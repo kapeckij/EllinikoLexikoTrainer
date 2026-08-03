@@ -26,14 +26,20 @@ function renderBatchOptions() {
 function renderPlanTable() {
   const tbody = document.getElementById('plan-table-body');
   tbody.innerHTML = BATCHES.map((batch, idx) => `
-    <tr>
+    <tr class="plan-row" onclick="goToBatch(${batch.batchId})" title="Открыть карточки: ${batch.batchName}">
       <td><strong>День ${idx + 1}</strong></td>
       <td class="batch-tag">Блок ${idx + 1}</td>
       <td>${batch.batchName}</td>
       <td>${batch.verbs.length} глаголов</td>
-      <td>Карточки → Тест</td>
+      <td style="color:var(--accent)">▶ Учить</td>
     </tr>
   `).join('');
+}
+
+function goToBatch(batchId) {
+  document.getElementById('batch-select').value = batchId;
+  showPage('learn');
+  resetLearn();
 }
 
 
@@ -55,7 +61,7 @@ function updateSR(progress, idx, rating) {
     p.interval = Math.max(1, Math.round(p.interval * 1.2));
     p.ef = Math.max(1.3, p.ef - 0.14);
   } else {
-    p.interval = Math.round(p.interval * p.ef);
+    p.interval = Math.max(7, Math.round(p.interval * p.ef));
     p.ef = Math.min(3.0, p.ef + 0.1);
   }
   p.nextReview = today + p.interval * 86400000;
@@ -130,12 +136,14 @@ function showLearnCard() {
   const fc = document.getElementById('flip-card');
   fc.classList.remove('flipped');
   learnFlipped = false;
-  setRatingEnabled(false);
   
   const total = learnQueue.length;
   const pct = Math.round(learnIdx / total * 100);
   document.getElementById('learn-progress-bar').style.width = pct + '%';
   document.getElementById('learn-progress-label').textContent = learnIdx + ' / ' + total;
+
+  document.getElementById('btn-prev').disabled = learnIdx === 0;
+  document.getElementById('btn-next').disabled = learnIdx >= learnQueue.length - 1;
 }
 
 function flipCard() {
@@ -143,16 +151,22 @@ function flipCard() {
   if (!learnFlipped) {
     fc.classList.add('flipped');
     learnFlipped = true;
-    setRatingEnabled(true);
   } else {
     fc.classList.remove('flipped');
     learnFlipped = false;
-    setRatingEnabled(false);
   }
 }
 
-function setRatingEnabled(en) {
-  ['btn-no','btn-maybe','btn-yes'].forEach(id => document.getElementById(id).disabled = !en);
+function prevCard() {
+  if (learnIdx <= 0) return;
+  learnIdx--;
+  showLearnCard();
+}
+
+function nextCard() {
+  if (learnIdx >= learnQueue.length) return;
+  learnIdx++;
+  showLearnCard();
 }
 
 function rate(rating) {
@@ -182,6 +196,48 @@ let quizCurrent = null;
 let quizCorrectCount = 0;
 let quizTotalCount = 0;
 let quizAnswered = false;
+const quizStreaks = {}; // verbIdx → consecutive correct count in this session
+
+// Returns 0=не знаю, 1=смутно, 2=знаю
+function getCategory(p) {
+  if (!p || !p.seen) return 0;
+  if (p.interval >= 7) return 2;
+  return 1;
+}
+
+function updateQuizSR(verbIdx, isCorrect) {
+  let progress = loadProgress();
+  let p = progress[verbIdx] || { interval: 1, ef: 2.5, nextReview: Date.now(), seen: false };
+  const cat = getCategory(p);
+  if (!isCorrect) {
+    quizStreaks[verbIdx] = 0;
+    if (cat === 2) {           // знаю → смутно
+      p.interval = 3;
+      p.ef = Math.max(1.3, p.ef - 0.2);
+    } else if (cat === 1) {    // смутно → не знаю
+      p.interval = 1;
+      p.seen = false;
+      p.ef = Math.max(1.3, p.ef - 0.2);
+    }
+    // cat === 0: остаётся не знаю
+  } else {
+    quizStreaks[verbIdx] = (quizStreaks[verbIdx] || 0) + 1;
+    if (quizStreaks[verbIdx] >= 2) {
+      quizStreaks[verbIdx] = 0;
+      if (cat === 0) {         // не знаю → смутно (2 правильных подряд)
+        p.seen = true;
+        p.interval = 3;
+      } else if (cat === 1) { // смутно → знаю (ещё 2 правильных подряд)
+        p.interval = 7;
+        p.ef = Math.min(3.0, p.ef + 0.1);
+      }
+      // cat === 2: уже знаю, не меняем
+    }
+  }
+  p.nextReview = Date.now() + p.interval * 86400000;
+  progress[verbIdx] = p;
+  saveProgress(progress);
+}
 
 function escapeHtml(s) {
   return String(s)
@@ -194,7 +250,13 @@ function escapeHtml(s) {
 
 function startQuiz() {
   const bval = parseInt(document.getElementById('quiz-batch').value);
-  quizPool = bval === -2 ? [...VERBS] : VERBS.filter(v => v.batch === bval);
+  const excludeKnown = document.getElementById('quiz-exclude-known').checked;
+  let pool = bval === -2 ? [...VERBS] : VERBS.filter(v => v.batch === bval);
+  if (excludeKnown) {
+    const progress = loadProgress();
+    pool = pool.filter(v => getCategory(progress[VERBS.indexOf(v)]) < 2);
+  }
+  quizPool = pool.sort(() => Math.random() - .5);
   if (quizPool.length < 4) { alert('Нужно минимум 4 глагола для теста. Выберите другой блок.'); return; }
   quizPool = [...quizPool].sort(() => Math.random() - .5);
   quizCorrectCount = 0;
@@ -211,10 +273,13 @@ function nextQuizQuestion() {
     document.getElementById('quiz-q-sub').textContent = 'Результат: ' + quizCorrectCount + ' / ' + quizTotalCount;
     document.getElementById('quiz-options').innerHTML = '<button class="btn-primary" onclick="startQuiz()" style="margin:10px auto;display:block">Начать заново</button>';
     document.getElementById('next-btn-wrap').style.display = 'none';
+    document.getElementById('quiz-giveup-wrap').style.display = 'none';
     return;
   }
   quizAnswered = false;
   document.getElementById('next-btn-wrap').style.display = 'none';
+  document.getElementById('quiz-giveup-wrap').style.display = '';
+  document.getElementById('btn-giveup').disabled = false;
   const mode = document.getElementById('quiz-mode').value;
   const correct = quizPool.shift();
   quizCurrent = correct;
@@ -270,6 +335,7 @@ function checkAnswer(btn, chosen, correct) {
     const correctBtn = Array.from(document.querySelectorAll('.quiz-option')).find(b => b.dataset.answer === correct);
     if (correctBtn) correctBtn.classList.add('correct');
   }
+  updateQuizSR(VERBS.indexOf(quizCurrent), isCorrect);
   document.getElementById('quiz-correct').textContent = quizCorrectCount;
   document.getElementById('quiz-total').textContent = quizTotalCount;
   document.getElementById('next-btn-wrap').style.display = '';
@@ -287,6 +353,7 @@ function checkFormAnswer(btn, chosen, correct) {
     const correctBtn = Array.from(document.querySelectorAll('.quiz-option')).find(b => b.dataset.answer === correct);
     if (correctBtn) correctBtn.classList.add('correct');
   }
+  updateQuizSR(VERBS.indexOf(quizCurrent), isCorrect);
   document.getElementById('quiz-correct').textContent = quizCorrectCount;
   document.getElementById('quiz-total').textContent = quizTotalCount;
   document.getElementById('next-btn-wrap').style.display = '';
@@ -310,23 +377,70 @@ function updateProgressPage() {
   const batchList = document.getElementById('batch-progress-list');
   batchList.innerHTML = '';
   for (let b = 0; b < BATCHES.length; b++) {
-    const bVerbs = VERBS.filter((v, i) => v.batch === b);
+    const bVerbs = VERBS.filter(v => v.batch === b);
     const bTotal = bVerbs.length;
-    const bKnown = bVerbs.filter((v, i) => {
-      const origIdx = VERBS.indexOf(v);
-      const p = progress[origIdx];
+    const bKnown = bVerbs.filter(v => {
+      const p = progress[VERBS.indexOf(v)];
       return p && p.seen && p.interval >= 3;
     }).length;
     const pct = Math.round(bKnown / bTotal * 100);
-    batchList.innerHTML += `
-      <div class="batch-row">
-        <div class="batch-row-header">
-          <span class="batch-row-name">Блок ${b+1}: ${BATCH_NAMES[b]}</span>
-          <span class="batch-row-pct">${bKnown}/${bTotal} (${pct}%)</span>
-        </div>
-        <div class="mini-bar"><div class="mini-bar-fill" style="width:${pct}%"></div></div>
+
+    const verbRows = bVerbs.map(v => {
+      const p = progress[VERBS.indexOf(v)];
+      const cat = getCategory(p);
+      const [icon, label, cls] = cat === 2
+        ? ['✓', 'знаю', 'verb-status-known']
+        : cat === 1
+        ? ['~', 'смутно', 'verb-status-learning']
+        : ['✕', 'не знаю', 'verb-status-new'];
+      return `<div class="verb-status-row">
+        <span class="verb-status-badge ${cls}">${icon} ${label}</span>
+        <span class="verb-status-present">${escapeHtml(v.present)}</span>
+        <span class="verb-status-translation">${escapeHtml(v.translation)}</span>
       </div>`;
+    }).join('');
+
+    batchList.innerHTML += `
+      <details class="batch-row-details">
+        <summary class="batch-row-header">
+          <div class="batch-row-left">
+            <span class="batch-row-arrow">▶</span>
+            <span class="batch-row-name">Блок ${b+1}: ${BATCH_NAMES[b]}</span>
+          </div>
+          <div class="batch-row-right">
+            <span class="batch-row-pct">${bKnown}/${bTotal} (${pct}%)</span>
+          </div>
+        </summary>
+        <div class="mini-bar" style="margin:0 0 10px"><div class="mini-bar-fill" style="width:${pct}%"></div></div>
+        <div class="verb-status-list">${verbRows}</div>
+      </details>`;
   }
+}
+
+function giveUp() {
+  if (quizAnswered) return;
+  quizAnswered = true;
+  quizTotalCount++;
+  // disable all options and highlight correct
+  document.querySelectorAll('.quiz-option').forEach(b => b.disabled = true);
+  const mode = document.getElementById('quiz-mode').value;
+  const correctKey = quizCurrent.present;
+  const correctBtn = Array.from(document.querySelectorAll('.quiz-option')).find(b => b.dataset.answer === correctKey);
+  if (correctBtn) correctBtn.classList.add('correct');
+  // force category to 0 (не знаю)
+  const idx = VERBS.indexOf(quizCurrent);
+  let progress = loadProgress();
+  let p = progress[idx] || { interval: 1, ef: 2.5, nextReview: Date.now(), seen: false };
+  p.seen = false;
+  p.interval = 1;
+  p.ef = Math.max(1.3, p.ef - 0.2);
+  p.nextReview = Date.now() + 86400000;
+  progress[idx] = p;
+  saveProgress(progress);
+  quizStreaks[idx] = 0;
+  document.getElementById('quiz-total').textContent = quizTotalCount;
+  document.getElementById('quiz-giveup-wrap').style.display = 'none';
+  document.getElementById('next-btn-wrap').style.display = '';
 }
 
 function resetAll() {
@@ -339,12 +453,16 @@ function resetAll() {
 // Expose functions to global scope (required for HTML onclick attributes)
 window.showPage = showPage;
 window.resetLearn = resetLearn;
+window.goToBatch = goToBatch;
 window.flipCard = flipCard;
+window.prevCard = prevCard;
+window.nextCard = nextCard;
 window.rate = rate;
 window.startQuiz = startQuiz;
 window.nextQuizQuestion = nextQuizQuestion;
 window.checkAnswer = checkAnswer;
 window.checkFormAnswer = checkFormAnswer;
+window.giveUp = giveUp;
 window.resetAll = resetAll;
 
 // Init
