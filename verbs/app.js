@@ -409,12 +409,26 @@ function updateProgressPage() {
           </div>
           <div class="batch-row-right">
             <span class="batch-row-pct">${bKnown}/${bTotal} (${pct}%)</span>
+            <button class="btn-reset-batch" onclick="event.preventDefault();event.stopPropagation();resetBatchProgress(${b})">Сбросить блок</button>
           </div>
         </summary>
         <div class="mini-bar" style="margin:0 0 10px"><div class="mini-bar-fill" style="width:${pct}%"></div></div>
         <div class="verb-status-list">${verbRows}</div>
       </details>`;
   }
+}
+
+function resetBatchProgress(batchId) {
+  if (!confirm('Сбросить прогресс только для этого блока?')) return;
+  const progress = loadProgress();
+  VERBS.forEach((v, i) => {
+    if (v.batch === batchId) {
+      delete progress[i];
+      quizStreaks[i] = 0;
+    }
+  });
+  saveProgress(progress);
+  updateProgressPage();
 }
 
 function giveUp() {
@@ -463,6 +477,7 @@ window.nextQuizQuestion = nextQuizQuestion;
 window.checkAnswer = checkAnswer;
 window.checkFormAnswer = checkFormAnswer;
 window.giveUp = giveUp;
+window.resetBatchProgress = resetBatchProgress;
 window.resetAll = resetAll;
 
 // Init
