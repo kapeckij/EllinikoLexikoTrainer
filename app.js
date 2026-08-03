@@ -336,6 +336,17 @@ function resetAll() {
   }
 }
 
+// Expose functions to global scope (required for HTML onclick attributes)
+window.showPage = showPage;
+window.resetLearn = resetLearn;
+window.flipCard = flipCard;
+window.rate = rate;
+window.startQuiz = startQuiz;
+window.nextQuizQuestion = nextQuizQuestion;
+window.checkAnswer = checkAnswer;
+window.checkFormAnswer = checkFormAnswer;
+window.resetAll = resetAll;
+
 // Init
 renderBatchOptions();
 renderPlanTable();
