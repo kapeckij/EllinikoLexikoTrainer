@@ -64,26 +64,30 @@
   <div class="progress-label" id="learn-progress-label">0 / 0</div>
 
   <div id="learn-main">
-    <div class="flip-scene" onclick="flipCard()">
-      <div class="flip-card" id="flip-card">
-        <div class="flip-face flip-front">
-          <span class="card-tag" id="card-batch-tag">Блок 1</span>
-          <div class="verb-main" id="card-present">—</div>
-          <div class="verb-forms" id="card-forms">—</div>
-          <div class="verb-example-front" id="card-example">—</div>
-          <div class="flip-hint">нажми чтобы перевернуть</div>
-        </div>
-        <div class="flip-face flip-back">
-          <span class="card-tag" id="card-batch-tag2">Блок 1</span>
-          <div class="verb-translation" id="card-translation">—</div>
-          <div class="flip-hint">↑ нажми чтобы вернуть</div>
+    <div class="card-nav-wrap">
+      <button class="card-nav-btn" id="btn-prev" onclick="prevCard()" title="Предыдущая">&#8592;</button>
+      <div class="flip-scene" onclick="flipCard()">
+        <div class="flip-card" id="flip-card">
+          <div class="flip-face flip-front">
+            <span class="card-tag" id="card-batch-tag">Блок 1</span>
+            <div class="verb-main" id="card-present">—</div>
+            <div class="verb-forms" id="card-forms">—</div>
+            <div class="verb-example-front" id="card-example">—</div>
+            <div class="flip-hint">нажми чтобы перевернуть</div>
+          </div>
+          <div class="flip-face flip-back">
+            <span class="card-tag" id="card-batch-tag2">Блок 1</span>
+            <div class="verb-translation" id="card-translation">—</div>
+            <div class="flip-hint">↑ нажми чтобы вернуть</div>
+          </div>
         </div>
       </div>
+      <button class="card-nav-btn" id="btn-next" onclick="nextCard()" title="Следующая">&#8594;</button>
     </div>
     <div class="rating-btns">
-      <button class="btn-no" id="btn-no" onclick="rate(0)" disabled>✗ Не знаю</button>
-      <button class="btn-maybe" id="btn-maybe" onclick="rate(3)" disabled>~ Смутно</button>
-      <button class="btn-yes" id="btn-yes" onclick="rate(5)" disabled>✓ Знаю!</button>
+      <button class="btn-no" id="btn-no" onclick="rate(0)">✗ Не знаю</button>
+      <button class="btn-maybe" id="btn-maybe" onclick="rate(3)">~ Смутно</button>
+      <button class="btn-yes" id="btn-yes" onclick="rate(5)">✓ Знаю!</button>
     </div>
   </div>
   <div id="learn-done" class="done-msg" style="display:none">
@@ -107,6 +111,12 @@
     </select>
     <button onclick="startQuiz()">▶ Начать тест</button>
   </div>
+  <div class="quiz-controls-sub">
+    <label class="quiz-exclude-label">
+      <input type="checkbox" id="quiz-exclude-known">
+      Исключить выученные
+    </label>
+  </div>
   <div class="quiz-score">Правильно: <span id="quiz-correct">0</span> / <span id="quiz-total">0</span></div>
   <div class="quiz-question" id="quiz-question-box">
     <div class="quiz-q-label" id="quiz-mode-label">Переведи глагол</div>
@@ -114,6 +124,9 @@
     <div class="quiz-q-sub" id="quiz-q-sub"></div>
   </div>
   <div class="quiz-options" id="quiz-options"></div>
+  <div class="quiz-giveup-wrap" id="quiz-giveup-wrap" style="display:none">
+    <button class="btn-giveup" id="btn-giveup" onclick="giveUp()">✕ Не знаю</button>
+  </div>
   <div class="next-btn-wrap" id="next-btn-wrap" style="display:none">
     <button class="btn-primary" onclick="nextQuizQuestion()">Следующий →</button>
   </div>
