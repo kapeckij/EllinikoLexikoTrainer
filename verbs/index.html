@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Греческие глаголы — Тренажёр</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<nav>
+  <div class="logo">🇬🇷 Λεξιλόγιο</div>
+  <a class="nav-home" href="../index.html" title="На главную">🏠</a>
+  <button class="active" onclick="showPage('plan')">📋 План</button>
+  <button onclick="showPage('learn')">📚 Карточки</button>
+  <button onclick="showPage('quiz')">🎯 Тест</button>
+  <button onclick="showPage('progress')">📊 Прогресс</button>
+</nav>
+
+<!-- PLAN PAGE -->
+<div id="page-plan" class="page active">
+  <div class="plan-header">
+    <h1>Plan изучения 221 глагола</h1>
+    <p>Основан на методиках интервального повторения (Spaced Repetition) и<br>активного вспоминания (Active Recall)</p>
+  </div>
+  <div class="badges">
+    <div class="badge">Всего глаголов: <span>221</span></div>
+    <div class="badge">Блоков: <span>11</span></div>
+    <div class="badge">По <span>~20</span> в день</div>
+    <div class="badge">Срок: <span>14–21 день</span></div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom:16px; color:var(--accent2)">📅 Расписание занятий (30–40 мин/день)</h3>
+    <div class="method-box" style="margin:0 0 16px; background:var(--bg)">
+      <div class="method-item"><span class="method-icon">🔵</span><div><strong>Фаза 1 (Дни 1–11): Новый материал</strong><p>Каждый день — новый блок (~20 глаголов). Сначала листай карточки (реж. "Учить"), потом пройди тест. Занятие: 15 мин карточки + 15 мин тест.</p></div></div>
+      <div class="method-item"><span class="method-icon">🟡</span><div><strong>Фаза 2 (Дни 12–14): Интенсивный повтор</strong><p>Тест "Все блоки" в режиме Рус→Греч и Формы. Цель: ≥80% правильных ответов по каждому блоку.</p></div></div>
+      <div class="method-item"><span class="method-icon">🟢</span><div><strong>Фаза 3 (Дни 15–21): Закрепление</strong><p>Карточки в режиме "К повторению" — тренажёр сам покажет те, что пора повторить. 10–15 мин в день.</p></div></div>
+    </div>
+    <table>
+      <thead><tr><th>День</th><th>Блок</th><th>Тема</th><th>Объём</th><th>Активность</th></tr></thead>
+      <tbody id="plan-table-body"></tbody>
+    </table>
+  </div>
+
+  <div class="method-box">
+    <h3>🧠 Принципы, которым следует тренажёр</h3>
+    <div class="method-item"><span class="method-icon">⏰</span><div><strong>Spaced Repetition (Интервальное повторение)</strong><p>Знаешь глагол → следующий показ через 2 дня, потом через 5, 12, 25... Не знаешь → снова через 1 день. Так материал уходит в долгосрочную память.</p></div></div>
+    <div class="method-item"><span class="method-icon">💪</span><div><strong>Active Recall (Активное вспоминание)</strong><p>Не просто читай — закрой перевод и <em>вспоминай</em>. Именно усилие вспоминания создаёт прочные нейронные связи.</p></div></div>
+    <div class="method-item"><span class="method-icon">🎲</span><div><strong>Interleaving (Перемешивание)</strong><p>Режим "Все блоки" мешает старые и новые слова — это сложнее, но эффективнее для запоминания.</p></div></div>
+    <div class="method-item"><span class="method-icon">📝</span><div><strong>Три формы глагола</strong><p>В каждой карточке — настоящее (αγαπάω), будущее (θα αγαπήσω) и прошедшее (αγάπησα). Учи сразу все три вместе.</p></div></div>
+  </div>
+</div>
+
+<!-- LEARN PAGE -->
+<div id="page-learn" class="page">
+  <div class="learn-controls">
+    <select id="batch-select" onchange="resetLearn()">
+      <option value="-1">⭐ К повторению сегодня</option>
+      <option value="-2">🔀 Все глаголы (перемешать)</option>
+    </select>
+    <button onclick="resetLearn()">▶ Начать</button>
+  </div>
+  <div class="progress-bar-wrap"><div class="progress-bar" id="learn-progress-bar" style="width:0%"></div></div>
+  <div class="progress-label" id="learn-progress-label">0 / 0</div>
+
+  <div id="learn-main">
+    <div class="card-nav-wrap">
+      <button class="card-nav-btn" id="btn-prev" onclick="prevCard()" title="Предыдущая">&#8592;</button>
+      <div class="flip-scene" onclick="flipCard()">
+        <div class="flip-card" id="flip-card">
+          <div class="flip-face flip-front">
+            <span class="card-tag" id="card-batch-tag">Блок 1</span>
+            <div class="verb-main" id="card-present">—</div>
+            <div class="verb-forms" id="card-forms">—</div>
+            <div class="verb-example-front" id="card-example">—</div>
+            <div class="flip-hint">нажми чтобы перевернуть</div>
+          </div>
+          <div class="flip-face flip-back">
+            <span class="card-tag" id="card-batch-tag2">Блок 1</span>
+            <div class="verb-translation" id="card-translation">—</div>
+            <div class="flip-hint">↑ нажми чтобы вернуть</div>
+          </div>
+        </div>
+      </div>
+      <button class="card-nav-btn" id="btn-next" onclick="nextCard()" title="Следующая">&#8594;</button>
+    </div>
+    <div class="rating-btns">
+      <button class="btn-no" id="btn-no" onclick="rate(0)">✗ Не знаю</button>
+      <button class="btn-maybe" id="btn-maybe" onclick="rate(3)">~ Смутно</button>
+      <button class="btn-yes" id="btn-yes" onclick="rate(5)">✓ Знаю!</button>
+    </div>
+  </div>
+  <div id="learn-done" class="done-msg" style="display:none">
+    <div class="big">🎉</div>
+    <h2>Отличная работа!</h2>
+    <p id="done-stats">Пройдено карточек: 0</p>
+    <button class="btn-primary" onclick="resetLearn()">Повторить ещё раз</button>
+  </div>
+</div>
+
+<!-- QUIZ PAGE -->
+<div id="page-quiz" class="page">
+  <div class="quiz-controls">
+    <select id="quiz-mode">
+      <option value="gr-ru">Греч → Рус (узнать перевод)</option>
+      <option value="ru-gr">Рус → Греч (узнать глагол)</option>
+      <option value="forms">Формы (наст → прош/буд)</option>
+    </select>
+    <select id="quiz-batch">
+      <option value="-2">Все блоки</option>
+    </select>
+    <button onclick="startQuiz()">▶ Начать тест</button>
+  </div>
+  <div class="quiz-controls-sub">
+    <label class="quiz-exclude-label">
+      <input type="checkbox" id="quiz-exclude-known">
+      Исключить выученные
+    </label>
+  </div>
+  <div class="quiz-score">Правильно: <span id="quiz-correct">0</span> / <span id="quiz-total">0</span></div>
+  <div class="quiz-question" id="quiz-question-box">
+    <div class="quiz-q-label" id="quiz-mode-label">Переведи глагол</div>
+    <div class="quiz-q-text" id="quiz-q-text">Нажми "Начать тест"</div>
+    <div class="quiz-q-sub" id="quiz-q-sub"></div>
+  </div>
+  <div class="quiz-options" id="quiz-options"></div>
+  <div class="quiz-giveup-wrap" id="quiz-giveup-wrap" style="display:none">
+    <button class="btn-giveup" id="btn-giveup" onclick="giveUp()">✕ Не знаю</button>
+  </div>
+  <div class="next-btn-wrap" id="next-btn-wrap" style="display:none">
+    <button class="btn-primary" onclick="nextQuizQuestion()">Следующий →</button>
+  </div>
+</div>
+
+<!-- PROGRESS PAGE -->
+<div id="page-progress" class="page">
+  <h2 style="margin-bottom:20px">Мой прогресс</h2>
+  <div class="stats-grid">
+    <div class="stat-box"><div class="stat-num" id="stat-known" style="color:var(--green)">0</div><div class="stat-label">Знаю уверенно</div></div>
+    <div class="stat-box"><div class="stat-num" id="stat-learning" style="color:var(--yellow)">0</div><div class="stat-label">В процессе</div></div>
+    <div class="stat-box"><div class="stat-num" id="stat-new" style="color:var(--muted)">221</div><div class="stat-label">Ещё не видел</div></div>
+  </div>
+  <div class="batch-progress-list" id="batch-progress-list"></div>
+  <div style="text-align:center"><button class="btn-reset" onclick="resetAll()">🗑 Сбросить весь прогресс</button></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
