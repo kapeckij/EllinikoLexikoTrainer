@@ -257,7 +257,7 @@ function startQuiz() {
     pool = pool.filter(v => getCategory(progress[VERBS.indexOf(v)]) < 2);
   }
   quizPool = pool.sort(() => Math.random() - .5);
-  if (quizPool.length < 4) { alert('Нужно минимум 4 глагола для теста. Выберите другой блок.'); return; }
+  if (quizPool.length < 1) { alert('Блок выучен - отличная работа!'); return; }
   quizPool = [...quizPool].sort(() => Math.random() - .5);
   quizCorrectCount = 0;
   quizTotalCount = 0;
