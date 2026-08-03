@@ -148,7 +148,7 @@ function showLearnCard() {
   const total = learnQueue.length;
   const pct = Math.round(learnIdx / total * 100);
   document.getElementById('learn-progress-bar').style.width = pct + '%';
-  document.getElementById('learn-progress-label').textContent = learnIdx + ' / ' + total;
+  document.getElementById('learn-progress-label').textContent = (learnIdx + 1) + ' / ' + total;
 
   document.getElementById('btn-prev').disabled = learnIdx === 0;
   document.getElementById('btn-next').disabled = learnIdx >= learnQueue.length - 1;

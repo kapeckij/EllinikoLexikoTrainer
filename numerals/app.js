@@ -105,7 +105,7 @@ function getLearnQueue() {
   } else {
     pool = NUMBERS.filter(n => n.groupId === val);
   }
-  return pool.map(n => ({ n, origIdx: NUMBERS.indexOf(n) })).sort(() => Math.random() - .5);
+  return pool.map(n => ({ n, origIdx: NUMBERS.indexOf(n) })).sort((a, b) => a.n.digit - b.n.digit);
 }
 
 function resetLearn() {
@@ -130,7 +130,7 @@ function showLearnCard() {
   learnFlipped = false;
   const total = learnQueue.length;
   document.getElementById('learn-progress-bar').style.width = Math.round(learnIdx / total * 100) + '%';
-  document.getElementById('learn-progress-label').textContent = learnIdx + ' / ' + total;
+  document.getElementById('learn-progress-label').textContent = (learnIdx + 1) + ' / ' + total;
   document.getElementById('btn-prev').disabled = learnIdx === 0;
   document.getElementById('btn-next').disabled = learnIdx >= learnQueue.length - 1;
 }
