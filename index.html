@@ -15,7 +15,13 @@
     <p>Выбери раздел для изучения</p>
   </div>
 
-  <div class="category-list">
+  <div class="home-tabs">
+    <button class="home-tab active" onclick="showHomeTab('catalog', this)">📚 Разделы</button>
+    <button class="home-tab" onclick="showHomeTab('tips', this)">🧠 Советы</button>
+  </div>
+
+  <div class="home-panel active" id="home-panel-catalog">
+    <div class="category-list">
     <a href="verbs/index.html" class="category-card">
       <span class="category-icon">📚</span>
       <div class="category-info">
@@ -23,6 +29,15 @@
         <div class="category-desc">Настоящее, будущее, прошедшее время. Карточки, тест, прогресс.</div>
       </div>
       <span class="category-count">221 слово</span>
+    </a>
+
+    <a href="numerals/index.html" class="category-card">
+      <span class="category-icon">🔢</span>
+      <div class="category-info">
+        <div class="category-name">Числительные</div>
+        <div class="category-desc">Количественные (0–1 000 000) и порядковые числительные. Цифра → Greek и обратно.</div>
+      </div>
+      <span class="category-count">44 + 15</span>
     </a>
 
     <div class="category-card disabled">
@@ -33,7 +48,6 @@
       </div>
       <span class="coming-soon">скоро</span>
     </div>
-
     <div class="category-card disabled">
       <span class="category-icon">🎨</span>
       <div class="category-info">
@@ -42,8 +56,101 @@
       </div>
       <span class="coming-soon">скоро</span>
     </div>
+    </div>
+  </div>
+
+  <div class="home-panel" id="home-panel-tips">
+    <div class="tips-card">
+      <h2>🧠 Как учить эффективнее</h2>
+
+      <div class="tips-section-label">Стратегия запоминания</div>
+
+      <div class="tips-item">
+        <div class="tips-item-icon">🔗</div>
+        <div class="tips-item-body">
+          <h3>Учи в контексте, не изолированно</h3>
+          <p>Запоминай не отдельное слово, а мини-связку: глагол + типичный объект или короткая фраза. Мозг держит контекст лучше, чем сухой перевод.</p>
+          <div class="tips-item-example">Вместо «γράφω = писать» запомни «γράφω γράμμα» — пишу письмо.</div>
+        </div>
+      </div>
+
+      <div class="tips-item">
+        <div class="tips-item-icon">🔁</div>
+        <div class="tips-item-body">
+          <h3>Интервальное повторение</h3>
+          <p>Повтори новое слово в тот же день, через сутки и через 3–4 дня. Система в тренажёре уже строит такой график — просто открывай «К повторению сегодня».</p>
+          <div class="tips-item-example">День 0 → День 1 → День 4 → День 10 → … — интервалы важнее длительности.</div>
+        </div>
+      </div>
+
+      <div class="tips-item">
+        <div class="tips-item-icon">💡</div>
+        <div class="tips-item-body">
+          <h3>Активное вспоминание перед ответом</h3>
+          <p>Всегда пробуй вспомнить самостоятельно, прежде чем перевернуть карточку или открыть ответ. Усилие при вспоминании — главный «крючок» для долгой памяти.</p>
+          <div class="tips-item-example">Если не смог — нажми «Не знаю» и посмотри форму. Ошибка с немедленным исправлением работает лучше, чем угадывание.</div>
+        </div>
+      </div>
+
+      <div class="tips-section-label">Практика</div>
+
+      <div class="tips-item">
+        <div class="tips-item-icon">↔️</div>
+        <div class="tips-item-body">
+          <h3>Тренируй оба направления</h3>
+          <p>Делай и «Греч → Рус», и «Рус → Греч». Узнавание и активное воспроизведение — разные навыки: без второго говорить не получится.</p>
+        </div>
+      </div>
+
+      <div class="tips-item">
+        <div class="tips-item-icon">🗣️</div>
+        <div class="tips-item-body">
+          <h3>Произноси вслух</h3>
+          <p>Произноси каждую новую форму минимум 2–3 раза. Проговаривание активирует моторную память и резко ускоряет автоматизацию.</p>
+          <div class="tips-item-example">Особенно полезно при изучении трёх форм глагола: произнеси тройку γράφω / θα γράψω / έγραψα вслух как одно целое.</div>
+        </div>
+      </div>
+
+      <div class="tips-item">
+        <div class="tips-item-icon">📅</div>
+        <div class="tips-item-body">
+          <h3>Мини-сессии каждый день</h3>
+          <p>15 минут ежедневно дают лучший результат, чем 2 часа раз в неделю. Регулярность побеждает интенсивность.</p>
+        </div>
+      </div>
+
+      <div class="tips-section-label">Специфика греческого</div>
+
+      <div class="tips-item">
+        <div class="tips-item-icon">🇬🇷</div>
+        <div class="tips-item-body">
+          <h3>Учи глаголы тройками</h3>
+          <p>Греческий глагол имеет три ключевые формы: настоящее, будущее и аорист. Запоминай их сразу как блок — это основа для всех времён.</p>
+          <div class="tips-item-example">γράφω (пишу) → θα γράψω (напишу) → έγραψα (написал)</div>
+        </div>
+      </div>
+
+      <div class="tips-item">
+        <div class="tips-item-icon">🔤</div>
+        <div class="tips-item-body">
+          <h3>Следи за ударением</h3>
+          <p>В греческом ударение меняет смысл и форму. Не игнорируй ударение на карточках — учи его как часть слова, а не надстройку.</p>
+          <div class="tips-item-example">«έχω» (имею) — ударение на «е». Перенос ударения часто сигнализирует о смене формы или времени.</div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
+
+<script>
+function showHomeTab(name, btn) {
+  document.querySelectorAll('.home-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.home-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('home-panel-' + name).classList.add('active');
+}
+</script>
 
 </body>
 </html>

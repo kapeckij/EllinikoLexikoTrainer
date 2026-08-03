@@ -1,4 +1,3 @@
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --bg: #0f1117;
@@ -14,7 +13,7 @@
     --border: #2d3148;
   }
   body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
-  
+
   /* NAV */
   nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 20px; display: flex; gap: 4px; align-items: center; position: sticky; top: 0; z-index: 100; }
   nav .logo { font-size: 1.2rem; font-weight: 700; color: var(--accent); padding: 12px 16px 12px 0; border-right: 1px solid var(--border); margin-right: 4px; }
@@ -28,9 +27,9 @@
   .page { display: none; padding: 24px 20px; max-width: 900px; margin: 0 auto; }
   .page.active { display: block; }
 
-  /* CARDS */
+  /* CARD */
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-  
+
   /* PLAN */
   .plan-header { text-align: center; padding: 32px 0 24px; }
   .plan-header h1 { font-size: 1.8rem; color: var(--accent); margin-bottom: 8px; }
@@ -54,24 +53,34 @@
   .progress-bar-wrap { background: var(--border); border-radius: 99px; height: 6px; margin-bottom: 20px; }
   .progress-bar { background: var(--accent); height: 6px; border-radius: 99px; transition: width .4s; }
   .progress-label { text-align: center; color: var(--muted); font-size: 0.82rem; margin-bottom: 12px; margin-top: 4px; }
-  
+
   /* FLIP CARD */
   .card-nav-wrap { display: flex; align-items: center; gap: 8px; width: 100%; max-width: 620px; margin: 0 auto 20px; }
   .card-nav-btn { flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: var(--card); color: var(--muted); font-size: 1.1rem; cursor: pointer; transition: all .15s; display: flex; align-items: center; justify-content: center; }
   .card-nav-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); background: rgba(91,143,255,.08); }
   .card-nav-btn:disabled { opacity: .25; cursor: default; }
-  .flip-scene { perspective: 1000px; flex: 1; height: 260px; cursor: pointer; }
+  .flip-scene { perspective: 1000px; flex: 1; height: 240px; cursor: pointer; }
   .flip-card { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform .5s cubic-bezier(.4,0,.2,1); }
   .flip-card.flipped { transform: rotateY(180deg); }
   .flip-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 24px; border: 1px solid var(--border); }
   .flip-front { background: var(--card); }
   .flip-back { background: var(--card2); transform: rotateY(180deg); }
   .flip-hint { font-size: 0.75rem; color: var(--muted); position: absolute; bottom: 12px; right: 16px; }
-  .verb-main { font-size: 1.7rem; font-weight: 700; color: var(--text); text-align: center; margin-bottom: 10px; }
-  .verb-forms { font-size: 0.88rem; color: var(--muted); text-align: center; margin-bottom: 10px; }
-  .verb-example-front { font-size: 0.88rem; color: var(--accent2); text-align: center; font-style: italic; max-width: 420px; line-height: 1.45; }
-  .verb-translation { font-size: 1.4rem; font-weight: 700; color: var(--green); text-align: center; margin-bottom: 12px; }
   .card-tag { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; position: absolute; top: 14px; left: 16px; background: var(--card2); padding: 3px 8px; border-radius: 99px; }
+
+  /* NUMERAL-SPECIFIC */
+  .numeral-big { font-size: 3.2rem; font-weight: 800; color: var(--accent); text-align: center; line-height: 1; margin-bottom: 4px; }
+  .numeral-greek { font-size: 1.5rem; font-weight: 700; color: var(--green); text-align: center; margin-bottom: 8px; }
+  .numeral-transcription { font-size: 0.9rem; color: var(--muted); text-align: center; font-style: italic; }
+
+  /* ORDINALS CARD */
+  .ordinal-label { font-size: 2.8rem; font-weight: 800; color: var(--accent2); text-align: center; margin-bottom: 4px; }
+  .ordinal-forms { font-size: 1.1rem; font-weight: 700; color: var(--green); text-align: center; margin-bottom: 6px; }
+  .ordinal-transcription { font-size: 0.82rem; color: var(--muted); text-align: center; font-style: italic; }
+
+  /* ORDINALS SECTION */
+  .ord-section-title { font-size: 1.1rem; font-weight: 700; color: var(--accent2); margin: 28px 0 12px; display: flex; align-items: center; gap: 8px; }
+  .ord-divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 
   /* RATING BUTTONS */
   .rating-btns { display: flex; gap: 12px; justify-content: center; margin-top: 10px; }
@@ -82,7 +91,7 @@
   .btn-maybe:hover { background: rgba(234,179,8,.25); }
   .btn-yes { background: rgba(34,197,94,.15); color: var(--green); border: 1px solid rgba(34,197,94,.3); }
   .btn-yes:hover { background: rgba(34,197,94,.25); }
-  
+
   .done-msg { text-align: center; padding: 40px 20px; }
   .done-msg .big { font-size: 3rem; }
   .done-msg h2 { margin: 12px 0 8px; font-size: 1.5rem; }
@@ -100,14 +109,10 @@
   .quiz-exclude-label input[type=checkbox] { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
   .quiz-question { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; text-align: center; margin-bottom: 16px; }
   .quiz-q-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 16px; }
-  .quiz-q-text { font-size: 1.8rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+  .quiz-q-text { font-size: 2rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
   .quiz-q-sub { font-size: 0.88rem; color: var(--muted); }
-  .quiz-spoiler { margin-top: 8px; text-align: left; display: inline-block; max-width: 100%; }
-  .quiz-spoiler summary { cursor: pointer; color: var(--accent2); user-select: none; }
-  .quiz-spoiler summary:hover { color: var(--accent); }
-  .quiz-spoiler .quiz-example-text { margin-top: 8px; color: var(--muted); font-style: italic; }
   .quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .quiz-option { background: var(--card); border: 2px solid var(--border); border-radius: 10px; padding: 14px 16px; cursor: pointer; font-size: 0.92rem; transition: all .15s; text-align: left; color: var(--text); }
+  .quiz-option { background: var(--card); border: 2px solid var(--border); border-radius: 10px; padding: 14px 16px; cursor: pointer; font-size: 0.92rem; transition: all .15s; text-align: center; color: var(--text); }
   .quiz-option:hover:not(:disabled) { border-color: var(--accent); background: rgba(91,143,255,.08); }
   .quiz-option.correct { border-color: var(--green) !important; background: rgba(34,197,94,.12) !important; color: var(--green); }
   .quiz-option.wrong { border-color: var(--red) !important; background: rgba(239,68,68,.12) !important; color: var(--red); }
@@ -140,16 +145,14 @@
   .batch-row-pct { font-size: 0.85rem; color: var(--accent); }
   .mini-bar { background: var(--border); border-radius: 99px; height: 5px; }
   .mini-bar-fill { background: var(--accent); height: 5px; border-radius: 99px; transition: width .5s; }
-
-  /* VERB STATUS LIST */
   .verb-status-list { display: flex; flex-direction: column; gap: 5px; margin-top: 4px; }
   .verb-status-row { display: flex; align-items: center; gap: 10px; padding: 5px 6px; border-radius: 6px; font-size: 0.85rem; }
   .verb-status-row:hover { background: rgba(255,255,255,.03); }
   .verb-status-badge { font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 99px; min-width: 72px; text-align: center; flex-shrink: 0; }
-  .verb-status-known   { background: rgba(34,197,94,.15);  color: var(--green); }
-  .verb-status-learning{ background: rgba(234,179,8,.15); color: var(--yellow); }
-  .verb-status-new     { background: rgba(239,68,68,.15);  color: var(--red); }
-  .verb-status-present { font-weight: 600; color: var(--text); min-width: 140px; }
-  .verb-status-translation { color: var(--muted); }
+  .verb-status-known    { background: rgba(34,197,94,.15);  color: var(--green); }
+  .verb-status-learning { background: rgba(234,179,8,.15);  color: var(--yellow); }
+  .verb-status-new      { background: rgba(239,68,68,.15);  color: var(--red); }
+  .verb-status-present { font-weight: 700; color: var(--accent); min-width: 60px; }
+  .verb-status-translation { color: var(--text); }
   .btn-reset { padding: 8px 16px; border-radius: 8px; border: 1px solid var(--red); background: transparent; color: var(--red); cursor: pointer; font-size: 0.85rem; margin-top: 20px; }
   .btn-reset:hover { background: rgba(239,68,68,.1); }

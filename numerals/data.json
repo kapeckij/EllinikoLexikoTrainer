@@ -1,0 +1,89 @@
+{
+  "groups": [
+    {
+      "id": 0,
+      "name": "Числа 0–12",
+      "numbers": [
+        {"digit": 0,  "greek": "μηδέν",    "transcription": "midén"},
+        {"digit": 1,  "greek": "ένα",      "transcription": "éna"},
+        {"digit": 2,  "greek": "δύο",      "transcription": "dío"},
+        {"digit": 3,  "greek": "τρία",     "transcription": "tría"},
+        {"digit": 4,  "greek": "τέσσερα",  "transcription": "téssera"},
+        {"digit": 5,  "greek": "πέντε",    "transcription": "pénte"},
+        {"digit": 6,  "greek": "έξι",      "transcription": "éxi"},
+        {"digit": 7,  "greek": "επτά",     "transcription": "eptá"},
+        {"digit": 8,  "greek": "οκτώ",     "transcription": "októ"},
+        {"digit": 9,  "greek": "εννέα",    "transcription": "ennéa"},
+        {"digit": 10, "greek": "δέκα",     "transcription": "déka"},
+        {"digit": 11, "greek": "έντεκα",   "transcription": "énteka"},
+        {"digit": 12, "greek": "δώδεκα",   "transcription": "dódeka"}
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Числа 13–20",
+      "numbers": [
+        {"digit": 13, "greek": "δεκατρία",    "transcription": "dekatría"},
+        {"digit": 14, "greek": "δεκατέσσερα", "transcription": "dekatéssera"},
+        {"digit": 15, "greek": "δεκαπέντε",   "transcription": "dekapénte"},
+        {"digit": 16, "greek": "δεκαέξι",     "transcription": "dekaéxi"},
+        {"digit": 17, "greek": "δεκαεπτά",    "transcription": "dekaeptá"},
+        {"digit": 18, "greek": "δεκαοκτώ",    "transcription": "dekaoktó"},
+        {"digit": 19, "greek": "δεκαεννέα",   "transcription": "dekaennéa"},
+        {"digit": 20, "greek": "είκοσι",      "transcription": "íkosi"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Десятки и составные",
+      "numbers": [
+        {"digit": 21, "greek": "είκοσι ένα",      "transcription": "íkosi éna"},
+        {"digit": 25, "greek": "είκοσι πέντε",     "transcription": "íkosi pénte"},
+        {"digit": 30, "greek": "τριάντα",          "transcription": "triánta"},
+        {"digit": 40, "greek": "σαράντα",          "transcription": "saránta"},
+        {"digit": 50, "greek": "πενήντα",          "transcription": "penínta"},
+        {"digit": 55, "greek": "πενήντα πέντε",    "transcription": "penínta pénte"},
+        {"digit": 60, "greek": "εξήντα",           "transcription": "exínta"},
+        {"digit": 70, "greek": "εβδομήντα",        "transcription": "evdomínta"},
+        {"digit": 80, "greek": "ογδόντα",          "transcription": "ogdónta"},
+        {"digit": 90, "greek": "ενενήντα",         "transcription": "enenínta"},
+        {"digit": 99, "greek": "ενενήντα εννέα",   "transcription": "enenínta ennéa"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Сотни и тысячи",
+      "numbers": [
+        {"digit": 100,     "greek": "εκατό",              "transcription": "ekató"},
+        {"digit": 200,     "greek": "διακόσια",           "transcription": "diakósia"},
+        {"digit": 300,     "greek": "τριακόσια",          "transcription": "triakósia"},
+        {"digit": 400,     "greek": "τετρακόσια",         "transcription": "tetrakósia"},
+        {"digit": 500,     "greek": "πεντακόσια",         "transcription": "pentakósia"},
+        {"digit": 600,     "greek": "εξακόσια",           "transcription": "exakósia"},
+        {"digit": 700,     "greek": "επτακόσια",          "transcription": "eptakósia"},
+        {"digit": 800,     "greek": "οκτακόσια",          "transcription": "oktakósia"},
+        {"digit": 900,     "greek": "εννιακόσια",         "transcription": "enniakósia"},
+        {"digit": 1000,    "greek": "χίλια",              "transcription": "chília"},
+        {"digit": 2000,    "greek": "δύο χιλιάδες",       "transcription": "dío chiliádes"},
+        {"digit": 1000000, "greek": "ένα εκατομμύριο",    "transcription": "éna ekatommírio"}
+      ]
+    }
+  ],
+  "ordinals": [
+    {"position": 1,    "label": "1-й",     "male": "πρώτος",     "female": "πρώτη",     "neuter": "πρώτο",     "transcription": "prótos / próti / próto"},
+    {"position": 2,    "label": "2-й",     "male": "δεύτερος",   "female": "δεύτερη",   "neuter": "δεύτερο",   "transcription": "défteros / défteri / déftero"},
+    {"position": 3,    "label": "3-й",     "male": "τρίτος",     "female": "τρίτη",     "neuter": "τρίτο",     "transcription": "trítos / tríti / tríto"},
+    {"position": 4,    "label": "4-й",     "male": "τέταρτος",   "female": "τέταρτη",   "neuter": "τέταρτο",   "transcription": "tétartos / tétarti / tétarto"},
+    {"position": 5,    "label": "5-й",     "male": "πέμπτος",    "female": "πέμπτη",    "neuter": "πέμπτο",    "transcription": "pémptos / pémpti / pémpeto"},
+    {"position": 6,    "label": "6-й",     "male": "έκτος",      "female": "έκτη",      "neuter": "έκτο",      "transcription": "éktos / ékti / ékto"},
+    {"position": 7,    "label": "7-й",     "male": "έβδομος",    "female": "έβδομη",    "neuter": "έβδομο",    "transcription": "évdomos / évdomi / évdomo"},
+    {"position": 8,    "label": "8-й",     "male": "όγδοος",     "female": "όγδοη",     "neuter": "όγδοο",     "transcription": "ógdoos / ógdoi / ógdoo"},
+    {"position": 9,    "label": "9-й",     "male": "ένατος",     "female": "ένατη",     "neuter": "ένατο",     "transcription": "énatos / énati / énato"},
+    {"position": 10,   "label": "10-й",    "male": "δέκατος",    "female": "δέκατη",    "neuter": "δέκατο",    "transcription": "dékatos / dékati / dékato"},
+    {"position": 11,   "label": "11-й",    "male": "ενδέκατος",  "female": "ενδέκατη",  "neuter": "ενδέκατο",  "transcription": "endékatos / endékati / endékato"},
+    {"position": 12,   "label": "12-й",    "male": "δωδέκατος",  "female": "δωδέκατη",  "neuter": "δωδέκατο",  "transcription": "dodékatos / dodékati / dodékato"},
+    {"position": 20,   "label": "20-й",    "male": "εικοστός",   "female": "εικοστή",   "neuter": "εικοστό",   "transcription": "ikostós / ikostí / ikostó"},
+    {"position": 100,  "label": "100-й",   "male": "εκατοστός",  "female": "εκατοστή",  "neuter": "εκατοστό",  "transcription": "ekatostós / ekatostí / ekatostó"},
+    {"position": 1000, "label": "1000-й",  "male": "χιλιοστός",  "female": "χιλιοστή",  "neuter": "χιλιοστό",  "transcription": "chiliostós / chiliostí / chiliostó"}
+  ]
+}

@@ -16,6 +16,12 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
 .home-header .flag { font-size: 3rem; margin-bottom: 12px; }
 .home-header h1 { font-size: 1.8rem; color: var(--accent); margin-bottom: 8px; }
 .home-header p { color: var(--muted); font-size: 0.95rem; }
+.home-tabs { display: flex; gap: 8px; margin: 0 0 14px; }
+.home-tab { flex: 1; background: var(--card); border: 1px solid var(--border); border-radius: 10px; color: var(--muted); padding: 10px 12px; font-size: 0.9rem; cursor: pointer; transition: all .2s; }
+.home-tab:hover { border-color: var(--accent); color: var(--text); }
+.home-tab.active { border-color: var(--accent); color: var(--accent); background: var(--card2); }
+.home-panel { display: none; }
+.home-panel.active { display: block; }
 .category-list { display: flex; flex-direction: column; gap: 12px; }
 .category-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px 24px; cursor: pointer; display: flex; align-items: center; gap: 16px; transition: all .2s; text-decoration: none; color: inherit; }
 .category-card:hover { border-color: var(--accent); background: var(--card2); transform: translateX(4px); }
@@ -26,3 +32,13 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
 .category-desc { font-size: 0.83rem; color: var(--muted); }
 .category-count { font-size: 0.8rem; color: var(--accent); font-weight: 600; background: rgba(91,143,255,.12); padding: 4px 10px; border-radius: 99px; flex-shrink: 0; }
 .coming-soon { font-size: 0.75rem; color: var(--muted); background: var(--card2); padding: 4px 10px; border-radius: 99px; flex-shrink: 0; }
+.tips-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+.tips-card h2 { color: var(--accent2); font-size: 1.15rem; margin: 0 0 14px; }
+.tips-item { border: 1px solid var(--border); border-radius: 12px; padding: 14px; background: var(--card2); margin-bottom: 10px; display: flex; gap: 14px; align-items: flex-start; }
+.tips-item:last-child { margin-bottom: 0; }
+.tips-item-icon { font-size: 1.5rem; flex-shrink: 0; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(91,143,255,.1); border-radius: 10px; }
+.tips-item-body { flex: 1; }
+.tips-item h3 { font-size: 0.92rem; font-weight: 700; color: var(--text); margin: 0 0 5px; }
+.tips-item p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; margin: 0; }
+.tips-item-example { margin-top: 8px; padding: 7px 10px; background: rgba(91,143,255,.07); border-left: 2px solid var(--accent); border-radius: 0 6px 6px 0; font-size: 0.8rem; color: var(--accent2); line-height: 1.55; }
+.tips-section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 14px 0 8px; font-weight: 700; }

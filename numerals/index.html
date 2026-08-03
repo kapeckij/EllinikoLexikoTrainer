@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Греческие числительные — Тренажёр</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">🔢 Αριθμοί</div>
+  <a class="nav-home" href="../index.html" title="На главную">🏠</a>
+  <button class="active" onclick="showPage('plan')">📋 Обзор</button>
+  <button onclick="showPage('learn')">🃏 Карточки</button>
+  <button onclick="showPage('quiz')">🎯 Тест</button>
+  <button onclick="showPage('ordinals')">🔢 Порядковые</button>
+  <button onclick="showPage('progress')">📊 Прогресс</button>
+</nav>
+
+<!-- PLAN PAGE -->
+<div id="page-plan" class="page active">
+  <div class="plan-header">
+    <h1>Греческие числительные</h1>
+    <p>Количественные и порядковые числительные греческого языка</p>
+  </div>
+  <div class="badges">
+    <div class="badge">Количественных: <span>44</span></div>
+    <div class="badge">Порядковых: <span>15</span></div>
+    <div class="badge">Групп: <span>4</span></div>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom:16px;color:var(--accent2)">📚 Группы для изучения</h3>
+    <table>
+      <thead><tr><th>#</th><th>Группа</th><th>Чисел</th><th></th></tr></thead>
+      <tbody id="plan-table-body"></tbody>
+    </table>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom:12px;color:var(--accent2)">💡 Подсказки</h3>
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7">
+      В греческом числа <strong style="color:var(--text)">3 и 4</strong> имеют разные формы по родам (τρία / τρεις, τέσσερα / τέσσερις). 
+      Составные числа образуются сложением: <strong style="color:var(--accent)">είκοσι ένα</strong> = 21.
+      Порядковые числительные согласуются с существительным по роду.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom:12px;color:var(--accent2)">📘 Правила и примеры употребления</h3>
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:10px">
+      1) После числительных обычно используется существительное во множественном числе: <strong style="color:var(--text)">τρία βιβλία</strong> (три книги), <strong style="color:var(--text)">πέντε άνθρωποι</strong> (пять человек).
+    </p>
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:10px">
+      2) Числительные <strong style="color:var(--text)">1, 3, 4</strong> согласуются по роду с существительным, а большинство остальных форм обычно не меняется: <strong style="color:var(--text)">ένας φίλος</strong>, <strong style="color:var(--text)">μία φίλη</strong>, <strong style="color:var(--text)">ένα παιδί</strong>.
+    </p>
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:16px">
+      3) В сложных числах сначала идут десятки, потом единицы: <strong style="color:var(--text)">είκοσι δύο</strong> (22), <strong style="color:var(--text)">τριάντα ένα</strong> (31), <strong style="color:var(--text)">σαράντα τέσσερα</strong> (44).
+    </p>
+    <h4 style="margin:16px 0 10px;color:var(--accent)">Склонение количественных числительных</h4>
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:8px">
+     В современном греческом склоняются только 1,3,4 и сотни.
+    </p>
+    <h4 style="margin:8px 0 10px;color:var(--accent)">Склонение цифр (1,3,4)</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Тип</th>
+          <th>Муж. род</th>
+          <th>Жен. род</th>
+          <th>Сред. род</th>
+          <th>Пример</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1 (один)</td>
+          <td>ένας</td>
+          <td>μία / μια</td>
+          <td>ένα</td>
+          <td>ένας μαθητής / μία μαθήτρια / ένα παιδί</td>
+        </tr>
+        <tr>
+          <td>3 (три)</td>
+          <td>τρεις</td>
+          <td>τρεις</td>
+          <td>τρία</td>
+          <td>τρεις φίλοι / τρία σπίτια</td>
+        </tr>
+        <tr>
+          <td>4 (четыре)</td>
+          <td>τέσσερις</td>
+          <td>τέσσερις</td>
+          <td>τέσσερα</td>
+          <td>τέσσερις μέρες / τέσσερα βιβλία</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 style="margin:16px 0 10px;color:var(--accent)">Склонение сотен (200–900)</h4>
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:10px">
+      Сотни в греческом обычно согласуются по роду с существительным. Часто встречаются формы для муж./жен. и отдельные формы для среднего рода:
+      <strong style="color:var(--text)">διακόσιοι / διακόσιες / διακόσια</strong>,
+      <strong style="color:var(--text)">τριακόσιοι / τριακόσιες / τριακόσια</strong> и т.д.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Значение</th>
+          <th>Муж. род</th>
+          <th>Жен. род</th>
+          <th>Сред. род</th>
+          <th>Пример</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>200</td>
+          <td>διακόσιοι</td>
+          <td>διακόσιες</td>
+          <td>διακόσια</td>
+          <td>διακόσιοι μαθητές / διακόσιες σελίδες / διακόσια ευρώ</td>
+        </tr>
+        <tr>
+          <td>300</td>
+          <td>τριακόσιοι</td>
+          <td>τριακόσιες</td>
+          <td>τριακόσια</td>
+          <td>τριακόσιοι άνθρωποι / τριακόσιες λέξεις / τριακόσια σπίτια</td>
+        </tr>
+        <tr>
+          <td>400</td>
+          <td>τετρακόσιοι</td>
+          <td>τετρακόσιες</td>
+          <td>τετρακόσια</td>
+          <td>τετρακόσια χιλιόμετρα (ср. род)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 style="margin:16px 0 10px;color:var(--accent)">Порядковые числительные</h4>
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:8px">
+      Порядковые согласуются с существительным по роду и числу: <strong style="color:var(--text)">ο πρώτος μαθητής</strong>, <strong style="color:var(--text)">η πρώτη μέρα</strong>, <strong style="color:var(--text)">το πρώτο μάθημα</strong>.
+    </p>
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7">
+      Ещё примеры: <strong style="color:var(--text)">δεύτερος όροφος</strong> (второй этаж), <strong style="color:var(--text)">τρίτη φορά</strong> (третий раз), <strong style="color:var(--text)">τέταρτο κεφάλαιο</strong> (четвёртая глава).
+    </p>
+  </div>
+</div>
+
+<!-- LEARN PAGE -->
+<div id="page-learn" class="page">
+  <div class="learn-controls">
+    <select id="group-select" onchange="resetLearn()">
+      <option value="-1">⭐ К повторению</option>
+      <option value="-2">🔀 Все числа</option>
+    </select>
+    <button onclick="resetLearn()">▶ Начать</button>
+  </div>
+  <div class="progress-bar-wrap"><div class="progress-bar" id="learn-progress-bar" style="width:0%"></div></div>
+  <div class="progress-label" id="learn-progress-label">0 / 0</div>
+
+  <div id="learn-main">
+    <div class="card-nav-wrap">
+      <button class="card-nav-btn" id="btn-prev" onclick="prevCard()" disabled>&#8592;</button>
+      <div class="flip-scene" onclick="flipCard()">
+        <div class="flip-card" id="flip-card">
+          <div class="flip-face flip-front">
+            <span class="card-tag" id="card-group-tag"></span>
+            <div class="numeral-big" id="card-digit">—</div>
+            <div class="flip-hint">нажми чтобы перевернуть</div>
+          </div>
+          <div class="flip-face flip-back">
+            <span class="card-tag" id="card-group-tag2"></span>
+            <div class="numeral-greek" id="card-greek">—</div>
+            <div class="numeral-transcription" id="card-transcription">—</div>
+            <div class="flip-hint">↑ нажми чтобы вернуть</div>
+          </div>
+        </div>
+      </div>
+      <button class="card-nav-btn" id="btn-next" onclick="nextCard()" disabled>&#8594;</button>
+    </div>
+    <div class="rating-btns">
+      <button class="btn-no" onclick="rate(0)">✗ Не знаю</button>
+      <button class="btn-maybe" onclick="rate(3)">~ Смутно</button>
+      <button class="btn-yes" onclick="rate(5)">✓ Знаю!</button>
+    </div>
+  </div>
+  <div id="learn-done" class="done-msg" style="display:none">
+    <div class="big">🎉</div>
+    <h2>Отличная работа!</h2>
+    <p id="done-stats"></p>
+    <button class="btn-primary" onclick="resetLearn()">Повторить ещё раз</button>
+  </div>
+</div>
+
+<!-- QUIZ PAGE -->
+<div id="page-quiz" class="page">
+  <div class="quiz-controls">
+    <select id="quiz-mode">
+      <option value="digit-to-greek">Цифра → Греч (найди слово)</option>
+      <option value="greek-to-digit">Греч → Цифра (найди число)</option>
+    </select>
+    <select id="quiz-group">
+      <option value="-2">Все числа</option>
+    </select>
+    <button onclick="startQuiz()">▶ Начать тест</button>
+  </div>
+  <div class="quiz-controls-sub">
+    <label class="quiz-exclude-label">
+      <input type="checkbox" id="quiz-exclude-known">
+      Исключить выученные
+    </label>
+  </div>
+  <div class="quiz-score">Правильно: <span id="quiz-correct">0</span> / <span id="quiz-total">0</span></div>
+  <div class="quiz-question">
+    <div class="quiz-q-label" id="quiz-mode-label">Выбери ответ</div>
+    <div class="quiz-q-text" id="quiz-q-text">Нажми "Начать тест"</div>
+    <div class="quiz-q-sub" id="quiz-q-sub"></div>
+  </div>
+  <div class="quiz-options" id="quiz-options"></div>
+  <div class="quiz-giveup-wrap" id="quiz-giveup-wrap" style="display:none">
+    <button class="btn-giveup" id="btn-giveup" onclick="giveUp()">✕ Не знаю</button>
+  </div>
+  <div class="next-btn-wrap" id="next-btn-wrap" style="display:none">
+    <button class="btn-primary" onclick="nextQuizQuestion()">Следующий →</button>
+  </div>
+</div>
+
+<!-- ORDINALS PAGE -->
+<div id="page-ordinals" class="page">
+  <div class="plan-header" style="padding:20px 0 16px">
+    <h1 style="font-size:1.4rem">Порядковые числительные</h1>
+    <p>Мужской / женский / средний род</p>
+  </div>
+
+  <!-- Ordinal cards -->
+  <div class="card-nav-wrap">
+    <button class="card-nav-btn" id="ord-btn-prev" onclick="prevOrd()" disabled>&#8592;</button>
+    <div class="flip-scene" onclick="flipOrdCard()">
+      <div class="flip-card" id="ord-flip-card">
+        <div class="flip-face flip-front">
+          <div class="ordinal-label" id="ord-front-label">1-й</div>
+          <div class="flip-hint">нажми чтобы перевернуть</div>
+        </div>
+        <div class="flip-face flip-back">
+          <div class="ordinal-forms" id="ord-back-forms">—</div>
+          <div class="ordinal-transcription" id="ord-back-transcription">—</div>
+          <div class="flip-hint">↑ нажми чтобы вернуть</div>
+        </div>
+      </div>
+    </div>
+    <button class="card-nav-btn" id="ord-btn-next" onclick="nextOrd()">&#8594;</button>
+  </div>
+  <div class="progress-label" id="ord-counter">1 / 15</div>
+
+  <hr class="ord-divider">
+
+  <!-- Ordinal quiz -->
+  <div class="ord-section-title">🎯 Тест порядковых</div>
+  <div class="quiz-controls" style="margin-bottom:16px">
+    <button onclick="startOrdQuiz()">▶ Начать</button>
+  </div>
+  <div class="quiz-score">Правильно: <span id="ord-quiz-correct">0</span> / <span id="ord-quiz-total">0</span></div>
+  <div class="quiz-question">
+    <div class="quiz-q-label">Как по-гречески? (муж. род)</div>
+    <div class="quiz-q-text" id="ord-quiz-q-text">Нажми "Начать"</div>
+    <div class="quiz-q-sub" id="ord-quiz-q-sub"></div>
+  </div>
+  <div class="quiz-options" id="ord-quiz-options"></div>
+  <div class="next-btn-wrap" id="ord-next-wrap" style="display:none">
+    <button class="btn-primary" onclick="nextOrdQuestion()">Следующий →</button>
+  </div>
+</div>
+
+<!-- PROGRESS PAGE -->
+<div id="page-progress" class="page">
+  <h2 style="margin-bottom:20px;color:var(--accent)">Прогресс</h2>
+  <div class="stats-grid">
+    <div class="stat-box"><div class="stat-num" style="color:var(--green)" id="stat-known">0</div><div class="stat-label">Знаю</div></div>
+    <div class="stat-box"><div class="stat-num" style="color:var(--yellow)" id="stat-learning">0</div><div class="stat-label">Учу</div></div>
+    <div class="stat-box"><div class="stat-num" style="color:var(--red)" id="stat-new">0</div><div class="stat-label">Новые</div></div>
+  </div>
+  <div class="batch-progress-list" id="batch-progress-list"></div>
+  <button class="btn-reset" onclick="resetAll()">🗑 Сбросить весь прогресс</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

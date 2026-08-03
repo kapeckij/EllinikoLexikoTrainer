@@ -27,13 +27,21 @@ function renderPlanTable() {
   const tbody = document.getElementById('plan-table-body');
   tbody.innerHTML = BATCHES.map((batch, idx) => `
     <tr class="plan-row" onclick="goToBatch(${batch.batchId})" title="Открыть карточки: ${batch.batchName}">
-      <td><strong>День ${idx + 1}</strong></td>
       <td class="batch-tag">Блок ${idx + 1}</td>
       <td>${batch.batchName}</td>
       <td>${batch.verbs.length} глаголов</td>
       <td style="color:var(--accent)">▶ Учить</td>
     </tr>
   `).join('');
+
+  // Fill dynamic badges from data
+  const totalVerbs = VERBS.length;
+  const totalBatches = BATCHES.length;
+  const avg = Math.round(totalVerbs / totalBatches);
+  document.getElementById('plan-title').textContent = `Обзор: ${totalVerbs} глаголов`;
+  document.getElementById('badge-total').textContent = totalVerbs;
+  document.getElementById('badge-batches').textContent = totalBatches;
+  document.getElementById('badge-avg').textContent = `~${avg}`;
 }
 
 function goToBatch(batchId) {
@@ -372,8 +380,7 @@ function updateProgressPage() {
   document.getElementById('stat-known').textContent = known;
   document.getElementById('stat-learning').textContent = learning;
   document.getElementById('stat-new').textContent = neww;
-  
-  const today = Date.now();
+
   const batchList = document.getElementById('batch-progress-list');
   batchList.innerHTML = '';
   for (let b = 0; b < BATCHES.length; b++) {
@@ -437,7 +444,6 @@ function giveUp() {
   quizTotalCount++;
   // disable all options and highlight correct
   document.querySelectorAll('.quiz-option').forEach(b => b.disabled = true);
-  const mode = document.getElementById('quiz-mode').value;
   const correctKey = quizCurrent.present;
   const correctBtn = Array.from(document.querySelectorAll('.quiz-option')).find(b => b.dataset.answer === correctKey);
   if (correctBtn) correctBtn.classList.add('correct');
