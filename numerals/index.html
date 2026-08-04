@@ -16,6 +16,7 @@
   <button onclick="showPage('learn')">🃏 Карточки</button>
   <button onclick="showPage('quiz')">🎯 Тест</button>
   <button onclick="showPage('ordinals')">🔢 Порядковые</button>
+  <button onclick="showPage('listening')">🎧 Аудирование</button>
   <button onclick="showPage('progress')">📊 Прогресс</button>
   <div class="lang-level-control">
     <span>Уровень:</span>
@@ -280,6 +281,33 @@
   <div class="quiz-options" id="ord-quiz-options"></div>
   <div class="next-btn-wrap" id="ord-next-wrap" style="display:none">
     <button class="btn-primary" onclick="nextOrdQuestion()">Следующий →</button>
+  </div>
+</div>
+
+<!-- LISTENING PAGE -->
+<div id="page-listening" class="page">
+  <h2 style="margin-bottom:16px;color:var(--accent)">Аудирование чисел</h2>
+  <div class="card listening-card">
+    <div class="listening-range-options" role="group" aria-label="Диапазон чисел">
+      <button class="listening-range-option active" data-max="99" onclick="selectListeningRange(99)">0–100</button>
+      <button class="listening-range-option" data-max="999" onclick="selectListeningRange(999)">0–1 тыс</button>
+      <button class="listening-range-option" data-max="999999" onclick="selectListeningRange(999999)">0–1 млн</button>
+      <button class="listening-range-option" data-max="999999999" onclick="selectListeningRange(999999999)">0–1 млрд</button>
+    </div>
+    <div class="listening-controls">
+      <button class="btn-primary" onclick="generateListeningNumber()">🎲 Сгенерировать число</button>
+      <button id="listening-play-btn" class="btn-primary" onclick="playListeningNumber()" disabled>▶️</button>
+    </div>
+
+    <details id="listening-number-spoiler" class="listening-spoiler" style="display:none">
+      <summary>Показать сгенерированное число</summary>
+      <div id="listening-generated-number" class="listening-number">—</div>
+    </details>
+
+    <div id="listening-answer-wrap" class="listening-answer-wrap" style="display:none">
+      <input id="listening-answer-input" class="listening-answer-input" type="text" inputmode="numeric" placeholder="Введи число">
+      <button class="btn-primary" onclick="checkListeningAnswer()">✔️ Проверить</button>
+    </div>
   </div>
 </div>
 

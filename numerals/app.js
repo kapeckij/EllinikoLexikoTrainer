@@ -76,11 +76,212 @@ function showPage(name) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
   document.getElementById('page-' + name).classList.add('active');
-  const pages = ['plan', 'learn', 'quiz', 'ordinals', 'progress'];
+  const pages = ['plan', 'learn', 'quiz', 'ordinals', 'listening', 'progress'];
   const btns = document.querySelectorAll('nav button');
   btns[pages.indexOf(name)].classList.add('active');
   if (name === 'progress') updateProgressPage();
   if (name === 'ordinals' && !ordInitialized) { ordInitialized = true; showOrdCard(); }
+}
+
+// ===== LISTENING PAGE =====
+let listeningCurrent = null;
+let speechVoiceCache = [];
+let speechVoiceReady = false;
+let listeningRangeMax = 99;
+
+const greekOnes = ['μηδέν', 'ένα', 'δύο', 'τρία', 'τέσσερα', 'πέντε', 'έξι', 'επτά', 'οκτώ', 'εννέα', 'δέκα', 'έντεκα', 'δώδεκα', 'δεκατρία', 'δεκατέσσερα', 'δεκαπέντε', 'δεκαέξι', 'δεκαεπτά', 'δεκαοκτώ', 'δεκαεννέα'];
+const greekTens = {
+  20: 'είκοσι',
+  30: 'τριάντα',
+  40: 'σαράντα',
+  50: 'πενήντα',
+  60: 'εξήντα',
+  70: 'εβδομήντα',
+  80: 'ογδόντα',
+  90: 'ενενήντα'
+};
+const greekHundreds = {
+  100: 'εκατό',
+  200: 'διακόσια',
+  300: 'τριακόσια',
+  400: 'τετρακόσια',
+  500: 'πεντακόσια',
+  600: 'εξακόσια',
+  700: 'επτακόσια',
+  800: 'οκτακόσια',
+  900: 'εννιακόσια'
+};
+
+function selectListeningRange(maxValue) {
+  listeningRangeMax = maxValue;
+  document.querySelectorAll('.listening-range-option').forEach(btn => {
+    btn.classList.toggle('active', Number(btn.dataset.max) === maxValue);
+  });
+}
+
+function getGreekNumberWord(value) {
+  const safeValue = Math.max(0, Math.floor(Number(value) || 0));
+  const exact = NUMBERS.find(n => n.digit === safeValue);
+  if (exact) return exact.greek;
+
+  if (safeValue < 20) return greekOnes[safeValue] || String(safeValue);
+
+  if (safeValue < 100) {
+    const tens = Math.floor(safeValue / 10) * 10;
+    const rem = safeValue % 10;
+    const tensWord = greekTens[tens] || '';
+    return rem ? `${tensWord} ${getGreekNumberWord(rem)}` : tensWord;
+  }
+
+  if (safeValue < 1000) {
+    const hundreds = Math.floor(safeValue / 100) * 100;
+    const rem = safeValue % 100;
+    const hundredWord = greekHundreds[hundreds] || '';
+    return rem ? `${hundredWord} ${getGreekNumberWord(rem)}` : hundredWord;
+  }
+
+  if (safeValue < 1000000) {
+    const thousands = Math.floor(safeValue / 1000);
+    const rem = safeValue % 1000;
+    const thousandsWord = thousands === 1 ? 'χίλια' : `${getGreekNumberWord(thousands)} χιλιάδες`;
+    return rem ? `${thousandsWord} ${getGreekNumberWord(rem)}` : thousandsWord;
+  }
+
+  if (safeValue < 1000000000) {
+    const millions = Math.floor(safeValue / 1000000);
+    const rem = safeValue % 1000000;
+    const millionsWord = millions === 1 ? 'ένα εκατομμύριο' : `${getGreekNumberWord(millions)} εκατομμύρια`;
+    return rem ? `${millionsWord} ${getGreekNumberWord(rem)}` : millionsWord;
+  }
+
+  const billions = Math.floor(safeValue / 1000000000);
+  const rem = safeValue % 1000000000;
+  const billionsWord = billions === 1 ? 'ένα δισεκατομμύριο' : `${getGreekNumberWord(billions)} δισεκατομμύρια`;
+  return rem ? `${billionsWord} ${getGreekNumberWord(rem)}` : billionsWord;
+}
+
+function refreshSpeechVoices() {
+  if (!('speechSynthesis' in window)) return [];
+  const voices = window.speechSynthesis.getVoices() || [];
+  speechVoiceCache = voices;
+  speechVoiceReady = voices.length > 0;
+  return speechVoiceCache;
+}
+
+function pickGreekVoice() {
+  const voices = refreshSpeechVoices();
+  const candidates = voices
+    .map(voice => {
+      const lang = String(voice.lang || '').toLowerCase();
+      const name = String(voice.name || '').toLowerCase();
+      let score = 0;
+      if (lang.startsWith('el')) score += 100;
+      if (lang.includes('el-gr') || lang.includes('el_gr')) score += 40;
+      if (lang.includes('greek') || name.includes('greek')) score += 25;
+      if (name.includes('ste') || name.includes('stefanos')) score += 15;
+      if (name.includes('syl') || name.includes('sylvie')) score += 10;
+      return { voice, score };
+    })
+    .filter(item => item.score > 0)
+    .sort((a, b) => b.score - a.score);
+
+  return candidates[0]?.voice || null;
+}
+
+function ensureSpeechVoices() {
+  if (!('speechSynthesis' in window)) return Promise.resolve(null);
+  if (speechVoiceReady) return Promise.resolve(pickGreekVoice());
+
+  return new Promise(resolve => {
+    const done = () => {
+      refreshSpeechVoices();
+      resolve(pickGreekVoice());
+    };
+
+    if (window.speechSynthesis.getVoices().length) {
+      done();
+      return;
+    }
+
+    window.speechSynthesis.onvoiceschanged = () => done();
+    setTimeout(done, 1200);
+  });
+}
+
+function speakGreekText(text) {
+  if (!('speechSynthesis' in window)) return Promise.resolve(false);
+
+  const normalized = String(text || '').trim();
+  if (!normalized) return Promise.resolve(false);
+
+  const speakNow = () => {
+    try {
+      window.speechSynthesis.cancel();
+      if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+      const utterance = new SpeechSynthesisUtterance(normalized);
+      utterance.lang = 'el-GR';
+      utterance.rate = 0.95;
+      utterance.pitch = 1.0;
+      utterance.volume = 1;
+      utterance.onerror = () => {};
+      const voice = pickGreekVoice();
+      if (voice) utterance.voice = voice;
+      window.speechSynthesis.speak(utterance);
+      return true;
+    } catch (err) {
+      console.warn('Speech synthesis failed:', err);
+      return false;
+    }
+  };
+
+  if (!speechVoiceReady) {
+    return ensureSpeechVoices().then(() => speakNow());
+  }
+
+  return Promise.resolve(speakNow());
+}
+
+function clearListeningAnswerState() {
+  const input = document.getElementById('listening-answer-input');
+  input.classList.remove('correct', 'wrong');
+}
+
+function generateListeningNumber() {
+  const safeMax = Math.max(0, Math.floor(listeningRangeMax || 99));
+  const digit = Math.floor(Math.random() * (safeMax + 1));
+  listeningCurrent = {
+    digit,
+    greek: getGreekNumberWord(digit),
+    transcription: ''
+  };
+  document.getElementById('listening-play-btn').disabled = false;
+  const spoiler = document.getElementById('listening-number-spoiler');
+  spoiler.style.display = '';
+  spoiler.open = false;
+  document.getElementById('listening-generated-number').textContent = String(listeningCurrent.digit);
+  const answerWrap = document.getElementById('listening-answer-wrap');
+  answerWrap.style.display = '';
+  const input = document.getElementById('listening-answer-input');
+  input.value = '';
+  clearListeningAnswerState();
+  input.focus();
+  void speakGreekText(listeningCurrent.greek);
+}
+
+function playListeningNumber() {
+  if (!listeningCurrent) return;
+  void speakGreekText(listeningCurrent.greek);
+}
+
+function checkListeningAnswer() {
+  if (!listeningCurrent) return;
+  const input = document.getElementById('listening-answer-input');
+  const value = input.value.trim();
+  clearListeningAnswerState();
+  const parsed = Number(value);
+  const isValidNumber = value !== '' && Number.isFinite(parsed);
+  const isCorrect = isValidNumber && parsed === listeningCurrent.digit;
+  input.classList.add(isCorrect ? 'correct' : 'wrong');
 }
 
 // ===== PLAN PAGE =====
@@ -463,8 +664,17 @@ window.checkOrdAnswer = checkOrdAnswer;
 window.resetGroupProgress = resetGroupProgress;
 window.resetAll = resetAll;
 window.onLanguageLevelChange = onLanguageLevelChange;
+window.selectListeningRange = selectListeningRange;
+window.generateListeningNumber = generateListeningNumber;
+window.playListeningNumber = playListeningNumber;
+window.checkListeningAnswer = checkListeningAnswer;
 
 // ===== INIT =====
+if ('speechSynthesis' in window) {
+  window.speechSynthesis.onvoiceschanged = refreshSpeechVoices;
+  refreshSpeechVoices();
+}
+
 initLanguageLevelControl();
 renderGroupOptions();
 renderPlanTable();

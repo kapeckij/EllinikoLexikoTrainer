@@ -159,6 +159,52 @@
   .btn-reset { padding: 8px 16px; border-radius: 8px; border: 1px solid var(--red); background: transparent; color: var(--red); cursor: pointer; font-size: 0.85rem; margin-top: 20px; }
   .btn-reset:hover { background: rgba(239,68,68,.1); }
 
+  /* LISTENING */
+  .listening-card { max-width: 620px; margin: 0 auto; }
+  .listening-range-options { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .listening-range-option {
+    border: 1px solid var(--border);
+    background: var(--card2);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all .15s ease;
+  }
+  .listening-range-option.active {
+    background: rgba(91,143,255,.16);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .listening-controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+  .listening-controls .btn-primary:disabled { opacity: .45; cursor: not-allowed; }
+  .listening-spoiler summary { cursor: pointer; color: var(--accent2); user-select: none; }
+  .listening-spoiler summary:hover { color: var(--accent); }
+  .listening-number { margin-top: 10px; font-size: 1.6rem; font-weight: 800; color: var(--accent); }
+  .listening-answer-wrap { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .listening-answer-input {
+    flex: 1;
+    min-width: 180px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card2);
+    color: var(--text);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .listening-answer-input.correct {
+    border-color: var(--green);
+    box-shadow: 0 0 0 2px rgba(34,197,94,.2);
+  }
+  .listening-answer-input.wrong {
+    border-color: var(--red);
+    box-shadow: 0 0 0 2px rgba(239,68,68,.2);
+  }
+
   @media (max-width: 768px) {
     nav { padding: 0 10px; flex-wrap: wrap; row-gap: 4px; }
     nav .logo { font-size: 1rem; padding: 10px 10px 10px 0; }
@@ -207,6 +253,8 @@
     .batch-row-right { flex-wrap: wrap; justify-content: flex-end; }
     .verb-status-row { flex-wrap: wrap; gap: 6px; }
     .verb-status-present { min-width: 0; }
+    .listening-number { font-size: 1.35rem; }
+    .listening-answer-input { min-width: 0; width: 100%; }
   }
 
   @media (max-width: 480px) {
@@ -219,4 +267,6 @@
     .ordinal-label { font-size: 1.8rem; }
     .rating-btns { flex-direction: column; }
     .rating-btns button { width: 100%; }
+    .listening-controls .btn-primary,
+    .listening-answer-wrap .btn-primary { width: 100%; }
   }
