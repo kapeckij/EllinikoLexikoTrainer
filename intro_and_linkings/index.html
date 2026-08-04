@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Греческие глаголы — Тренажёр</title>
+<title>Вводные и связки — Тренажёр</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-  <div class="logo">📚 Ρήματα</div>
+  <div class="logo">🔗 Συνδέσεις</div>
   <a class="nav-home" href="../index.html" title="На главную">🏠</a>
   <button class="active" onclick="showPage('plan')">📋 Обзор</button>
   <button onclick="showPage('learn')">📚 Карточки</button>
@@ -17,17 +17,16 @@
   <button onclick="showPage('progress')">📊 Прогресс</button>
 </nav>
 
-<!-- PLAN PAGE -->
 <div id="page-plan" class="page active">
   <div class="plan-header">
     <h1 id="plan-title">Обзор</h1>
-    <p>Тематические блоки для карточек, теста и системного повторения</p>
+    <p>Вводные и соединительные слова для уверенной связной речи на греческом</p>
   </div>
   <div class="badges">
-    <div class="badge">Всего глаголов: <span id="badge-total">—</span></div>
-    <div class="badge">Блоков: <span id="badge-batches">—</span></div>
-    <div class="badge">Средний размер блока: <span id="badge-avg">—</span></div>
-    <div class="badge">Три формы: <span>наст / буд / прош</span></div>
+    <div class="badge">Всего слов: <span id="badge-total">-</span></div>
+    <div class="badge">Блоков: <span id="badge-batches">-</span></div>
+    <div class="badge">Средний размер блока: <span id="badge-avg">-</span></div>
+    <div class="badge">Фокус: <span>связность речи</span></div>
   </div>
 
   <div class="card">
@@ -39,82 +38,21 @@
   </div>
 
   <div class="card" style="margin-top:16px">
-    <h3 style="margin-bottom:12px; color:var(--accent2)">🧠 Подсказки: будущее и аорист</h3>
-    <p style="margin-bottom:10px; color:var(--muted)">Ниже рабочая шпаргалка по образованию форм. Для тренажёра главное: видеть тип основы и применять нужную модель.</p>
-    <p style="margin-bottom:8px; color:var(--text)"><b>Будущее:</b> обычно <b>θα + форма будущего</b> (колонка «буд»), например: <b>γράφω → θα γράψω</b>.</p>
-    <p style="margin-bottom:8px; color:var(--text)"><b>Аорист (актив):</b> чаще всего строится через суффикс <b>-σα</b> и его фонетические варианты <b>-ψα / -ξα</b>.</p>
-
-    <table style="margin-top:8px">
-      <thead>
-        <tr>
-          <th>Тип основы</th>
-          <th>Изменение в аористе</th>
-          <th>Модель</th>
-          <th>Пример</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Регулярная основа</td>
-          <td>Добавляется σ</td>
-          <td>-σα</td>
-          <td>μιλάω → μίλησα</td>
-        </tr>
-        <tr>
-          <td>На π / β / φ</td>
-          <td>σ сливается с согласной</td>
-          <td>-ψα</td>
-          <td>γράφω → έγραψα</td>
-        </tr>
-        <tr>
-          <td>На κ / γ / χ</td>
-          <td>σ сливается с согласной</td>
-          <td>-ξα</td>
-          <td>δείχνω → έδειξα</td>
-        </tr>
-        <tr>
-          <td>На τ / δ / θ</td>
-          <td>Зубной часто выпадает перед σ</td>
-          <td>-σα</td>
-          <td>πατάω → πάτησα</td>
-        </tr>
-        <tr>
-          <td>Глаголы на -ζω</td>
-          <td>Часто смена основы + σ</td>
-          <td>-σα</td>
-          <td>διαβάζω → διάβασα</td>
-        </tr>
-        <tr>
-          <td>Глаголы на -σσω / -ττω</td>
-          <td>Переход к кс-сочетанию</td>
-          <td>-ξα</td>
-          <td>πράττω → έπραξα</td>
-        </tr>
-        <tr>
-          <td>Часть глаголов на -νω</td>
-          <td>Нерегулярная сильная основа</td>
-          <td>-ηνα / -υνα / и др.</td>
-          <td>μένω → έμεινα, πλένω → έπλυνα</td>
-        </tr>
-        <tr>
-          <td>Нерегулярные частотные</td>
-          <td>Форма не выводится по правилу</td>
-          <td>запоминать как пару</td>
-          <td>βλέπω → είδα, λέω → είπα</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p style="margin-top:10px; color:var(--muted)">Дополнительно: в 1-м лице ед. прошедшего часто появляется <b>ε-</b> (augment): <b>γράφω → έγραψα</b>. Отрицание: <b>δεν + аорист</b>.</p>
+    <h3 style="margin-bottom:12px; color:var(--accent2)">🧠 Как учить связки эффективно</h3>
+    <ul style="margin:0 0 0 18px; line-height:1.65; color:var(--text)">
+      <li>Учи слова в готовых шаблонах: <b>πρώτον ... δεύτερον ... τέλος</b>.</li>
+      <li>Тренируй 2 направления: <b>греческое слово -> перевод</b> и <b>перевод -> греческое слово</b>.</li>
+      <li>Повторяй вслух с примером из карточки, чтобы автоматизировать употребление в речи.</li>
+      <li>Группируй по функции: добавление, противопоставление, причина, вывод, время.</li>
+    </ul>
   </div>
 </div>
 
-<!-- LEARN PAGE -->
 <div id="page-learn" class="page">
   <div class="learn-controls">
     <select id="batch-select" onchange="resetLearn()">
       <option value="-1">⭐ К повторению сегодня</option>
-      <option value="-2">🔀 Все глаголы (перемешать)</option>
+      <option value="-2">📘 Все слова по порядку</option>
     </select>
     <button onclick="resetLearn()">▶ Начать</button>
   </div>
@@ -129,14 +67,14 @@
           <div class="flip-face flip-front">
             <span class="card-tag" id="card-batch-tag">Блок 1</span>
             <span class="card-level-badge" id="card-level-badge"></span>
-            <div class="verb-main" id="card-present">—</div>
-            <div class="verb-forms" id="card-forms">—</div>
-            <div class="verb-example-front" id="card-example">—</div>
+            <div class="verb-main" id="card-present">-</div>
+            <div class="verb-forms" id="card-note">вводное / связка</div>
+            <div class="verb-example-front" id="card-example">-</div>
             <div class="flip-hint">нажми чтобы перевернуть</div>
           </div>
           <div class="flip-face flip-back">
             <span class="card-tag" id="card-batch-tag2">Блок 1</span>
-            <div class="verb-translation" id="card-translation">—</div>
+            <div class="verb-translation" id="card-translation">-</div>
             <div class="flip-hint">↑ нажми чтобы вернуть</div>
           </div>
         </div>
@@ -157,13 +95,11 @@
   </div>
 </div>
 
-<!-- QUIZ PAGE -->
 <div id="page-quiz" class="page">
   <div class="quiz-controls">
     <select id="quiz-mode">
       <option value="gr-ru">Греч → Рус (узнать перевод)</option>
-      <option value="ru-gr">Рус → Греч (узнать глагол)</option>
-      <option value="forms">Формы (наст → прош/буд)</option>
+      <option value="ru-gr">Рус → Греч (вспомнить слово)</option>
     </select>
     <select id="quiz-batch">
       <option value="-2">Все блоки</option>
@@ -178,7 +114,7 @@
   </div>
   <div class="quiz-score">Правильно: <span id="quiz-correct">0</span> / <span id="quiz-total">0</span></div>
   <div class="quiz-question" id="quiz-question-box">
-    <div class="quiz-q-label" id="quiz-mode-label">Переведи глагол</div>
+    <div class="quiz-q-label" id="quiz-mode-label">Выбери правильный вариант</div>
     <div class="quiz-q-text" id="quiz-q-text">Нажми "Начать тест"</div>
     <div class="quiz-q-sub" id="quiz-q-sub"></div>
   </div>
@@ -191,13 +127,12 @@
   </div>
 </div>
 
-<!-- PROGRESS PAGE -->
 <div id="page-progress" class="page">
   <h2 style="margin-bottom:20px">Мой прогресс</h2>
   <div class="stats-grid">
     <div class="stat-box"><div class="stat-num" id="stat-known" style="color:var(--green)">0</div><div class="stat-label">Знаю уверенно</div></div>
     <div class="stat-box"><div class="stat-num" id="stat-learning" style="color:var(--yellow)">0</div><div class="stat-label">В процессе</div></div>
-    <div class="stat-box"><div class="stat-num" id="stat-new" style="color:var(--muted)">221</div><div class="stat-label">Ещё не видел</div></div>
+    <div class="stat-box"><div class="stat-num" id="stat-new" style="color:var(--muted)">0</div><div class="stat-label">Ещё не видел</div></div>
   </div>
   <div class="batch-progress-list" id="batch-progress-list"></div>
   <div style="text-align:center"><button class="btn-reset" onclick="resetAll()">🗑 Сбросить весь прогресс</button></div>

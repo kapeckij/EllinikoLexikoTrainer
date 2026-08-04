@@ -1,0 +1,1409 @@
+{
+  "batches": [
+    {
+      "batchId": "0",
+      "batchHeader": "Блок 1 — Порядок и структура речи",
+      "batchName": "Порядок и структура речи",
+      "words": [
+        {
+          "greekWord": "πρώτον",
+          "example": "Πρώτον, πρέπει να ξεκινήσουμε.",
+          "translation": "во-первых",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "δεύτερον",
+          "example": "Δεύτερον, ας συνεχίσουμε.",
+          "translation": "во-вторых",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "τρίτον",
+          "example": "Τρίτον, ας αποφασίσουμε.",
+          "translation": "в-третьих",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "τέλος",
+          "example": "Τέλος, σας ευχαριστώ.",
+          "translation": "в конце; наконец",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "τέλος πάντων",
+          "example": "Τέλος πάντων, ας συνεχίσουμε.",
+          "translation": "в общем",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "λοιπόν",
+          "example": "Λοιπόν, αρχίζουμε.",
+          "translation": "итак; ну",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "κλείνοντας",
+          "example": "Κλείνοντας, σας ευχαριστώ.",
+          "translation": "в заключение",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "έτσι λοιπόν",
+          "example": "Έτσι λοιπόν αρχίζουμε.",
+          "translation": "итак; таким образом",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "συνοψίζοντας",
+          "example": "Συνοψίζοντας, συμφωνούμε όλοι.",
+          "translation": "подводя итог",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "με λίγα λόγια",
+          "example": "Με λίγα λόγια, όλα πήγαν καλά.",
+          "translation": "короче говоря",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "1",
+      "batchHeader": "Блок 2 — Добавление и усиление мысли",
+      "batchName": "Добавление и усиление мысли",
+      "words": [
+        {
+          "greekWord": "και",
+          "example": "Μιλά ελληνικά και αγγλικά.",
+          "translation": "и",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "επίσης",
+          "example": "Επίσης, θέλω καφέ.",
+          "translation": "также",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "ακόμη",
+          "example": "Θέλω ακόμη χρόνο.",
+          "translation": "ещё; также",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "ακόμα",
+          "example": "Έχω ακόμα ελπίδα.",
+          "translation": "ещё",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "ακόμη και",
+          "example": "Ακόμη και αυτός ήρθε.",
+          "translation": "даже",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "επιπλέον",
+          "example": "Επιπλέον, είναι χρήσιμο.",
+          "translation": "кроме того",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "επιπρόσθετα",
+          "example": "Επιπρόσθετα, είναι φθηνό.",
+          "translation": "дополнительно",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "επιπροσθέτως",
+          "example": "Επιπροσθέτως, συμφωνώ.",
+          "translation": "кроме того",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "παράλληλα",
+          "example": "Παράλληλα εργάζεται.",
+          "translation": "одновременно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "άλλωστε",
+          "example": "Άλλωστε έχουμε χρόνο.",
+          "translation": "к тому же",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "εξάλλου",
+          "example": "Εξάλλου το ξέρεις.",
+          "translation": "кроме того",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "συν τοις άλλοις",
+          "example": "Συν τοις άλλοις βοηθά όλους.",
+          "translation": "помимо прочего",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "πέρα από αυτό",
+          "example": "Πέρα από αυτό, συμφωνώ.",
+          "translation": "кроме этого",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "εκτός αυτού",
+          "example": "Εκτός αυτού, είναι εύκολο.",
+          "translation": "помимо этого",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "πάνω απ' όλα",
+          "example": "Πάνω απ' όλα η υγεία.",
+          "translation": "прежде всего",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "όχι μόνο... αλλά και",
+          "example": "Όχι μόνο διάβασε αλλά και έγραψε την εργασία.",
+          "translation": "не только... но и",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "και... και",
+          "example": "Και ο Γιάννης και η Μαρία ήρθαν.",
+          "translation": "и... и",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "βέβαια και",
+          "example": "Βέβαια και μπορείς να έρθεις.",
+          "translation": "конечно же",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "2",
+      "batchHeader": "Блок 3 — Противопоставление и уступка",
+      "batchName": "Противопоставление и уступка",
+      "words": [
+        {
+          "greekWord": "αλλά",
+          "example": "Θέλω αλλά δεν μπορώ.",
+          "translation": "но",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "όμως",
+          "example": "Είναι δύσκολο, όμως αξίζει.",
+          "translation": "однако",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "ωστόσο",
+          "example": "Ωστόσο συνεχίσαμε.",
+          "translation": "тем не менее",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "παρόλα αυτά",
+          "example": "Έβρεχε· παρόλα αυτά βγήκαμε.",
+          "translation": "несмотря на это",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "παρ' όλα αυτά",
+          "example": "Παρ' όλα αυτά χαμογελούσε.",
+          "translation": "тем не менее",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "εντούτοις",
+          "example": "Εντούτοις συνέχισε.",
+          "translation": "тем не менее",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "αντίθετα",
+          "example": "Αντίθετα, εγώ έμεινα.",
+          "translation": "наоборот",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ενώ",
+          "example": "Εκείνος δουλεύει ενώ εγώ διαβάζω.",
+          "translation": "тогда как",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "αν και",
+          "example": "Αν και κουρασμένος, ήρθε.",
+          "translation": "хотя",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "μολονότι",
+          "example": "Μολονότι βιαζόταν, σταμάτησε.",
+          "translation": "хотя",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "παρότι",
+          "example": "Παρότι έβρεχε, βγήκαμε.",
+          "translation": "несмотря на то что",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "κι όμως",
+          "example": "Κι όμως τα κατάφερε.",
+          "translation": "и всё же",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "αντί να",
+          "example": "Αντί να διαβάζει, κοιμάται.",
+          "translation": "вместо того чтобы",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "είτε... είτε",
+          "example": "Είτε σήμερα είτε αύριο, θα έρθω.",
+          "translation": "либо... либо",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ούτε... ούτε",
+          "example": "Ούτε πίνει ούτε καπνίζει.",
+          "translation": "ни... ни",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "ή",
+          "example": "Θέλεις καφέ ή τσάι;",
+          "translation": "или",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "είτε",
+          "example": "Είτε μένεις είτε φεύγεις, πες μου.",
+          "translation": "либо",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "κυρίως όμως",
+          "example": "Κυρίως όμως πρέπει να είμαστε προσεκτικοί.",
+          "translation": "однако главным образом",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "από τη μία",
+          "example": "Από τη μία έχει δίκιο.",
+          "translation": "с одной стороны",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "από την άλλη",
+          "example": "Από την άλλη, είναι πολύ ακριβό.",
+          "translation": "с другой стороны",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "αφενός... αφετέρου",
+          "example": "Αφενός εργάζεται, αφετέρου σπουδάζει.",
+          "translation": "с одной стороны... с другой",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "διαφορετικά",
+          "example": "Βιάσου, διαφορετικά θα αργήσεις.",
+          "translation": "иначе",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "αλλιώς",
+          "example": "Έλα τώρα, αλλιώς θα φύγω.",
+          "translation": "иначе",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "εκτός από",
+          "example": "Εκτός από τον Νίκο, όλοι ήρθαν.",
+          "translation": "кроме",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "χωρίς",
+          "example": "Έφυγε χωρίς να μιλήσει.",
+          "translation": "без",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "παρά",
+          "example": "Παρά τις δυσκολίες, συνέχισε.",
+          "translation": "несмотря на",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "αντί",
+          "example": "Αντί καφέ πήρε τσάι.",
+          "translation": "вместо",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "τουναντίον",
+          "example": "Τουναντίον, έγινε καλύτερος.",
+          "translation": "напротив",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "τελικά όμως",
+          "example": "Τελικά όμως άλλαξε γνώμη.",
+          "translation": "но в итоге",
+          "languageLevel": "B2"
+        }
+      ]
+    },
+    {
+      "batchId": "3",
+      "batchHeader": "Блок 4 — Причина и обоснование",
+      "batchName": "Причина и обоснование",
+      "words": [
+        {
+          "greekWord": "γιατί",
+          "example": "Έφυγα γιατί άργησα.",
+          "translation": "потому что",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "επειδή",
+          "example": "Δεν ήρθα επειδή δούλευα.",
+          "translation": "потому что",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "αφού",
+          "example": "Αφού έφαγε, έφυγε.",
+          "translation": "после того как; поскольку",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "μιας και",
+          "example": "Μιας και είσαι εδώ, βοήθησέ με.",
+          "translation": "раз уж",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "καθώς",
+          "example": "Καθώς έβρεχε, μείναμε μέσα.",
+          "translation": "поскольку",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "λόγω",
+          "example": "Η πτήση ακυρώθηκε λόγω ομίχλης.",
+          "translation": "из-за",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "εξαιτίας",
+          "example": "Άργησε εξαιτίας της κίνησης.",
+          "translation": "из-за",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "χάρη σε",
+          "example": "Χάρη σε σένα τα καταφέραμε.",
+          "translation": "благодаря",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ένας ακόμη λόγος",
+          "example": "Ένας ακόμη λόγος είναι ο χρόνος.",
+          "translation": "ещё одна причина",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "κυρίως γιατί",
+          "example": "Κυρίως γιατί δεν είχε χρόνο.",
+          "translation": "главным образом потому что",
+          "languageLevel": "B2"
+        }
+      ]
+    },
+    {
+      "batchId": "4",
+      "batchHeader": "Блок 5 — Следствие и вывод",
+      "batchName": "Следствие и вывод",
+      "words": [
+        {
+          "greekWord": "γι' αυτό",
+          "example": "Άργησα, γι' αυτό έτρεξα.",
+          "translation": "поэтому",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "γι' αυτό το λόγο",
+          "example": "Γι' αυτό το λόγο συμφώνησα.",
+          "translation": "по этой причине",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "για τον λόγο αυτό",
+          "example": "Για τον λόγο αυτό έφυγε.",
+          "translation": "по этой причине",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "έτσι",
+          "example": "Έτσι όλα άλλαξαν.",
+          "translation": "таким образом",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "επομένως",
+          "example": "Επομένως, συνεχίζουμε.",
+          "translation": "следовательно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "συνεπώς",
+          "example": "Συνεπώς, συμφωνούμε.",
+          "translation": "следовательно",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "κατά συνέπεια",
+          "example": "Κατά συνέπεια, πέτυχε.",
+          "translation": "вследствие этого",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "ως αποτέλεσμα",
+          "example": "Ως αποτέλεσμα, κέρδισε.",
+          "translation": "в результате",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "άρα",
+          "example": "Άρα έχεις δίκιο.",
+          "translation": "значит",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "στο τέλος της ημέρας",
+          "example": "Στο τέλος της ημέρας αυτό έχει σημασία.",
+          "translation": "в конечном счёте",
+          "languageLevel": "B2"
+        }
+      ]
+    },
+    {
+      "batchId": "5",
+      "batchHeader": "Блок 6 — Время и последовательность (часть 1)",
+      "batchName": "Время и последовательность (часть 1)",
+      "words": [
+        {
+          "greekWord": "αρχικά",
+          "example": "Αρχικά δεν συμφωνούσα.",
+          "translation": "сначала, первоначально",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "στην αρχή",
+          "example": "Στην αρχή όλα ήταν εύκολα.",
+          "translation": "вначале",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "πρώτα",
+          "example": "Πρώτα διάβασε.",
+          "translation": "сначала",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "πρώτα απ' όλα",
+          "example": "Πρώτα απ' όλα άκουσέ με.",
+          "translation": "прежде всего",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "στη συνέχεια",
+          "example": "Στη συνέχεια πήγαμε σπίτι.",
+          "translation": "затем",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "έπειτα",
+          "example": "Έπειτα μιλήσαμε.",
+          "translation": "затем",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "μετά",
+          "example": "Μετά θα φάμε.",
+          "translation": "потом",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "κατόπιν",
+          "example": "Κατόπιν άρχισε η συνάντηση.",
+          "translation": "затем",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "εν συνεχεία",
+          "example": "Εν συνεχεία παρουσιάστηκαν τα σχέδια.",
+          "translation": "далее",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "αργότερα",
+          "example": "Θα μιλήσουμε αργότερα.",
+          "translation": "позже",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "τελικά",
+          "example": "Τελικά είχε δίκιο.",
+          "translation": "в итоге",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "όταν",
+          "example": "Όταν έρθεις, τηλεφώνησέ μου.",
+          "translation": "когда",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "μόλις",
+          "example": "Μόλις τελειώσω, θα φύγω.",
+          "translation": "как только",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "πριν",
+          "example": "Πριν φύγεις, κλείσε την πόρτα.",
+          "translation": "прежде чем",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "πριν από",
+          "example": "Ήρθε πριν από μένα.",
+          "translation": "до",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "μετά από",
+          "example": "Μετά από δύο ώρες έφυγε.",
+          "translation": "после",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "αφότου",
+          "example": "Αφότου γύρισε, ξεκουράστηκε.",
+          "translation": "после того как",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "μέχρι",
+          "example": "Περίμενε μέχρι αύριο.",
+          "translation": "до",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "μέχρι να",
+          "example": "Περίμενε μέχρι να έρθω.",
+          "translation": "пока не",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "6",
+      "batchHeader": "Блок 7 — Время и последовательность (часть 2)",
+      "batchName": "Время и последовательность (часть 2)",
+      "words": [
+        {
+          "greekWord": "ώσπου",
+          "example": "Περίμενε ώσπου να γυρίσει.",
+          "translation": "пока не",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "όσο",
+          "example": "Διάβαζε όσο περίμενε.",
+          "translation": "пока",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "εν τω μεταξύ",
+          "example": "Εν τω μεταξύ ετοίμασε καφέ.",
+          "translation": "тем временем",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "στο μεταξύ",
+          "example": "Στο μεταξύ άρχισε να βρέχει.",
+          "translation": "между тем",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ταυτόχρονα",
+          "example": "Ταυτόχρονα εργάζεται και σπουδάζει.",
+          "translation": "одновременно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "νωρίτερα",
+          "example": "Ήρθα νωρίτερα σήμερα.",
+          "translation": "раньше",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "κάθε φορά",
+          "example": "Κάθε φορά ξεχνά τα κλειδιά του.",
+          "translation": "каждый раз",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "την ίδια στιγμή",
+          "example": "Την ίδια στιγμή χτύπησε το τηλέφωνο.",
+          "translation": "в тот же момент",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "εκείνη τη στιγμή",
+          "example": "Εκείνη τη στιγμή κατάλαβα το λάθος μου.",
+          "translation": "в тот момент",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ως τότε",
+          "example": "Περίμενε ως τότε.",
+          "translation": "до тех пор",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "μέχρι τότε",
+          "example": "Μέχρι τότε όλα θα έχουν αλλάξει.",
+          "translation": "до тех пор",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "από τώρα και στο εξής",
+          "example": "Από τώρα και στο εξής θα διαβάζω κάθε μέρα.",
+          "translation": "отныне",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "ξαφνικά",
+          "example": "Ξαφνικά άρχισε να βρέχει.",
+          "translation": "внезапно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "στο τέλος",
+          "example": "Στο τέλος όλα πήγαν καλά.",
+          "translation": "в конце",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "ήδη",
+          "example": "Έχω ήδη τελειώσει.",
+          "translation": "уже",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "ακόμα όχι",
+          "example": "Ακόμα όχι, περιμένω.",
+          "translation": "ещё нет",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "για άλλη μία φορά",
+          "example": "Για άλλη μία φορά είχε δίκιο.",
+          "translation": "ещё раз",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "εκ νέου",
+          "example": "Θα το εξετάσουμε εκ νέου.",
+          "translation": "заново",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "κάθε τόσο",
+          "example": "Κάθε τόσο με παίρνει τηλέφωνο.",
+          "translation": "время от времени",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "7",
+      "batchHeader": "Блок 8 — Условие и цель",
+      "batchName": "Условие и цель",
+      "words": [
+        {
+          "greekWord": "αν",
+          "example": "Αν έρθεις, θα χαρώ.",
+          "translation": "если",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "εάν",
+          "example": "Εάν χρειαστεί, πες μου.",
+          "translation": "если",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "άμα",
+          "example": "Άμα θέλεις, έλα.",
+          "translation": "если",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "εκτός αν",
+          "example": "Θα πάω εκτός αν βρέξει.",
+          "translation": "если только не",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "σε περίπτωση που",
+          "example": "Σε περίπτωση που αργήσεις, πάρε τηλέφωνο.",
+          "translation": "в случае если",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "αρκεί να",
+          "example": "Αρκεί να προσπαθήσεις.",
+          "translation": "достаточно чтобы",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "για να",
+          "example": "Διαβάζω για να μάθω.",
+          "translation": "чтобы",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "ώστε να",
+          "example": "Μίλα δυνατά ώστε να σε ακούσουν.",
+          "translation": "чтобы",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "με σκοπό να",
+          "example": "Ήρθε με σκοπό να βοηθήσει.",
+          "translation": "с целью",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "προκειμένου να",
+          "example": "Έφυγε προκειμένου να ξεκουραστεί.",
+          "translation": "для того чтобы",
+          "languageLevel": "C1"
+        }
+      ]
+    },
+    {
+      "batchId": "8",
+      "batchHeader": "Блок 9 — Пояснение и примеры",
+      "batchName": "Пояснение и примеры",
+      "words": [
+        {
+          "greekWord": "καταρχάς",
+          "example": "Καταρχάς, ευχαριστώ όλους.",
+          "translation": "прежде всего",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "δηλαδή",
+          "example": "Είναι γιατρός, δηλαδή εργάζεται σε νοσοκομείο.",
+          "translation": "то есть",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "με άλλα λόγια",
+          "example": "Με άλλα λόγια, συμφωνούμε.",
+          "translation": "другими словами",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ειδικότερα",
+          "example": "Ειδικότερα, μιλάμε για παιδιά.",
+          "translation": "в частности",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "συγκεκριμένα",
+          "example": "Συγκεκριμένα, αύριο στις δέκα.",
+          "translation": "конкретно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ειδικά",
+          "example": "Ειδικά το καλοκαίρι.",
+          "translation": "особенно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "βασικά",
+          "example": "Βασικά έχεις δίκιο.",
+          "translation": "вообще-то; в основном",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "για παράδειγμα",
+          "example": "Για παράδειγμα, η Αθήνα.",
+          "translation": "например",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "παραδείγματος χάρη",
+          "example": "Παραδείγματος χάρη, αυτό.",
+          "translation": "например",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "όπως",
+          "example": "Κάν' το όπως σου είπα.",
+          "translation": "как; например",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "λ.χ.",
+          "example": "Λ.χ. η Κρήτη είναι νησί.",
+          "translation": "например",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "π.χ.",
+          "example": "Π.χ. μπορείς να πάρεις λεωφορείο.",
+          "translation": "например",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "πέρα από",
+          "example": "Πέρα από αυτό, δεν έχω κάτι άλλο.",
+          "translation": "помимо",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ακριβώς",
+          "example": "Αυτό είναι ακριβώς το πρόβλημα.",
+          "translation": "именно; точно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ειδικά για",
+          "example": "Αυτό είναι ειδικά για σένα.",
+          "translation": "специально для",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "πιο συγκεκριμένα",
+          "example": "Πιο συγκεκριμένα, μιλάω για την Αθήνα.",
+          "translation": "более конкретно",
+          "languageLevel": "B2"
+        }
+      ]
+    },
+    {
+      "batchId": "9",
+      "batchHeader": "Блок 10 — Мнение, уверенность, вероятность",
+      "batchName": "Мнение, уверенность, вероятность",
+      "words": [
+        {
+          "greekWord": "κατά τη γνώμη μου",
+          "example": "Κατά τη γνώμη μου έχει δίκιο.",
+          "translation": "по моему мнению",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "κατά την άποψή μου",
+          "example": "Κατά την άποψή μου είναι σωστό.",
+          "translation": "на мой взгляд",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "προσωπικά",
+          "example": "Προσωπικά διαφωνώ.",
+          "translation": "лично",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "νομίζω ότι",
+          "example": "Νομίζω ότι θα έρθει.",
+          "translation": "думаю",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "πιστεύω ότι",
+          "example": "Πιστεύω ότι μπορεί.",
+          "translation": "считаю",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "θεωρώ ότι",
+          "example": "Θεωρώ ότι είναι σημαντικό.",
+          "translation": "полагаю",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "βέβαια",
+          "example": "Βέβαια θα έρθω.",
+          "translation": "конечно",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "φυσικά",
+          "example": "Φυσικά συμφωνώ.",
+          "translation": "естественно",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "ασφαλώς",
+          "example": "Ασφαλώς μπορείς.",
+          "translation": "безусловно",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "πραγματικά",
+          "example": "Είναι πραγματικά καλός.",
+          "translation": "действительно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "πράγματι",
+          "example": "Πράγματι είχε δίκιο.",
+          "translation": "действительно",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "όντως",
+          "example": "Όντως ισχύει.",
+          "translation": "действительно",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "σίγουρα",
+          "example": "Σίγουρα θα τηλεφωνήσει.",
+          "translation": "наверняка",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ίσως",
+          "example": "Ίσως έρθει.",
+          "translation": "возможно",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "πιθανόν",
+          "example": "Πιθανόν να αργήσει.",
+          "translation": "вероятно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ενδεχομένως",
+          "example": "Ενδεχομένως να αλλάξει γνώμη.",
+          "translation": "возможно",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "μπορεί",
+          "example": "Μπορεί να βρέξει.",
+          "translation": "может быть",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "φαίνεται πως",
+          "example": "Φαίνεται πως έχει δίκιο.",
+          "translation": "кажется",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "μάλλον",
+          "example": "Μάλλον θα μείνει.",
+          "translation": "скорее всего",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "προφανώς",
+          "example": "Προφανώς έχει δίκιο.",
+          "translation": "очевидно",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "σαφώς",
+          "example": "Είναι σαφώς καλύτερο.",
+          "translation": "явно",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "βεβαίως",
+          "example": "Βεβαίως, περάστε.",
+          "translation": "конечно",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "μάλιστα",
+          "example": "Μάλιστα, έχετε δίκιο.",
+          "translation": "действительно; конечно",
+          "languageLevel": "B2"
+        }
+      ]
+    },
+    {
+      "batchId": "10",
+      "batchHeader": "Блок 11 — Частотность и разговорные маркеры",
+      "batchName": "Частотность и разговорные маркеры",
+      "words": [
+        {
+          "greekWord": "συνήθως",
+          "example": "Συνήθως ξυπνά νωρίς.",
+          "translation": "обычно",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "συχνά",
+          "example": "Πηγαίνει συχνά εκεί.",
+          "translation": "часто",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "μερικές φορές",
+          "example": "Μερικές φορές διαβάζει τη νύχτα.",
+          "translation": "иногда",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "πολλές φορές",
+          "example": "Πολλές φορές τον είδα.",
+          "translation": "много раз",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "αρκετές φορές",
+          "example": "Αρκετές φορές το δοκίμασα.",
+          "translation": "неоднократно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "τις περισσότερες φορές",
+          "example": "Τις περισσότερες φορές μένει σπίτι.",
+          "translation": "чаще всего",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "σπάνια",
+          "example": "Σπάνια τρώει έξω.",
+          "translation": "редко",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "σχεδόν πάντα",
+          "example": "Σχεδόν πάντα αργεί.",
+          "translation": "почти всегда",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "πάντα",
+          "example": "Πάντα χαμογελά.",
+          "translation": "всегда",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "ποτέ",
+          "example": "Δεν καπνίζει ποτέ.",
+          "translation": "никогда",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "καλά",
+          "example": "Καλά, ας φύγουμε.",
+          "translation": "ладно",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "εντάξει",
+          "example": "Εντάξει, συμφωνώ.",
+          "translation": "хорошо",
+          "languageLevel": "A1"
+        },
+        {
+          "greekWord": "ξέρεις",
+          "example": "Ξέρεις, δεν είναι εύκολο.",
+          "translation": "знаешь",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "κοίτα",
+          "example": "Κοίτα, αυτό είναι σημαντικό.",
+          "translation": "смотри",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "άκου",
+          "example": "Άκου με προσεκτικά.",
+          "translation": "послушай",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "να σου πω",
+          "example": "Να σου πω κάτι;",
+          "translation": "скажу тебе",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "έτσι κι αλλιώς",
+          "example": "Έτσι κι αλλιώς θα πάω.",
+          "translation": "всё равно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ούτως ή άλλως",
+          "example": "Ούτως ή άλλως τελείωσε.",
+          "translation": "в любом случае",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "ειλικρινά",
+          "example": "Ειλικρινά, δεν ξέρω.",
+          "translation": "честно говоря",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "κανονικά",
+          "example": "Κανονικά ξεκινάμε στις οκτώ.",
+          "translation": "обычно; по плану",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ως συνήθως",
+          "example": "Ως συνήθως άργησε.",
+          "translation": "как обычно",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "11",
+      "batchHeader": "Блок 12 — Сравнение и соотнесение темы (часть 1)",
+      "batchName": "Сравнение и соотнесение темы (часть 1)",
+      "words": [
+        {
+          "greekWord": "κυρίως",
+          "example": "Κυρίως διαβάζει το βράδυ.",
+          "translation": "главным образом",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "σαν",
+          "example": "Τρέχει σαν τον άνεμο.",
+          "translation": "как",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "όπως και",
+          "example": "Όπως και εσύ, συμφωνώ.",
+          "translation": "так же как",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "τόσο... όσο",
+          "example": "Είναι τόσο καλός όσο εσύ.",
+          "translation": "так же... как",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "περισσότερο",
+          "example": "Μου αρέσει περισσότερο.",
+          "translation": "больше",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "λιγότερο",
+          "example": "Δουλεύει λιγότερο.",
+          "translation": "меньше",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "σε σύγκριση με",
+          "example": "Σε σύγκριση με πέρσι είναι καλύτερα.",
+          "translation": "по сравнению с",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "αντίστοιχα",
+          "example": "Οι τιμές αυξήθηκαν αντίστοιχα.",
+          "translation": "соответственно",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "μόνο",
+          "example": "Μόνο εσύ το ξέρεις.",
+          "translation": "только",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "μόλις που",
+          "example": "Μόλις που πρόλαβα το λεωφορείο.",
+          "translation": "едва",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "σχεδόν",
+          "example": "Σχεδόν τελείωσα.",
+          "translation": "почти",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "περίπου",
+          "example": "Περίπου είκοσι άτομα ήρθαν.",
+          "translation": "примерно",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "τουλάχιστον",
+          "example": "Τουλάχιστον προσπάθησε.",
+          "translation": "по крайней мере",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "γενικά",
+          "example": "Γενικά συμφωνώ μαζί σου.",
+          "translation": "в целом",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "συνολικά",
+          "example": "Συνολικά ήταν καλή εμπειρία.",
+          "translation": "в целом",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "ιδίως",
+          "example": "Ιδίως τον χειμώνα κάνει κρύο.",
+          "translation": "особенно",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "ειδικά όταν",
+          "example": "Ειδικά όταν βρέχει, δεν οδηγώ.",
+          "translation": "особенно когда",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "12",
+      "batchHeader": "Блок 13 — Сравнение и соотнесение темы (часть 2)",
+      "batchName": "Сравнение и соотнесение темы (часть 2)",
+      "words": [
+        {
+          "greekWord": "σχετικά",
+          "example": "Σχετικά θα μιλήσουμε αύριο.",
+          "translation": "относительно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "σχετικά με",
+          "example": "Σχετικά με το θέμα, συμφωνώ.",
+          "translation": "относительно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "όσον αφορά",
+          "example": "Όσον αφορά το κόστος, είναι χαμηλό.",
+          "translation": "что касается",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "σε ό,τι αφορά",
+          "example": "Σε ό,τι αφορά την εργασία, όλα είναι έτοιμα.",
+          "translation": "что касается",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "αναφορικά με",
+          "example": "Αναφορικά με την πρόταση, έχω μία ιδέα.",
+          "translation": "относительно",
+          "languageLevel": "C1"
+        },
+        {
+          "greekWord": "σύμφωνα με",
+          "example": "Σύμφωνα με τον καθηγητή, η άσκηση είναι εύκολη.",
+          "translation": "согласно",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "μαζί με",
+          "example": "Ήρθε μαζί με την αδελφή του.",
+          "translation": "вместе с",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "το ίδιο",
+          "example": "Το ίδιο πιστεύω κι εγώ.",
+          "translation": "то же самое",
+          "languageLevel": "A2"
+        },
+        {
+          "greekWord": "παρόμοια",
+          "example": "Παρόμοια συνέβη και πέρσι.",
+          "translation": "аналогично",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "παρόμοια με",
+          "example": "Παρόμοια με την προηγούμενη άσκηση.",
+          "translation": "аналогично",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "σαν να",
+          "example": "Μιλάει σαν να τα ξέρει όλα.",
+          "translation": "как будто",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "λες και",
+          "example": "Λες και δεν με είδε.",
+          "translation": "словно",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "κάπως",
+          "example": "Σήμερα νιώθω κάπως καλύτερα.",
+          "translation": "как-то",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "όλο και",
+          "example": "Γίνεται όλο και καλύτερος.",
+          "translation": "всё более",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "όχι πια",
+          "example": "Δεν μένει εδώ όχι πια.",
+          "translation": "больше не",
+          "languageLevel": "B1"
+        },
+        {
+          "greekWord": "από εκεί και πέρα",
+          "example": "Από εκεί και πέρα, αποφασίζεις εσύ.",
+          "translation": "дальше; после этого",
+          "languageLevel": "B2"
+        },
+        {
+          "greekWord": "ιδιαίτερα",
+          "example": "Μου αρέσει ιδιαίτερα αυτό το βιβλίο.",
+          "translation": "особенно",
+          "languageLevel": "B1"
+        }
+      ]
+    }
+  ]
+}

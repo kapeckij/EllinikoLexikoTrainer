@@ -140,6 +140,11 @@ function showLearnCard() {
   const bname = 'Блок ' + (v.batch + 1);
   document.getElementById('card-batch-tag').textContent = bname;
   document.getElementById('card-batch-tag2').textContent = bname;
+
+  const lvl = v.languageLevel || '';
+  const badge = document.getElementById('card-level-badge');
+  badge.textContent = lvl;
+  badge.className = 'card-level-badge' + (lvl ? ' card-level-' + lvl : '');
   
   const fc = document.getElementById('flip-card');
   fc.classList.remove('flipped');
