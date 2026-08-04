@@ -5,6 +5,33 @@ fetch('data.json')
 const GROUPS  = DATA.groups;
 const NUMBERS = GROUPS.flatMap(g => g.numbers.map(n => ({ ...n, groupId: g.id })));
 const ORDINALS = DATA.ordinals;
+const LANGUAGE_LEVEL_KEY = 'gr_language_level';
+const LANGUAGE_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
+
+let currentLanguageLevel = 'C1';
+
+function normalizeLanguageLevel(level) {
+  const normalized = String(level || '').toUpperCase().trim();
+  return LANGUAGE_LEVELS.includes(normalized) ? normalized : null;
+}
+
+function loadLanguageLevel() {
+  const stored = normalizeLanguageLevel(localStorage.getItem(LANGUAGE_LEVEL_KEY));
+  return stored || 'C1';
+}
+
+function onLanguageLevelChange(level) {
+  currentLanguageLevel = normalizeLanguageLevel(level) || 'C1';
+  localStorage.setItem(LANGUAGE_LEVEL_KEY, currentLanguageLevel);
+  const select = document.getElementById('lang-level-select');
+  if (select) select.value = currentLanguageLevel;
+}
+
+function initLanguageLevelControl() {
+  currentLanguageLevel = loadLanguageLevel();
+  const select = document.getElementById('lang-level-select');
+  if (select) select.value = currentLanguageLevel;
+}
 
 // ===== HELPERS =====
 function escapeHtml(s) {
@@ -435,8 +462,10 @@ window.nextOrdQuestion = nextOrdQuestion;
 window.checkOrdAnswer = checkOrdAnswer;
 window.resetGroupProgress = resetGroupProgress;
 window.resetAll = resetAll;
+window.onLanguageLevelChange = onLanguageLevelChange;
 
 // ===== INIT =====
+initLanguageLevelControl();
 renderGroupOptions();
 renderPlanTable();
 resetLearn();

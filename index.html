@@ -8,6 +8,17 @@
 </head>
 <body>
 
+<div class="lang-level-floating">
+  <span>Уровень:</span>
+  <select id="lang-level-select" onchange="onLanguageLevelChange(this.value)">
+    <option value="A1">A1</option>
+    <option value="A2">A2</option>
+    <option value="B1">B1</option>
+    <option value="B2">B2</option>
+    <option value="C1" selected>C1</option>
+  </select>
+</div>
+
 <div class="home-wrap">
   <div class="home-header">
     <div class="flag">🇬🇷</div>
@@ -28,29 +39,10 @@
         <div class="category-name">Глаголы</div>
         <div class="category-desc">Настоящее, будущее, прошедшее время. Карточки, тест, прогресс.</div>
       </div>
-      <span class="category-count">221 слово</span>
+      <span class="category-count" id="count-verbs">-</span>
     </a>
-
-    <a href="numerals/index.html" class="category-card">
-      <span class="category-icon">🔢</span>
-      <div class="category-info">
-        <div class="category-name">Числительные</div>
-        <div class="category-desc">Количественные (0–1 000 000) и порядковые числительные. Цифра → Greek и обратно.</div>
-      </div>
-      <span class="category-count">44 + 15</span>
-    </a>
-
-    <a href="intro_and_linkings/index.html" class="category-card">
-      <span class="category-icon">🔗</span>
-      <div class="category-info">
-        <div class="category-name">Вводные и связки</div>
-        <div class="category-desc">Переходы, причины, выводы, противопоставление. Карточки, тест и прогресс.</div>
-      </div>
-      <span class="category-count">219 слов</span>
-    </a>
-
     <div class="category-card disabled">
-      <span class="category-icon">🏷️</span>
+      <span class="category-icon">🔤</span>
       <div class="category-info">
         <div class="category-name">Существительные</div>
         <div class="category-desc">Род, артикль, единственное и множественное число.</div>
@@ -66,13 +58,29 @@
       <span class="coming-soon">скоро</span>
     </div>
     <div class="category-card disabled">
-      <span class="category-icon">🔤</span>
+      <span class="category-icon">🏷️</span>
       <div class="category-info">
         <div class="category-name">Наречия</div>
         <div class="category-desc">Согласование с существительным и использование в предложениях.</div>
       </div>
       <span class="coming-soon">скоро</span>
     </div>
+    <a href="numerals/index.html" class="category-card">
+      <span class="category-icon">🔢</span>
+      <div class="category-info">
+        <div class="category-name">Числительные</div>
+        <div class="category-desc">Количественные (0–1 000 000) и порядковые числительные.</div>
+      </div>
+      <span class="category-count" id="count-numerals">-</span>
+    </a>
+    <a href="intro_and_linkings/index.html" class="category-card">
+      <span class="category-icon">🔗</span>
+      <div class="category-info">
+        <div class="category-name">Вводные и связки</div>
+        <div class="category-desc">Переходы, причины, выводы, противопоставление.</div>
+      </div>
+      <span class="category-count" id="count-intro-linkings">-</span>
+    </a>
     </div>
   </div>
 
@@ -160,14 +168,7 @@
   </div>
 </div>
 
-<script>
-function showHomeTab(name, btn) {
-  document.querySelectorAll('.home-tab').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.home-panel').forEach(p => p.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('home-panel-' + name).classList.add('active');
-}
-</script>
+<script src="app.js"></script>
 
 </body>
 </html>

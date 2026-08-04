@@ -16,6 +16,16 @@
   <button onclick="showPage('quiz')">🎯 Тест</button>
   <button onclick="showPage('ordinals')">🔢 Порядковые</button>
   <button onclick="showPage('progress')">📊 Прогресс</button>
+  <div class="lang-level-control">
+    <span>Уровень:</span>
+    <select id="lang-level-select" onchange="onLanguageLevelChange(this.value)">
+      <option value="A1">A1</option>
+      <option value="A2">A2</option>
+      <option value="B1">B1</option>
+      <option value="B2">B2</option>
+      <option value="C1" selected>C1</option>
+    </select>
+  </div>
 </nav>
 
 <!-- PLAN PAGE -->

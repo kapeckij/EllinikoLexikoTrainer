@@ -5,39 +5,147 @@ fetch('data.json')
 const BATCHES = TRAINER_DATA.batches;
 const VERBS = BATCHES.flatMap(batch => batch.verbs.map(v => ({ ...v, batch: Number(batch.batchId) })));
 const BATCH_NAMES = BATCHES.map(batch => batch.batchName);
+const LANGUAGE_LEVEL_KEY = 'gr_language_level';
+const LANGUAGE_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
+const LEVEL_RANK = { A1: 0, A2: 1, B1: 2, B2: 3, C1: 4 };
+
+let currentLanguageLevel = 'C1';
+
+function normalizeLanguageLevel(level) {
+  const normalized = String(level || '').toUpperCase().trim();
+  return LANGUAGE_LEVELS.includes(normalized) ? normalized : null;
+}
+
+function loadLanguageLevel() {
+  const stored = normalizeLanguageLevel(localStorage.getItem(LANGUAGE_LEVEL_KEY));
+  return stored || 'C1';
+}
+
+function saveLanguageLevel(level) {
+  localStorage.setItem(LANGUAGE_LEVEL_KEY, level);
+}
+
+function isVisibleByLanguageLevel(wordLevel) {
+  const normalizedWordLevel = normalizeLanguageLevel(wordLevel);
+  const normalizedSelectedLevel = normalizeLanguageLevel(currentLanguageLevel) || 'C1';
+  if (!normalizedWordLevel) return true;
+  return LEVEL_RANK[normalizedWordLevel] <= LEVEL_RANK[normalizedSelectedLevel];
+}
+
+function getVisibleVerbs() {
+  return VERBS.filter(v => isVisibleByLanguageLevel(v.languageLevel));
+}
 
 function renderBatchOptions() {
   const learnSelect = document.getElementById('batch-select');
   const quizSelect = document.getElementById('quiz-batch');
 
+  const currentLearnValue = learnSelect.value;
+  const currentQuizValue = quizSelect.value;
+
+  Array.from(learnSelect.querySelectorAll('option')).forEach(opt => {
+    if (opt.value !== '-1' && opt.value !== '-2') opt.remove();
+  });
+  Array.from(quizSelect.querySelectorAll('option')).forEach(opt => {
+    if (opt.value !== '-2') opt.remove();
+  });
+
+  const visibleVerbs = getVisibleVerbs();
+
   BATCHES.forEach(batch => {
+    const batchIdNum = Number(batch.batchId);
+    const visibleCount = visibleVerbs.filter(v => v.batch === batchIdNum).length;
+    if (visibleCount === 0) return;
+
     const optLearn = document.createElement('option');
     optLearn.value = batch.batchId;
-    optLearn.textContent = batch.batchHeader;
+    optLearn.textContent = `${batch.batchHeader} (${visibleCount})`;
     learnSelect.appendChild(optLearn);
 
     const optQuiz = document.createElement('option');
     optQuiz.value = batch.batchId;
-    optQuiz.textContent = batch.batchHeader;
+    optQuiz.textContent = `${batch.batchHeader} (${visibleCount})`;
     quizSelect.appendChild(optQuiz);
   });
+
+  if (!Array.from(learnSelect.options).some(o => o.value === currentLearnValue)) {
+    learnSelect.value = '-1';
+  } else {
+    learnSelect.value = currentLearnValue;
+  }
+
+  if (!Array.from(quizSelect.options).some(o => o.value === currentQuizValue)) {
+    quizSelect.value = '-2';
+  } else {
+    quizSelect.value = currentQuizValue;
+  }
+}
+
+function resetQuizUiState() {
+  quizPool = [];
+  quizCurrent = null;
+  quizAnswered = false;
+  quizCorrectCount = 0;
+  quizTotalCount = 0;
+  document.getElementById('quiz-correct').textContent = 0;
+  document.getElementById('quiz-total').textContent = 0;
+  document.getElementById('quiz-q-text').textContent = 'Нажмите «Начать тест»';
+  document.getElementById('quiz-q-sub').textContent = 'Выборка будет собрана по выбранному уровню языка.';
+  document.getElementById('quiz-options').innerHTML = '';
+  document.getElementById('next-btn-wrap').style.display = 'none';
+  document.getElementById('quiz-giveup-wrap').style.display = 'none';
+}
+
+function onLanguageLevelChange(level) {
+  currentLanguageLevel = normalizeLanguageLevel(level) || 'C1';
+  saveLanguageLevel(currentLanguageLevel);
+
+  const select = document.getElementById('lang-level-select');
+  if (select) select.value = currentLanguageLevel;
+
+  renderPlanTable();
+  renderBatchOptions();
+
+  const activePageId = document.querySelector('.page.active')?.id;
+  if (activePageId === 'page-learn') {
+    resetLearn();
+  } else if (activePageId === 'page-progress') {
+    updateProgressPage();
+  } else if (activePageId === 'page-quiz') {
+    resetQuizUiState();
+  }
+}
+
+function initLanguageLevelControl() {
+  currentLanguageLevel = loadLanguageLevel();
+  const select = document.getElementById('lang-level-select');
+  if (select) select.value = currentLanguageLevel;
 }
 
 function renderPlanTable() {
+  const visibleVerbs = getVisibleVerbs();
   const tbody = document.getElementById('plan-table-body');
-  tbody.innerHTML = BATCHES.map((batch, idx) => `
+  tbody.innerHTML = BATCHES.map((batch, idx) => {
+    const batchIdNum = Number(batch.batchId);
+    const visibleCount = visibleVerbs.filter(v => v.batch === batchIdNum).length;
+    if (visibleCount === 0) return '';
+    return `
     <tr class="plan-row" onclick="goToBatch(${batch.batchId})" title="Открыть карточки: ${batch.batchName}">
       <td class="batch-tag">Блок ${idx + 1}</td>
       <td>${batch.batchName}</td>
-      <td>${batch.verbs.length} глаголов</td>
+      <td>${visibleCount} глаголов</td>
       <td style="color:var(--accent)">▶ Учить</td>
     </tr>
-  `).join('');
+  `;
+  }).join('');
 
   // Fill dynamic badges from data
-  const totalVerbs = VERBS.length;
-  const totalBatches = BATCHES.length;
-  const avg = Math.round(totalVerbs / totalBatches);
+  const totalVerbs = visibleVerbs.length;
+  const totalBatches = BATCHES.filter(batch => {
+    const batchIdNum = Number(batch.batchId);
+    return visibleVerbs.some(v => v.batch === batchIdNum);
+  }).length;
+  const avg = totalBatches ? Math.round(totalVerbs / totalBatches) : 0;
   document.getElementById('plan-title').textContent = `Обзор: ${totalVerbs} глаголов`;
   document.getElementById('badge-total').textContent = totalVerbs;
   document.getElementById('badge-batches').textContent = totalBatches;
@@ -98,18 +206,19 @@ function getLearnQueue() {
   const val = parseInt(document.getElementById('batch-select').value);
   const progress = loadProgress();
   const today = Date.now();
+  const visibleVerbs = getVisibleVerbs();
   let pool;
   if (val === -1) {
     // Due for review today
-    pool = VERBS.filter((v, i) => {
-      const p = progress[i];
+    pool = visibleVerbs.filter(v => {
+      const p = progress[VERBS.indexOf(v)];
       if (!p || !p.seen) return true; // new = due
       return p.nextReview <= today;
     });
   } else if (val === -2) {
-    pool = [...VERBS];
+    pool = [...visibleVerbs];
   } else {
-    pool = VERBS.filter(v => v.batch === val);
+    pool = visibleVerbs.filter(v => v.batch === val);
   }
   // Shuffle
   return pool.map((v, i) => ({ v, origIdx: VERBS.indexOf(v) }))
@@ -264,7 +373,8 @@ function escapeHtml(s) {
 function startQuiz() {
   const bval = parseInt(document.getElementById('quiz-batch').value);
   const excludeKnown = document.getElementById('quiz-exclude-known').checked;
-  let pool = bval === -2 ? [...VERBS] : VERBS.filter(v => v.batch === bval);
+  const visibleVerbs = getVisibleVerbs();
+  let pool = bval === -2 ? [...visibleVerbs] : visibleVerbs.filter(v => v.batch === bval);
   if (excludeKnown) {
     const progress = loadProgress();
     pool = pool.filter(v => getCategory(progress[VERBS.indexOf(v)]) < 2);
@@ -298,7 +408,7 @@ function nextQuizQuestion() {
   quizCurrent = correct;
   
   // Get 3 wrong options
-  const wrongPool = VERBS.filter(v => v !== correct);
+  const wrongPool = getVisibleVerbs().filter(v => v !== correct);
   const wrongs = wrongPool.sort(() => Math.random() - .5).slice(0, 3);
   const options = [correct, ...wrongs].sort(() => Math.random() - .5);
   
@@ -376,7 +486,10 @@ function checkFormAnswer(btn, chosen, correct) {
 function updateProgressPage() {
   const progress = loadProgress();
   let known = 0, learning = 0, neww = 0;
-  VERBS.forEach((v, i) => {
+  const visibleVerbs = getVisibleVerbs();
+
+  visibleVerbs.forEach(v => {
+    const i = VERBS.indexOf(v);
     const p = progress[i];
     if (!p || !p.seen) neww++;
     else if (p.interval >= 7) known++;
@@ -389,8 +502,9 @@ function updateProgressPage() {
   const batchList = document.getElementById('batch-progress-list');
   batchList.innerHTML = '';
   for (let b = 0; b < BATCHES.length; b++) {
-    const bVerbs = VERBS.filter(v => v.batch === b);
+    const bVerbs = visibleVerbs.filter(v => v.batch === b);
     const bTotal = bVerbs.length;
+    if (bTotal === 0) continue;
     const bKnown = bVerbs.filter(v => {
       const p = progress[VERBS.indexOf(v)];
       return p && p.seen && p.interval >= 3;
@@ -433,8 +547,9 @@ function updateProgressPage() {
 function resetBatchProgress(batchId) {
   if (!confirm('Сбросить прогресс только для этого блока?')) return;
   const progress = loadProgress();
+  const visibleVerbs = getVisibleVerbs();
   VERBS.forEach((v, i) => {
-    if (v.batch === batchId) {
+    if (v.batch === batchId && visibleVerbs.includes(v)) {
       delete progress[i];
       quizStreaks[i] = 0;
     }
@@ -490,11 +605,14 @@ window.checkFormAnswer = checkFormAnswer;
 window.giveUp = giveUp;
 window.resetBatchProgress = resetBatchProgress;
 window.resetAll = resetAll;
+window.onLanguageLevelChange = onLanguageLevelChange;
 
 // Init
+initLanguageLevelControl();
 renderBatchOptions();
 renderPlanTable();
 resetLearn();
+resetQuizUiState();
 
   })
   .catch(err => console.error('Failed to load data.json:', err));
