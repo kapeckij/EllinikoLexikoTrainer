@@ -83,6 +83,15 @@ function showPage(name) {
   if (name === 'ordinals' && !ordInitialized) { ordInitialized = true; showOrdCard(); }
 }
 
+function resetFlipCardToFront(cardId) {
+  const card = document.getElementById(cardId);
+  if (!card) return;
+  card.classList.add('no-transition');
+  card.classList.remove('flipped');
+  void card.offsetWidth;
+  requestAnimationFrame(() => card.classList.remove('no-transition'));
+}
+
 // ===== LISTENING PAGE =====
 let listeningCurrent = null;
 let speechVoiceCache = [];
@@ -347,6 +356,8 @@ function resetLearn() {
 
 function showLearnCard() {
   if (learnIdx >= learnQueue.length) { showLearnDone(); return; }
+  resetFlipCardToFront('flip-card');
+  learnFlipped = false;
   const { n } = learnQueue[learnIdx];
   document.getElementById('card-digit').textContent = n.digit;
   document.getElementById('card-greek').textContent = n.greek;
@@ -354,8 +365,6 @@ function showLearnCard() {
   const gname = GROUPS.find(g => g.id === n.groupId)?.name || '';
   document.getElementById('card-group-tag').textContent = gname;
   document.getElementById('card-group-tag2').textContent = gname;
-  document.getElementById('flip-card').classList.remove('flipped');
-  learnFlipped = false;
   const total = learnQueue.length;
   document.getElementById('learn-progress-bar').style.width = Math.round(learnIdx / total * 100) + '%';
   document.getElementById('learn-progress-label').textContent = (learnIdx + 1) + ' / ' + total;
@@ -511,12 +520,12 @@ let ordQuizPool = [], ordQuizAnswered = false;
 let ordQuizCorrect = 0, ordQuizTotal = 0;
 
 function showOrdCard() {
+  resetFlipCardToFront('ord-flip-card');
+  ordFlipped = false;
   const ord = ORDINALS[ordIdx];
   document.getElementById('ord-front-label').textContent = ord.label;
   document.getElementById('ord-back-forms').textContent = ord.male + ' / ' + ord.female + ' / ' + ord.neuter;
   document.getElementById('ord-back-transcription').textContent = ord.transcription;
-  document.getElementById('ord-flip-card').classList.remove('flipped');
-  ordFlipped = false;
   document.getElementById('ord-counter').textContent = (ordIdx + 1) + ' / ' + ORDINALS.length;
   document.getElementById('ord-btn-prev').disabled = ordIdx === 0;
   document.getElementById('ord-btn-next').disabled = ordIdx >= ORDINALS.length - 1;

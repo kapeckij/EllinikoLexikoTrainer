@@ -196,6 +196,15 @@ function showPage(name) {
   if (name === 'progress') updateProgressPage();
 }
 
+function resetFlipCardToFront(cardId) {
+  const card = document.getElementById(cardId);
+  if (!card) return;
+  card.classList.add('no-transition');
+  card.classList.remove('flipped');
+  void card.offsetWidth;
+  requestAnimationFrame(() => card.classList.remove('no-transition'));
+}
+
 // ===== LEARN PAGE =====
 let learnQueue = [];
 let learnIdx = 0;
@@ -240,6 +249,8 @@ function showLearnCard() {
     showLearnDone();
     return;
   }
+  resetFlipCardToFront('flip-card');
+  learnFlipped = false;
   const item = learnQueue[learnIdx];
   const v = item.v;
   document.getElementById('card-present').textContent = v.present;
@@ -254,10 +265,6 @@ function showLearnCard() {
   const badge = document.getElementById('card-level-badge');
   badge.textContent = lvl;
   badge.className = 'card-level-badge' + (lvl ? ' card-level-' + lvl : '');
-  
-  const fc = document.getElementById('flip-card');
-  fc.classList.remove('flipped');
-  learnFlipped = false;
   
   const total = learnQueue.length;
   const pct = Math.round(learnIdx / total * 100);

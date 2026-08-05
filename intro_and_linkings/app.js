@@ -142,6 +142,15 @@ function showPage(name) {
   if (name === 'progress') updateProgressPage();
 }
 
+function resetFlipCardToFront(cardId) {
+  const card = document.getElementById(cardId);
+  if (!card) return;
+  card.classList.add('no-transition');
+  card.classList.remove('flipped');
+  void card.offsetWidth;
+  requestAnimationFrame(() => card.classList.remove('no-transition'));
+}
+
 function renderBatchOptions() {
   const learnSelect = document.getElementById('batch-select');
   const quizSelect = document.getElementById('quiz-batch');
@@ -300,6 +309,9 @@ function showLearnCard() {
     return;
   }
 
+  resetFlipCardToFront('flip-card');
+  learnFlipped = false;
+
   const { w } = learnQueue[learnIdx];
   document.getElementById('card-present').textContent = w.greekWord || '-';
   document.getElementById('card-example').textContent = w.example || '';
@@ -313,9 +325,6 @@ function showLearnCard() {
   const tag = w.batchRef?.batchHeader || 'Блок';
   document.getElementById('card-batch-tag').textContent = tag;
   document.getElementById('card-batch-tag2').textContent = tag;
-
-  document.getElementById('flip-card').classList.remove('flipped');
-  learnFlipped = false;
 
   const total = learnQueue.length;
   const pct = total ? Math.round(learnIdx / total * 100) : 0;
