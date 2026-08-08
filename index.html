@@ -29,6 +29,7 @@
 
   <div class="home-tabs">
     <button class="home-tab active" onclick="showHomeTab('catalog', this)">📚 Разделы</button>
+    <button class="home-tab" onclick="showHomeTab('search', this)">🔍 Поиск</button>
     <button class="home-tab" onclick="showHomeTab('tips', this)">🧠 Советы</button>
   </div>
 
@@ -42,30 +43,30 @@
       </div>
       <span class="category-count" id="count-verbs">-</span>
     </a>
-    <div class="category-card disabled">
+    <a href="nouns/index.html" class="category-card">
       <span class="category-icon">🔤</span>
       <div class="category-info">
         <div class="category-name">Существительные</div>
-        <div class="category-desc">Род, артикль, единственное и множественное число.</div>
+        <div class="category-desc">Род, артикль, три формы. Карточки, тест, прогресс.</div>
       </div>
-      <span class="coming-soon">скоро</span>
-    </div>
-    <div class="category-card disabled">
+      <span class="category-count" id="count-nouns">-</span>
+    </a>
+    <a href="adjectives/index.html" class="category-card">
       <span class="category-icon">🎨</span>
       <div class="category-info">
         <div class="category-name">Прилагательные</div>
         <div class="category-desc">Мужской, женский, средний род. Согласование с существительным.</div>
       </div>
-      <span class="coming-soon">скоро</span>
-    </div>
-    <div class="category-card disabled">
+      <span class="category-count" id="count-adjectives">-</span>
+    </a>
+    <a href="adverbs/index.html" class="category-card">
       <span class="category-icon">🏷️</span>
       <div class="category-info">
         <div class="category-name">Наречия</div>
-        <div class="category-desc">Согласование с существительным и использование в предложениях.</div>
+        <div class="category-desc">Использование в речи, сочетание с глаголами и прилагательными.</div>
       </div>
-      <span class="coming-soon">скоро</span>
-    </div>
+      <span class="category-count" id="count-adverbs">-</span>
+    </a>
     <a href="numerals/index.html" class="category-card">
       <span class="category-icon">🔢</span>
       <div class="category-info">
@@ -82,6 +83,25 @@
       </div>
       <span class="category-count" id="count-intro-linkings">-</span>
     </a>
+    </div>
+  </div>
+
+  <div class="home-panel" id="home-panel-search">
+    <div class="search-wrap">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Поиск на русском или греческом…"
+          autocomplete="off"
+          oninput="onSearchInput(this.value)"
+        >
+        <button class="search-clear" id="search-clear" onclick="clearSearch()" style="display:none">✕</button>
+      </div>
+      <div class="search-meta" id="search-meta"></div>
+      <div class="search-results" id="search-results"></div>
     </div>
   </div>
 

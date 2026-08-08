@@ -1,4 +1,4 @@
-fetch('data.json')
+fetch('../resources/numerals-data.json')
   .then(r => r.json())
   .then(DATA => {
 

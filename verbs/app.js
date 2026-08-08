@@ -1,9 +1,9 @@
-fetch('data.json')
+fetch('../resources/verbs-data.json')
   .then(r => r.json())
   .then(TRAINER_DATA => {
 
 const BATCHES = TRAINER_DATA.batches;
-const VERBS = BATCHES.flatMap(batch => batch.verbs.map(v => ({ ...v, batch: Number(batch.batchId) })));
+const VERBS = BATCHES.flatMap(batch => batch.words.map(v => ({ ...v, batch: Number(batch.batchId) })));
 const BATCH_NAMES = BATCHES.map(batch => batch.batchName);
 const LANGUAGE_LEVEL_KEY = 'gr_language_level';
 const LANGUAGE_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
@@ -388,7 +388,6 @@ function startQuiz() {
   }
   quizPool = pool.sort(() => Math.random() - .5);
   if (quizPool.length < 1) { alert('Блок выучен - отличная работа!'); return; }
-  quizPool = [...quizPool].sort(() => Math.random() - .5);
   quizCorrectCount = 0;
   quizTotalCount = 0;
   quizAnswered = false;
@@ -448,30 +447,12 @@ function nextQuizQuestion() {
     const wrongForms = wrongs.map(o => askFuture ? o.future : o.past);
     const allForms = [correctForm, ...wrongForms].sort(() => Math.random() - .5);
     optContainer.innerHTML = allForms.map(f => 
-      `<button class="quiz-option" data-answer="${escapeHtml(f)}" onclick="checkFormAnswer(this, '${f.replace(/'/g,"&#39;")}', '${correctForm.replace(/'/g,"&#39;")}')">${f}</button>`
+      `<button class="quiz-option" data-answer="${escapeHtml(f)}" onclick="checkAnswer(this, '${f.replace(/'/g,"&#39;")}', '${correctForm.replace(/'/g,"&#39;")}')">${f}</button>`
     ).join('');
   }
 }
 
 function checkAnswer(btn, chosen, correct) {
-  if (quizAnswered) return;
-  quizAnswered = true;
-  quizTotalCount++;
-  document.querySelectorAll('.quiz-option').forEach(b => b.disabled = true);
-  const isCorrect = chosen === correct;
-  if (isCorrect) { btn.classList.add('correct'); quizCorrectCount++; }
-  else {
-    btn.classList.add('wrong');
-    const correctBtn = Array.from(document.querySelectorAll('.quiz-option')).find(b => b.dataset.answer === correct);
-    if (correctBtn) correctBtn.classList.add('correct');
-  }
-  updateQuizSR(VERBS.indexOf(quizCurrent), isCorrect);
-  document.getElementById('quiz-correct').textContent = quizCorrectCount;
-  document.getElementById('quiz-total').textContent = quizTotalCount;
-  document.getElementById('next-btn-wrap').style.display = '';
-}
-
-function checkFormAnswer(btn, chosen, correct) {
   if (quizAnswered) return;
   quizAnswered = true;
   quizTotalCount++;
@@ -608,7 +589,6 @@ window.rate = rate;
 window.startQuiz = startQuiz;
 window.nextQuizQuestion = nextQuizQuestion;
 window.checkAnswer = checkAnswer;
-window.checkFormAnswer = checkFormAnswer;
 window.giveUp = giveUp;
 window.resetBatchProgress = resetBatchProgress;
 window.resetAll = resetAll;

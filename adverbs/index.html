@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Греческие наречия — Тренажёр</title>
+<link rel="icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Ctext y="50" font-size="50"%3E%F0%9F%87%AC%F0%9F%87%B7%3C/text%3E%3C/svg%3E'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">🏷️ Επιρρήματα</div>
+  <a class="nav-home" href="../index.html" title="На главную">🏠</a>
+  <button class="active" onclick="showPage('plan')">📋 Обзор</button>
+  <button onclick="showPage('learn')">🃏 Карточки</button>
+  <button onclick="showPage('quiz')">🎯 Тест</button>
+  <button onclick="showPage('progress')">📊 Прогресс</button>
+  <div class="lang-level-control">
+    <span>Уровень:</span>
+    <select id="lang-level-select" onchange="onLanguageLevelChange(this.value)">
+      <option value="A1">A1</option>
+      <option value="A2">A2</option>
+      <option value="B1">B1</option>
+      <option value="B2">B2</option>
+      <option value="C1" selected>C1</option>
+    </select>
+  </div>
+</nav>
+
+<!-- PLAN PAGE -->
+<div id="page-plan" class="page active">
+  <div class="plan-header">
+    <h1 id="plan-title">Обзор</h1>
+    <p>Тематические блоки для карточек, теста и системного повторения</p>
+  </div>
+  <div class="badges">
+    <div class="badge">Всего слов: <span id="badge-total">—</span></div>
+    <div class="badge">Блоков: <span id="badge-batches">—</span></div>
+    <div class="badge">Средний размер блока: <span id="badge-avg">—</span></div>
+    <div class="badge">Тип слов: <span>наречия</span></div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom:16px; color:var(--accent2)">📚 Тематические блоки</h3>
+    <table>
+      <thead><tr><th>Блок</th><th>Тема</th><th>Объём</th><th>Активность</th></tr></thead>
+      <tbody id="plan-table-body"></tbody>
+    </table>
+  </div>
+
+  <!-- USAGE REFERENCE -->
+  <div class="card" style="margin-top:16px">
+    <h3 style="margin-bottom:12px; color:var(--accent2)">🧠 Использование наречий в греческом</h3>
+    <p style="color:var(--muted); font-size:0.85rem; margin-bottom:14px; line-height:1.6">
+      Наречия в греческом не изменяются по роду, числу или падежу.
+      Они уточняют глаголы, прилагательные или другие наречия.
+    </p>
+
+    <div class="ref-section">
+      <h4>Наречие + глагол</h4>
+      <div class="ref-table-wrap">
+        <table>
+          <thead><tr><th>Наречие</th><th>Перевод</th><th>Пример</th><th>Перевод</th></tr></thead>
+          <tbody>
+            <tr><td class="td-gr">καλά</td><td class="td-ru">хорошо</td><td class="td-ex">Μιλάω καλά ελληνικά.</td><td class="td-ru">Я хорошо говорю по-гречески.</td></tr>
+            <tr><td class="td-gr">γρήγορα</td><td class="td-ru">быстро</td><td class="td-ex">Τρέχει γρήγορα.</td><td class="td-ru">Он бежит быстро.</td></tr>
+            <tr><td class="td-gr">αργά</td><td class="td-ru">медленно / поздно</td><td class="td-ex">Μιλά αργά.</td><td class="td-ru">Она говорит медленно.</td></tr>
+            <tr><td class="td-gr">πάντα</td><td class="td-ru">всегда</td><td class="td-ex">Πάντα λέω την αλήθεια.</td><td class="td-ru">Я всегда говорю правду.</td></tr>
+            <tr><td class="td-gr">ποτέ</td><td class="td-ru">никогда</td><td class="td-ex">Δεν αργώ ποτέ.</td><td class="td-ru">Я никогда не опаздываю.</td></tr>
+            <tr><td class="td-gr">ήδη</td><td class="td-ru">уже</td><td class="td-ex">Έχω ήδη φάει.</td><td class="td-ru">Я уже поел.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="ref-section">
+      <h4>Наречие + прилагательное (усиление/ослабление)</h4>
+      <div class="ref-table-wrap">
+        <table>
+          <thead><tr><th>Наречие</th><th>Перевод</th><th>Пример</th><th>Перевод</th></tr></thead>
+          <tbody>
+            <tr><td class="td-gr">πολύ</td><td class="td-ru">очень</td><td class="td-ex">Είναι πολύ ωραία.</td><td class="td-ru">Она очень красивая.</td></tr>
+            <tr><td class="td-gr">αρκετά</td><td class="td-ru">достаточно</td><td class="td-ex">Είναι αρκετά καλός.</td><td class="td-ru">Он достаточно хороший.</td></tr>
+            <tr><td class="td-gr">λίγο</td><td class="td-ru">немного</td><td class="td-ex">Είναι λίγο κουρασμένος.</td><td class="td-ru">Он немного устал.</td></tr>
+            <tr><td class="td-gr">τόσο</td><td class="td-ru">так, настолько</td><td class="td-ex">Είναι τόσο μεγάλο!</td><td class="td-ru">Оно такое большое!</td></tr>
+            <tr><td class="td-gr">αρκετά</td><td class="td-ru">довольно</td><td class="td-ex">Μιλά αρκετά καλά.</td><td class="td-ru">Говорит довольно хорошо.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="ref-section">
+      <h4>Наречия времени — позиция в предложении</h4>
+      <div class="ref-table-wrap">
+        <table>
+          <thead><tr><th>Наречие</th><th>Перевод</th><th>Позиция</th><th>Пример</th></tr></thead>
+          <tbody>
+            <tr><td class="td-gr">σήμερα</td><td class="td-ru">сегодня</td><td>начало или конец</td><td class="td-ex">Σήμερα έχω μάθημα. / Έχω μάθημα σήμερα.</td></tr>
+            <tr><td class="td-gr">χθες</td><td class="td-ru">вчера</td><td>начало или конец</td><td class="td-ex">Χθες πήγα στην αγορά.</td></tr>
+            <tr><td class="td-gr">αύριο</td><td class="td-ru">завтра</td><td>начало или конец</td><td class="td-ex">Αύριο θα πάμε εκδρομή.</td></tr>
+            <tr><td class="td-gr">τώρα</td><td class="td-ru">сейчас</td><td>после глагола</td><td class="td-ex">Διαβάζω τώρα.</td></tr>
+            <tr><td class="td-gr">ήδη</td><td class="td-ru">уже</td><td>между aux и главным гл.</td><td class="td-ex">Έχω ήδη τελειώσει.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="ref-section">
+      <h4>Наречия места</h4>
+      <div class="ref-table-wrap">
+        <table>
+          <thead><tr><th>Наречие</th><th>Перевод</th><th>Пример</th></tr></thead>
+          <tbody>
+            <tr><td class="td-gr">εδώ</td><td class="td-ru">здесь</td><td class="td-ex">Μένω εδώ.</td></tr>
+            <tr><td class="td-gr">εκεί</td><td class="td-ru">там</td><td class="td-ex">Πήγαμε εκεί χθες.</td></tr>
+            <tr><td class="td-gr">παντού</td><td class="td-ru">везде</td><td class="td-ex">Ψάχνω παντού τα κλειδιά μου.</td></tr>
+            <tr><td class="td-gr">κάπου</td><td class="td-ru">где-то</td><td class="td-ex">Τα άφησα κάπου.</td></tr>
+            <tr><td class="td-gr">πουθενά</td><td class="td-ru">нигде</td><td class="td-ex">Δεν τα βρίσκω πουθενά.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="ref-section">
+      <h4>Наречие + наречие (двойное уточнение)</h4>
+      <p style="color:var(--muted); font-size:0.82rem; line-height:1.6; margin-bottom:8px">
+        Наречие может модифицировать другое наречие, обычно стоя перед ним:
+      </p>
+      <div class="ref-table-wrap">
+        <table>
+          <thead><tr><th>Конструкция</th><th>Пример</th><th>Перевод</th></tr></thead>
+          <tbody>
+            <tr><td class="td-gr">πολύ + наречие</td><td class="td-ex">Μιλάει πολύ γρήγορα.</td><td class="td-ru">Говорит очень быстро.</td></tr>
+            <tr><td class="td-gr">αρκετά + наречие</td><td class="td-ex">Φτάνει αρκετά αργά.</td><td class="td-ru">Приходит достаточно поздно.</td></tr>
+            <tr><td class="td-gr">τόσο + наречие</td><td class="td-ex">Τρέχει τόσο αργά;</td><td class="td-ru">Неужели бегает так медленно?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="ref-section">
+      <h4>Отрицание с наречиями</h4>
+      <p style="color:var(--muted); font-size:0.82rem; line-height:1.6; margin-bottom:8px">
+        В греческом двойное отрицание — норма: <b style="color:var(--text)">δεν … ποτέ</b>, <b style="color:var(--text)">δεν … πουθενά</b>.
+      </p>
+      <div class="ref-table-wrap">
+        <table>
+          <thead><tr><th>Конструкция</th><th>Пример</th><th>Перевод</th></tr></thead>
+          <tbody>
+            <tr><td class="td-gr">δεν … ποτέ</td><td class="td-ex">Δεν πηγαίνω ποτέ εκεί.</td><td class="td-ru">Я никогда туда не хожу.</td></tr>
+            <tr><td class="td-gr">δεν … πουθενά</td><td class="td-ex">Δεν πάω πουθενά σήμερα.</td><td class="td-ru">Я никуда не иду сегодня.</td></tr>
+            <tr><td class="td-gr">δεν … καθόλου</td><td class="td-ex">Δεν καταλαβαίνω καθόλου.</td><td class="td-ru">Я совсем не понимаю.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEARN PAGE -->
+<div id="page-learn" class="page">
+  <div class="learn-controls">
+    <select id="batch-select" onchange="resetLearn()">
+      <option value="-1">⭐ К повторению сегодня</option>
+      <option value="-2">🔀 Все слова (перемешать)</option>
+    </select>
+    <button onclick="resetLearn()">▶ Начать</button>
+  </div>
+  <div class="progress-bar-wrap"><div class="progress-bar" id="learn-progress-bar" style="width:0%"></div></div>
+  <div class="progress-label" id="learn-progress-label">0 / 0</div>
+
+  <div id="learn-main">
+    <div class="card-nav-wrap">
+      <button class="card-nav-btn" id="btn-prev" onclick="prevCard()" title="Предыдущая">&#8592;</button>
+      <div class="flip-scene" onclick="flipCard()">
+        <div class="flip-card" id="flip-card">
+          <div class="flip-face flip-front">
+            <span class="card-tag" id="card-batch-tag">Блок 1</span>
+            <span class="card-level-badge" id="card-level-badge"></span>
+            <div class="word-main" id="card-greek">—</div>
+            <div class="word-example" id="card-example">—</div>
+            <div class="flip-hint">нажми чтобы перевернуть</div>
+          </div>
+          <div class="flip-face flip-back">
+            <span class="card-tag" id="card-batch-tag2">Блок 1</span>
+            <div class="word-translation" id="card-translation">—</div>
+            <div class="flip-hint">↑ нажми чтобы вернуть</div>
+          </div>
+        </div>
+      </div>
+      <button class="card-nav-btn" id="btn-next" onclick="nextCard()" title="Следующая">&#8594;</button>
+    </div>
+    <div class="rating-btns">
+      <button class="btn-no" onclick="rate(0)">✗ Не знаю</button>
+      <button class="btn-maybe" onclick="rate(3)">~ Смутно</button>
+      <button class="btn-yes" onclick="rate(5)">✓ Знаю!</button>
+    </div>
+  </div>
+  <div id="learn-done" class="done-msg" style="display:none">
+    <div class="big">🎉</div>
+    <h2>Отличная работа!</h2>
+    <p id="done-stats">Пройдено карточек: 0</p>
+    <button class="btn-primary" onclick="resetLearn()">Повторить ещё раз</button>
+  </div>
+</div>
+
+<!-- QUIZ PAGE -->
+<div id="page-quiz" class="page">
+  <div class="quiz-controls">
+    <select id="quiz-mode">
+      <option value="gr-ru">Греч → Рус (перевод)</option>
+      <option value="ru-gr">Рус → Греч (выбрать слово)</option>
+    </select>
+    <select id="quiz-batch">
+      <option value="-2">Все блоки</option>
+    </select>
+    <button onclick="startQuiz()">▶ Начать тест</button>
+  </div>
+  <div class="quiz-controls-sub">
+    <label class="quiz-exclude-label">
+      <input type="checkbox" id="quiz-exclude-known">
+      Исключить выученные
+    </label>
+  </div>
+  <div class="quiz-score">Правильно: <span id="quiz-correct">0</span> / <span id="quiz-total">0</span></div>
+  <div class="quiz-question" id="quiz-question-box">
+    <div class="quiz-q-label" id="quiz-mode-label">Переведи слово</div>
+    <div class="quiz-q-text" id="quiz-q-text">Нажми «Начать тест»</div>
+    <div class="quiz-q-sub" id="quiz-q-sub"></div>
+  </div>
+  <div class="quiz-options" id="quiz-options"></div>
+  <div class="quiz-giveup-wrap" id="quiz-giveup-wrap" style="display:none">
+    <button class="btn-giveup" id="btn-giveup" onclick="giveUp()">✕ Не знаю</button>
+  </div>
+  <div class="next-btn-wrap" id="next-btn-wrap" style="display:none">
+    <button class="btn-primary" onclick="nextQuizQuestion()">Следующий →</button>
+  </div>
+</div>
+
+<!-- PROGRESS PAGE -->
+<div id="page-progress" class="page">
+  <h2 style="margin-bottom:20px">Мой прогресс</h2>
+  <div class="stats-grid">
+    <div class="stat-box"><div class="stat-num" id="stat-known" style="color:var(--green)">0</div><div class="stat-label">Знаю уверенно</div></div>
+    <div class="stat-box"><div class="stat-num" id="stat-learning" style="color:var(--yellow)">0</div><div class="stat-label">В процессе</div></div>
+    <div class="stat-box"><div class="stat-num" id="stat-new" style="color:var(--muted)">0</div><div class="stat-label">Ещё не видел</div></div>
+  </div>
+  <div class="batch-progress-list" id="batch-progress-list"></div>
+  <div style="text-align:center"><button class="btn-reset" onclick="resetAll()">🗑 Сбросить весь прогресс</button></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

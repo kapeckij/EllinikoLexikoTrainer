@@ -5,6 +5,9 @@ const LEVEL_RANK = { A1: 0, A2: 1, B1: 2, B2: 3, C1: 4 };
 let verbsData = null;
 let numeralsData = null;
 let introLinkingsData = null;
+let nounsData = null;
+let adjectivesData = null;
+let adverbsData = null;
 
 function normalizeLanguageLevel(level) {
   const normalized = String(level || '').toUpperCase().trim();
@@ -24,41 +27,152 @@ function setCount(id, value) {
 }
 
 function updateCategoryCounts() {
-  const selectedLevel = normalizeLanguageLevel(localStorage.getItem(LANGUAGE_LEVEL_KEY)) || 'C1';
+  const level = normalizeLanguageLevel(localStorage.getItem(LANGUAGE_LEVEL_KEY)) || 'C1';
+  const visible = words => words.filter(w => isVisibleByLanguageLevel(w.languageLevel, level)).length;
 
-  if (verbsData && Array.isArray(verbsData.batches)) {
-    const verbs = verbsData.batches.flatMap(batch => (batch.verbs || []));
-    const visibleVerbs = verbs.filter(v => isVisibleByLanguageLevel(v.languageLevel, selectedLevel));
-    setCount('count-verbs', visibleVerbs.length + ' слов');
-  }
+  const batchSources = [
+    { data: verbsData,         id: 'count-verbs' },
+    { data: introLinkingsData, id: 'count-intro-linkings' },
+    { data: adverbsData,       id: 'count-adverbs' },
+    { data: adjectivesData,    id: 'count-adjectives' },
+    { data: nounsData,         id: 'count-nouns' },
+  ];
 
-  if (introLinkingsData && Array.isArray(introLinkingsData.batches)) {
-    const words = introLinkingsData.batches.flatMap(batch => (batch.words || []));
-    const visibleWords = words.filter(w => isVisibleByLanguageLevel(w.languageLevel, selectedLevel));
-    setCount('count-intro-linkings', visibleWords.length + ' слов');
-  }
+  batchSources.forEach(({ data, id }) => {
+    if (data && Array.isArray(data.batches)) {
+      setCount(id, visible(data.batches.flatMap(b => b.words || [])) + ' слов');
+    }
+  });
 
   if (numeralsData) {
-    const quantitative = (numeralsData.groups || []).flatMap(group => (group.numbers || []));
+    const quantitative = (numeralsData.groups || []).flatMap(g => g.numbers || []);
     const ordinals = numeralsData.ordinals || [];
-    const visibleQuantitative = quantitative.filter(n => isVisibleByLanguageLevel(n.languageLevel, selectedLevel));
-    const visibleOrdinals = ordinals.filter(o => isVisibleByLanguageLevel(o.languageLevel, selectedLevel));
-    setCount('count-numerals', visibleQuantitative.length + ' + ' + visibleOrdinals.length);
+    setCount('count-numerals',
+      visible(quantitative) + ' + ' + visible(ordinals));
   }
 }
 
+async function safeJson(res) {
+  if (!res.ok) return null;
+  try { return await res.json(); } catch (e) { console.error('JSON parse error:', res.url, e); return null; }
+}
+
 async function loadCategoryData() {
-  const [verbsRes, numeralsRes, introRes] = await Promise.all([
-    fetch('verbs/data.json'),
-    fetch('numerals/data.json'),
-    fetch('intro_and_linkings/data.json')
+  const [verbsRes, numeralsRes, introRes, nounsRes, adjRes, advRes] = await Promise.all([
+    fetch('resources/verbs-data.json'),
+    fetch('resources/numerals-data.json'),
+    fetch('resources/intro-and-linkings-data.json'),
+    fetch('resources/nouns-data.json'),
+    fetch('resources/adjectives-data.json'),
+    fetch('resources/adverbs-data.json')
   ]);
 
-  verbsData = verbsRes.ok ? await verbsRes.json() : null;
-  numeralsData = numeralsRes.ok ? await numeralsRes.json() : null;
-  introLinkingsData = introRes.ok ? await introRes.json() : null;
+  [verbsData, numeralsData, introLinkingsData, nounsData, adjectivesData, adverbsData] = await Promise.all([
+    safeJson(verbsRes),
+    safeJson(numeralsRes),
+    safeJson(introRes),
+    safeJson(nounsRes),
+    safeJson(adjRes),
+    safeJson(advRes)
+  ]);
 
   updateCategoryCounts();
+  searchIndex = null; // reset index after data reload
+}
+
+// ===== SEARCH =====
+function buildSearchIndex() {
+  const index = [];
+  if (verbsData && Array.isArray(verbsData.batches))
+    verbsData.batches.flatMap(b => b.words || []).forEach(w => index.push({ type: 'verb', w }));
+  if (nounsData && Array.isArray(nounsData.batches))
+    nounsData.batches.flatMap(b => b.words || []).forEach(w => index.push({ type: 'noun', w }));
+  if (adjectivesData && Array.isArray(adjectivesData.batches))
+    adjectivesData.batches.flatMap(b => b.words || []).forEach(w => index.push({ type: 'adj', w }));
+  if (adverbsData && Array.isArray(adverbsData.batches))
+    adverbsData.batches.flatMap(b => b.words || []).forEach(w => index.push({ type: 'adv', w }));
+  if (introLinkingsData && Array.isArray(introLinkingsData.batches))
+    introLinkingsData.batches.flatMap(b => b.words || []).forEach(w => index.push({ type: 'link', w }));
+  return index;
+}
+
+let searchIndex = null;
+let searchDebounce = null;
+
+function getSearchIndex() {
+  if (!searchIndex) searchIndex = buildSearchIndex();
+  return searchIndex;
+}
+
+function escapeHtml(s) {
+  return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
+}
+
+function stripAccents(s) {
+  return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/ς/g, 'σ');
+}
+
+function matchesQuery(entry, q) {
+  const { type, w } = entry;
+  const fields = type === 'verb'
+    ? [w.present, w.future, w.past, w.translation]
+    : (type === 'noun' || type === 'adj')
+      ? [w.male, w.female, w.neuter, w.translation]
+      : [w.greek, w.greekWord, w.translation];
+  return fields.some(f => f && stripAccents(f).includes(q));
+}
+
+function renderEntry(entry) {
+  const { type, w } = entry;
+  const labels = { verb: 'глаг', noun: 'сущ', adj: 'прил', adv: 'нар', link: 'связ' };
+  let forms = '';
+  if (type === 'verb') {
+    forms = [w.present, w.future, w.past].filter(Boolean)
+      .map(p => `<span>${escapeHtml(p)}</span>`).join('<span class="sr-sep">/</span>');
+  } else if (type === 'noun' || type === 'adj') {
+    forms = [w.male, w.female, w.neuter].filter(p => p && p !== '-')
+      .map(p => `<span>${escapeHtml(p)}</span>`).join('<span class="sr-sep">/</span>');
+  } else {
+    forms = `<span>${escapeHtml(w.greek || w.greekWord || '')}</span>`;
+  }
+  return `<div class="search-result-row">
+    <span class="sr-type">${labels[type] || type}</span>
+    <span class="sr-forms">${forms}</span>
+    <span class="sr-translation">${escapeHtml(w.translation || '')}</span>
+  </div>`;
+}
+
+function runSearch(query) {
+  const q = stripAccents(query.trim());
+  const meta = document.getElementById('search-meta');
+  const results = document.getElementById('search-results');
+  const clearBtn = document.getElementById('search-clear');
+  if (clearBtn) clearBtn.style.display = q ? '' : 'none';
+  if (q.length < 2) {
+    meta.textContent = q.length === 0 ? '' : 'Введите не менее 2 символов…';
+    results.innerHTML = '';
+    return;
+  }
+  const matches = getSearchIndex().filter(e => matchesQuery(e, q));
+  if (matches.length === 0) {
+    meta.textContent = 'Ничего не найдено';
+    results.innerHTML = `<div class="search-empty">По запросу «${escapeHtml(query.trim())}» ничего не найдено</div>`;
+    return;
+  }
+  const limit = 80;
+  meta.textContent = matches.length > limit ? `Найдено ${matches.length} — показаны первые ${limit}` : `Найдено: ${matches.length}`;
+  results.innerHTML = matches.slice(0, limit).map(renderEntry).join('');
+}
+
+function onSearchInput(value) {
+  clearTimeout(searchDebounce);
+  searchDebounce = setTimeout(() => runSearch(value), 180);
+}
+
+function clearSearch() {
+  const input = document.getElementById('search-input');
+  if (input) { input.value = ''; input.focus(); }
+  runSearch('');
 }
 
 function onLanguageLevelChange(level) {
@@ -84,10 +198,15 @@ function showHomeTab(name, btn) {
 
 window.onLanguageLevelChange = onLanguageLevelChange;
 window.showHomeTab = showHomeTab;
+window.onSearchInput = onSearchInput;
+window.clearSearch = clearSearch;
 
 initLanguageLevelControl();
 loadCategoryData().catch(() => {
   setCount('count-verbs', '-');
   setCount('count-numerals', '-');
   setCount('count-intro-linkings', '-');
+  setCount('count-nouns', '-');
+  setCount('count-adjectives', '-');
+  setCount('count-adverbs', '-');
 });

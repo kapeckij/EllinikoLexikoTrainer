@@ -1,0 +1,530 @@
+{
+  "batches": [
+    {
+      "batchId": "0",
+      "batchHeader": "Блок 1 — Время",
+      "batchName": "Наречия времени: момент и частотность действия",
+      "words": [
+        {
+          "greek": "ακόμα",
+          "example": "Ακόμα περιμένω το λεωφορείο.",
+          "translation": "еще",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "αμέσως",
+          "example": "Έλα αμέσως εδώ.",
+          "translation": "сразу",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "αργότερα",
+          "example": "Θα μιλήσουμε αργότερα.",
+          "translation": "позже",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "αύριο",
+          "example": "Αύριο θα πάω στο μάθημα.",
+          "translation": "завтра",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "ήδη",
+          "example": "Έχω ήδη τελειώσει την άσκηση.",
+          "translation": "уже",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "μερικές φορές",
+          "example": "Μερικές φορές μαγειρεύω το βράδυ.",
+          "translation": "иногда",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "μόλις",
+          "example": "Μόλις γύρισα σπίτι.",
+          "translation": "только что",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "ξανά",
+          "example": "Πες το ξανά, παρακαλώ.",
+          "translation": "снова",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "πάντα",
+          "example": "Πάντα πίνω καφέ το πρωί.",
+          "translation": "всегда",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "ποτέ",
+          "example": "Δεν καπνίζω ποτέ.",
+          "translation": "никогда",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "σήμερα",
+          "example": "Σήμερα δουλεύω από το σπίτι.",
+          "translation": "сегодня",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "σπάνια",
+          "example": "Τρώω σπάνια γλυκά.",
+          "translation": "редко",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "συστηματικά",
+          "example": "Προπονείται συστηματικά κάθε μέρα.",
+          "translation": "систематически",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "συχνά",
+          "example": "Πηγαίνουμε συχνά στο πάρκο.",
+          "translation": "часто",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "τελευταία",
+          "example": "Τελευταία κοιμάμαι νωρίς.",
+          "translation": "в последнее время",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "τελικά",
+          "example": "Τελικά πήγαμε με ταξί.",
+          "translation": "в итоге",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "τότε",
+          "example": "Τότε κατάλαβα το λάθος μου.",
+          "translation": "тогда",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "τώρα",
+          "example": "Τώρα διαβάζω ελληνικά.",
+          "translation": "сейчас",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "χθες",
+          "example": "Χθες είδα μια ταινία.",
+          "translation": "вчера",
+          "languageLevel": "A1"
+        }
+      ]
+    },
+    {
+      "batchId": "1",
+      "batchHeader": "Блок 2 — Место",
+      "batchName": "Наречия места и направления",
+      "words": [
+        {
+          "greek": "απέναντι",
+          "example": "Το φαρμακείο είναι απέναντι.",
+          "translation": "напротив",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "γύρω",
+          "example": "Κοίτα γύρω σου προσεκτικά.",
+          "translation": "вокруг",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "δίπλα",
+          "example": "Κάτσε δίπλα μου.",
+          "translation": "рядом",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "εδώ",
+          "example": "Κάτσε εδώ δίπλα μου.",
+          "translation": "здесь",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "εκεί",
+          "example": "Το βιβλίο είναι εκεί στο τραπέζι.",
+          "translation": "там",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "έξω",
+          "example": "Τα παιδιά παίζουν έξω.",
+          "translation": "снаружи",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "ίσια",
+          "example": "Πήγαινε ίσια και μετά δεξιά.",
+          "translation": "прямо",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "κάτω",
+          "example": "Η τσάντα είναι κάτω από το γραφείο.",
+          "translation": "внизу",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "κοντά",
+          "example": "Μένουμε κοντά στο κέντρο.",
+          "translation": "близко",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "μακριά",
+          "example": "Το χωριό είναι μακριά.",
+          "translation": "далеко",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "μέσα",
+          "example": "Μπες μέσα, κάνει κρύο.",
+          "translation": "внутри",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "παντού",
+          "example": "Έψαξα παντού για τα κλειδιά.",
+          "translation": "везде",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "πάνω",
+          "example": "Το ποτήρι είναι πάνω στο ράφι.",
+          "translation": "наверху",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "πίσω",
+          "example": "Γύρνα πίσω τώρα.",
+          "translation": "назад",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "προς τα εμπρός",
+          "example": "Κάνε ένα βήμα προς τα εμπρός.",
+          "translation": "вперед",
+          "languageLevel": "A2"
+        }
+      ]
+    },
+    {
+      "batchId": "2",
+      "batchHeader": "Блок 3 — Степень + Манера",
+      "batchName": "Степень, количество и качество выполнения действия",
+      "words": [
+        {
+          "greek": "απόλυτα",
+          "example": "Συμφωνώ απόλυτα μαζί σου.",
+          "translation": "абсолютно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "αργά",
+          "example": "Γύρισα αργά στο σπίτι.",
+          "translation": "поздно, медленно",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "αρκετά",
+          "example": "Είναι αρκετά δύσκολο θέμα.",
+          "translation": "достаточно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "άσχημα",
+          "example": "Κοιμήθηκα άσχημα χθες.",
+          "translation": "плохо",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "γρήγορα",
+          "example": "Γράψε γρήγορα την απάντηση.",
+          "translation": "быстро",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "δυναμικά",
+          "example": "Ξεκίνησε δυναμικά τη συνάντηση.",
+          "translation": "энергично",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "δυνατά",
+          "example": "Μίλα πιο δυνατά, σε παρακαλώ.",
+          "translation": "громко",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "δύσκολα",
+          "example": "Δουλεύει δύσκολα υπό πίεση.",
+          "translation": "трудно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "ελάχιστα",
+          "example": "Κοιμήθηκα ελάχιστα χθες.",
+          "translation": "минимально, очень мало",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "εύκολα",
+          "example": "Βρήκα εύκολα τη διεύθυνση.",
+          "translation": "легко",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "ήσυχα",
+          "example": "Μιλάει ήσυχα στην τάξη.",
+          "translation": "спокойно, тихо",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "καθαρά",
+          "example": "Μίλα καθαρά για να σε καταλάβω.",
+          "translation": "ясно, четко",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "καλά",
+          "example": "Μιλάς καλά ελληνικά.",
+          "translation": "хорошо",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "λίγο",
+          "example": "Ξεκουράσου λίγο.",
+          "translation": "немного",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "λιγότερο",
+          "example": "Τρώω λιγότερο ψωμί τώρα.",
+          "translation": "меньше",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "περίπου",
+          "example": "Θα έρθω περίπου στις έξι.",
+          "translation": "примерно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "περισσότερο",
+          "example": "Θέλω περισσότερο χρόνο.",
+          "translation": "больше",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "πολύ",
+          "example": "Μου αρέσει πολύ αυτό το τραγούδι.",
+          "translation": "очень, много",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "προσεκτικά",
+          "example": "Διάβασε προσεκτικά τις οδηγίες.",
+          "translation": "внимательно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "σιγά",
+          "example": "Περπάτα σιγά στον πάγο.",
+          "translation": "тихо, медленно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "σταθερά",
+          "example": "Προχωρά σταθερά προς τον στόχο.",
+          "translation": "стабильно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "σχεδόν",
+          "example": "Σχεδόν τελείωσα τη δουλειά.",
+          "translation": "почти",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "χαλαρά",
+          "example": "Το Σαββατοκύριακο ντύνομαι χαλαρά.",
+          "translation": "расслабленно",
+          "languageLevel": "A2"
+        }
+      ]
+    },
+    {
+      "batchId": "3",
+      "batchHeader": "Блок 4 — Уверенность + Образ",
+      "batchName": "Уверенность, модальность и контекст действия",
+      "words": [
+        {
+          "greek": "ακριβώς",
+          "example": "Αυτό είναι ακριβώς που θέλω.",
+          "translation": "точно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "αλλιώς",
+          "example": "Φύγε τώρα, αλλιώς θα αργήσεις.",
+          "translation": "иначе",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "απλά",
+          "example": "Μίλα απλά και καθαρά.",
+          "translation": "просто",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "γενικά",
+          "example": "Γενικά είμαι αισιόδοξος.",
+          "translation": "в целом",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "διαφορετικά",
+          "example": "Κάν’ το διαφορετικά αυτή τη φορά.",
+          "translation": "иначе",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "εντελώς",
+          "example": "Είναι εντελώς διαφορετικό.",
+          "translation": "полностью",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "επίσης",
+          "example": "Θέλω επίσης ένα νερό.",
+          "translation": "также",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "έτσι",
+          "example": "Κάν’ το έτσι όπως σου είπα.",
+          "translation": "так",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "ίσως",
+          "example": "Ίσως έρθει αργά.",
+          "translation": "возможно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "καλά-καλά",
+          "example": "Δεν τον ξέρω καλά-καλά ακόμα.",
+          "translation": "как следует",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "κανονικά",
+          "example": "Κανονικά ξεκινάμε στις οκτώ.",
+          "translation": "нормально, обычно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "κάπως",
+          "example": "Νιώθω κάπως κουρασμένος σήμερα.",
+          "translation": "как-то, несколько",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "κατά προτίμηση",
+          "example": "Κατά προτίμηση, ελάτε νωρίς.",
+          "translation": "предпочтительно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "κυρίως",
+          "example": "Τρώω κυρίως λαχανικά.",
+          "translation": "в основном",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "μαζί",
+          "example": "Πάμε μαζί στο μάθημα.",
+          "translation": "вместе",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "μάλλον",
+          "example": "Μάλλον έχεις δίκιο.",
+          "translation": "скорее",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "μόνο",
+          "example": "Θέλω μόνο έναν καφέ.",
+          "translation": "только",
+          "languageLevel": "A1"
+        },
+        {
+          "greek": "ξαφνικά",
+          "example": "Ξαφνικά άρχισε να βρέχει.",
+          "translation": "внезапно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "ξεχωριστά",
+          "example": "Πληρώσαμε ξεχωριστά.",
+          "translation": "отдельно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "οπωσδήποτε",
+          "example": "Πρέπει οπωσδήποτε να φύγουμε.",
+          "translation": "обязательно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "πιθανώς",
+          "example": "Πιθανώς θα βρέξει το βράδυ.",
+          "translation": "вероятно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "πράγματι",
+          "example": "Πράγματι, είχε δίκιο.",
+          "translation": "действительно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "σίγουρα",
+          "example": "Θα έρθω σίγουρα αύριο.",
+          "translation": "точно, наверняка",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "σκόπιμα",
+          "example": "Το έκανε σκόπιμα.",
+          "translation": "намеренно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "σχετικά",
+          "example": "Είναι σχετικά εύκολο μάθημα.",
+          "translation": "относительно",
+          "languageLevel": "A2"
+        },
+        {
+          "greek": "φυσικά",
+          "example": "Φυσικά και θα σε βοηθήσω.",
+          "translation": "конечно",
+          "languageLevel": "A2"
+        }
+      ]
+    }
+  ]
+}

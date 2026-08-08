@@ -1,1 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Греческие существительные — Тренажёр</title>
+<link rel="icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Ctext y="50" font-size="50"%3E%F0%9F%87%AC%F0%9F%87%B7%3C/text%3E%3C/svg%3E'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">🔤 Ουσιαστικά</div>
+  <a class="nav-home" href="../index.html" title="На главную">🏠</a>
+  <button class="active" onclick="showPage('plan')">📋 Обзор</button>
+  <button onclick="showPage('learn')">🃏 Карточки</button>
+  <button onclick="showPage('quiz')">🎯 Тест</button>
+  <button onclick="showPage('progress')">📊 Прогресс</button>
+  <div class="lang-level-control">
+    <span>Уровень:</span>
+    <select id="lang-level-select" onchange="onLanguageLevelChange(this.value)">
+      <option value="A1">A1</option>
+      <option value="A2">A2</option>
+      <option value="B1">B1</option>
+      <option value="B2">B2</option>
+      <option value="C1" selected>C1</option>
+    </select>
+  </div>
+</nav>
+
+<!-- PLAN PAGE -->
+<div id="page-plan" class="page active">
+  <div class="plan-header">
+    <h1 id="plan-title">Обзор</h1>
+    <p>Тематические блоки для карточек, теста и системного повторения</p>
+  </div>
+  <div class="badges">
+    <div class="badge">Всего слов: <span id="badge-total">—</span></div>
+    <div class="badge">Блоков: <span id="badge-batches">—</span></div>
+    <div class="badge">Средний размер блока: <span id="badge-avg">—</span></div>
+    <div class="badge">Три рода: <span>муж / жен / ср</span></div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom:16px; color:var(--accent2)">📚 Тематические блоки</h3>
+    <table>
+      <thead><tr><th>Блок</th><th>Тема</th><th>Объём</th><th>Активность</th></tr></thead>
+      <tbody id="plan-table-body"></tbody>
+    </table>
+  </div>
+
+  <!-- DECLENSION REFERENCE -->
+  <div class="card" style="margin-top:16px">
+    <h3 style="margin-bottom:12px; color:var(--accent2)">🧠 Множественное число существительных</h3>
+
+    <div class="gender-legend">
+      <div class="gender-pill"><div class="gender-dot dot-masc"></div>Мужской (ο)</div>
+      <div class="gender-pill"><div class="gender-dot dot-fem"></div>Женский (η)</div>
+      <div class="gender-pill"><div class="gender-dot dot-neut"></div>Средний (το)</div>
+    </div>
+
+    <div class="decl-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Род</th>
+            <th>Окончание ед.ч.</th>
+            <th>Окончание мн.ч.</th>
+            <th>Пример ед.ч.</th>
+            <th>Пример мн.ч.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-masc">Муж.</td>
+            <td>-ος</td><td>-οι</td>
+            <td class="td-masc">ο φίλος</td><td class="td-masc">οι φίλοι</td>
+          </tr>
+          <tr>
+            <td class="td-masc">Муж.</td>
+            <td>-ας</td><td>-ες</td>
+            <td class="td-masc">ο πατέρας</td><td class="td-masc">οι πατέρες</td>
+          </tr>
+          <tr>
+            <td class="td-masc">Муж.</td>
+            <td>-ης</td><td>-ες</td>
+            <td class="td-masc">ο μαθητής</td><td class="td-masc">οι μαθητές</td>
+          </tr>
+          <tr>
+            <td class="td-masc">Муж.</td>
+            <td>-ές</td><td>-έδες</td>
+            <td class="td-masc">ο καφές</td><td class="td-masc">οι καφέδες</td>
+          </tr>
+          <tr>
+            <td class="td-masc">Муж.</td>
+            <td>-ούς</td><td>-ούδες</td>
+            <td class="td-masc">ο παππούς</td><td class="td-masc">οι παππούδες</td>
+          </tr>
+          <tr>
+            <td class="td-fem">Жен.</td>
+            <td>-α</td><td>-ες</td>
+            <td class="td-fem">η γλώσσα</td><td class="td-fem">οι γλώσσες</td>
+          </tr>
+          <tr>
+            <td class="td-fem">Жен.</td>
+            <td>-η</td><td>-ες</td>
+            <td class="td-fem">η αδερφή</td><td class="td-fem">οι αδερφές</td>
+          </tr>
+          <tr>
+            <td class="td-fem">Жен.</td>
+            <td>-ος (жен.)</td><td>-οι</td>
+            <td class="td-fem">η οδός</td><td class="td-fem">οι οδοί</td>
+          </tr>
+          <tr>
+            <td class="td-fem">Жен.</td>
+            <td>-ού</td><td>-ούδες</td>
+            <td class="td-fem">η αλεπού</td><td class="td-fem">οι αλεπούδες</td>
+          </tr>
+          <tr>
+            <td class="td-neut">Ср.</td>
+            <td>-ο</td><td>-α</td>
+            <td class="td-neut">το βιβλίο</td><td class="td-neut">τα βιβλία</td>
+          </tr>
+          <tr>
+            <td class="td-neut">Ср.</td>
+            <td>-ι</td><td>-ια</td>
+            <td class="td-neut">το παιδί</td><td class="td-neut">τα παιδιά</td>
+          </tr>
+          <tr>
+            <td class="td-neut">Ср.</td>
+            <td>-μα</td><td>-ματα</td>
+            <td class="td-neut">το μάθημα</td><td class="td-neut">τα μαθήματα</td>
+          </tr>
+          <tr>
+            <td class="td-neut">Ср.</td>
+            <td>-ος (ср.)</td><td>-η</td>
+            <td class="td-neut">το μέρος</td><td class="td-neut">τα μέρη</td>
+          </tr>
+          <tr>
+            <td class="td-neut">Ср.</td>
+            <td>-ας (ср.)</td><td>-ατα</td>
+            <td class="td-neut">το κρέας</td><td class="td-neut">τα κρέατα</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3 style="margin-bottom:12px; color:var(--accent2)">📐 Склонение по падежам</h3>
+    <p style="color:var(--muted); font-size:0.85rem; margin-bottom:14px; line-height:1.6">
+      В новогреческом 4 падежа: <b style="color:var(--text)">Ονομαστική</b> (Именительный — подлежащее),
+      <b style="color:var(--text)">Γενική</b> (Родительный — принадлежность),
+      <b style="color:var(--text)">Αιτιατική</b> (Винительный — прямое дополнение),
+      <b style="color:var(--text)">Κλητική</b> (Звательный — обращение).
+    </p>
+
+    <div class="decl-section">
+      <h4 class="td-masc">Мужской род — ο -ος (φίλος, δρόμος)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Ед.ч.</th><th>Мн.ч.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-masc">ο φίλος</td><td class="td-masc">οι φίλοι</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-masc">του φίλου</td><td class="td-masc">των φίλων</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-masc">τον φίλο</td><td class="td-masc">τους φίλους</td></tr>
+            <tr><td class="td-case">Κλητ.</td><td class="td-masc">φίλε</td><td class="td-masc">φίλοι</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="decl-section">
+      <h4 class="td-masc">Мужской род — ο -ας (πατέρας, άντρας)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Ед.ч.</th><th>Мн.ч.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-masc">ο πατέρας</td><td class="td-masc">οι πατέρες</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-masc">του πατέρα</td><td class="td-masc">των πατέρων</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-masc">τον πατέρα</td><td class="td-masc">τους πατέρες</td></tr>
+            <tr><td class="td-case">Κλητ.</td><td class="td-masc">πατέρα</td><td class="td-masc">πατέρες</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="decl-section">
+      <h4 class="td-masc">Мужской род — ο -ης (μαθητής, πολίτης)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Ед.ч.</th><th>Мн.ч.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-masc">ο μαθητής</td><td class="td-masc">οι μαθητές</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-masc">του μαθητή</td><td class="td-masc">των μαθητών</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-masc">τον μαθητή</td><td class="td-masc">τους μαθητές</td></tr>
+            <tr><td class="td-case">Κλητ.</td><td class="td-masc">μαθητή</td><td class="td-masc">μαθητές</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="decl-section">
+      <h4 class="td-fem">Женский род — η -α (γλώσσα, μέρα)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Ед.ч.</th><th>Мн.ч.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-fem">η γλώσσα</td><td class="td-fem">οι γλώσσες</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-fem">της γλώσσας</td><td class="td-fem">των γλωσσών</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-fem">τη γλώσσα</td><td class="td-fem">τις γλώσσες</td></tr>
+            <tr><td class="td-case">Κλητ.</td><td class="td-fem">γλώσσα</td><td class="td-fem">γλώσσες</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="decl-section">
+      <h4 class="td-fem">Женский род — η -η (αδερφή, ζωή)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Ед.ч.</th><th>Мн.ч.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-fem">η αδερφή</td><td class="td-fem">οι αδερφές</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-fem">της αδερφής</td><td class="td-fem">των αδερφών</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-fem">την αδερφή</td><td class="td-fem">τις αδερφές</td></tr>
+            <tr><td class="td-case">Κλητ.</td><td class="td-fem">αδερφή</td><td class="td-fem">αδερφές</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="decl-section">
+      <h4 class="td-neut">Средний род — το -ο (βιβλίο, σχολείο)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Ед.ч.</th><th>Мн.ч.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-neut">το βιβλίο</td><td class="td-neut">τα βιβλία</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-neut">του βιβλίου</td><td class="td-neut">των βιβλίων</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-neut">το βιβλίο</td><td class="td-neut">τα βιβλία</td></tr>
+            <tr><td class="td-case">Κλητ.</td><td class="td-neut">βιβλίο</td><td class="td-neut">βιβλία</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="decl-section">
+      <h4 class="td-neut">Средний род — το -ι (παιδί, νησί)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Ед.ч.</th><th>Мн.ч.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-neut">το παιδί</td><td class="td-neut">τα παιδιά</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-neut">του παιδιού</td><td class="td-neut">των παιδιών</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-neut">το παιδί</td><td class="td-neut">τα παιδιά</td></tr>
+            <tr><td class="td-case">Κλητ.</td><td class="td-neut">παιδί</td><td class="td-neut">παιδιά</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="decl-section">
+      <h4 class="td-neut">Средний род — то -μα (μάθημα, πρόβλημα)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Ед.ч.</th><th>Мн.ч.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-neut">το μάθημα</td><td class="td-neut">τα μαθήματα</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-neut">του μαθήματος</td><td class="td-neut">των μαθημάτων</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-neut">το μάθημα</td><td class="td-neut">τα μαθήματα</td></tr>
+            <tr><td class="td-case">Κλητ.</td><td class="td-neut">μάθημα</td><td class="td-neut">μαθήματα</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEARN PAGE -->
+<div id="page-learn" class="page">
+  <div class="learn-controls">
+    <select id="batch-select" onchange="resetLearn()">
+      <option value="-1">⭐ К повторению сегодня</option>
+      <option value="-2">🔀 Все слова (перемешать)</option>
+    </select>
+    <button onclick="resetLearn()">▶ Начать</button>
+  </div>
+  <div class="progress-bar-wrap"><div class="progress-bar" id="learn-progress-bar" style="width:0%"></div></div>
+  <div class="progress-label" id="learn-progress-label">0 / 0</div>
+
+  <div id="learn-main">
+    <div class="card-nav-wrap">
+      <button class="card-nav-btn" id="btn-prev" onclick="prevCard()" title="Предыдущая">&#8592;</button>
+      <div class="flip-scene" onclick="flipCard()">
+        <div class="flip-card" id="flip-card">
+          <div class="flip-face flip-front">
+            <span class="card-tag" id="card-batch-tag">Блок 1</span>
+            <span class="card-level-badge" id="card-level-badge"></span>
+            <div class="noun-forms-wrap" id="card-forms-wrap">
+              <div class="noun-form-row" id="card-row-m">
+                <span class="noun-form-label lbl-m">муж</span>
+                <span class="noun-form-value val-m" id="card-male">—</span>
+              </div>
+              <div class="noun-form-row" id="card-row-f">
+                <span class="noun-form-label lbl-f">жен</span>
+                <span class="noun-form-value val-f" id="card-female">—</span>
+              </div>
+              <div class="noun-form-row" id="card-row-n">
+                <span class="noun-form-label lbl-n">ср</span>
+                <span class="noun-form-value val-n" id="card-neuter">—</span>
+              </div>
+            </div>
+            <div class="noun-example" id="card-example">—</div>
+            <div class="flip-hint">нажми чтобы перевернуть</div>
+          </div>
+          <div class="flip-face flip-back">
+            <span class="card-tag" id="card-batch-tag2">Блок 1</span>
+            <div class="noun-translation" id="card-translation">—</div>
+            <div class="flip-hint">↑ нажми чтобы вернуть</div>
+          </div>
+        </div>
+      </div>
+      <button class="card-nav-btn" id="btn-next" onclick="nextCard()" title="Следующая">&#8594;</button>
+    </div>
+    <div class="rating-btns">
+      <button class="btn-no" onclick="rate(0)">✗ Не знаю</button>
+      <button class="btn-maybe" onclick="rate(3)">~ Смутно</button>
+      <button class="btn-yes" onclick="rate(5)">✓ Знаю!</button>
+    </div>
+  </div>
+  <div id="learn-done" class="done-msg" style="display:none">
+    <div class="big">🎉</div>
+    <h2>Отличная работа!</h2>
+    <p id="done-stats">Пройдено карточек: 0</p>
+    <button class="btn-primary" onclick="resetLearn()">Повторить ещё раз</button>
+  </div>
+</div>
+
+<!-- QUIZ PAGE -->
+<div id="page-quiz" class="page">
+  <div class="quiz-controls">
+    <select id="quiz-mode">
+      <option value="gr-ru">Греч → Рус (перевод по форме)</option>
+      <option value="ru-gr">Рус → Греч (выбрать слово)</option>
+    </select>
+    <select id="quiz-batch">
+      <option value="-2">Все блоки</option>
+    </select>
+    <button onclick="startQuiz()">▶ Начать тест</button>
+  </div>
+  <div class="quiz-controls-sub">
+    <label class="quiz-exclude-label">
+      <input type="checkbox" id="quiz-exclude-known">
+      Исключить выученные
+    </label>
+  </div>
+  <div class="quiz-score">Правильно: <span id="quiz-correct">0</span> / <span id="quiz-total">0</span></div>
+  <div class="quiz-question" id="quiz-question-box">
+    <div class="quiz-q-label" id="quiz-mode-label">Переведи слово</div>
+    <div class="quiz-q-text" id="quiz-q-text">Нажми «Начать тест»</div>
+    <div class="quiz-q-forms" id="quiz-q-forms"></div>
+    <div class="quiz-q-sub" id="quiz-q-sub"></div>
+  </div>
+  <div class="quiz-options" id="quiz-options"></div>
+  <div class="quiz-giveup-wrap" id="quiz-giveup-wrap" style="display:none">
+    <button class="btn-giveup" id="btn-giveup" onclick="giveUp()">✕ Не знаю</button>
+  </div>
+  <div class="next-btn-wrap" id="next-btn-wrap" style="display:none">
+    <button class="btn-primary" onclick="nextQuizQuestion()">Следующий →</button>
+  </div>
+</div>
+
+<!-- PROGRESS PAGE -->
+<div id="page-progress" class="page">
+  <h2 style="margin-bottom:20px">Мой прогресс</h2>
+  <div class="stats-grid">
+    <div class="stat-box"><div class="stat-num" id="stat-known" style="color:var(--green)">0</div><div class="stat-label">Знаю уверенно</div></div>
+    <div class="stat-box"><div class="stat-num" id="stat-learning" style="color:var(--yellow)">0</div><div class="stat-label">В процессе</div></div>
+    <div class="stat-box"><div class="stat-num" id="stat-new" style="color:var(--muted)">0</div><div class="stat-label">Ещё не видел</div></div>
+  </div>
+  <div class="batch-progress-list" id="batch-progress-list"></div>
+  <div style="text-align:center"><button class="btn-reset" onclick="resetAll()">🗑 Сбросить весь прогресс</button></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
 

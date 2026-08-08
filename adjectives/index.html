@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Греческие прилагательные — Тренажёр</title>
+<link rel="icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Ctext y="50" font-size="50"%3E%F0%9F%87%AC%F0%9F%87%B7%3C/text%3E%3C/svg%3E'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">🎨 Επίθετα</div>
+  <a class="nav-home" href="../index.html" title="На главную">🏠</a>
+  <button class="active" onclick="showPage('plan')">📋 Обзор</button>
+  <button onclick="showPage('learn')">🃏 Карточки</button>
+  <button onclick="showPage('quiz')">🎯 Тест</button>
+  <button onclick="showPage('progress')">📊 Прогресс</button>
+  <div class="lang-level-control">
+    <span>Уровень:</span>
+    <select id="lang-level-select" onchange="onLanguageLevelChange(this.value)">
+      <option value="A1">A1</option>
+      <option value="A2">A2</option>
+      <option value="B1">B1</option>
+      <option value="B2">B2</option>
+      <option value="C1" selected>C1</option>
+    </select>
+  </div>
+</nav>
+
+<!-- PLAN PAGE -->
+<div id="page-plan" class="page active">
+  <div class="plan-header">
+    <h1 id="plan-title">Обзор</h1>
+    <p>Тематические блоки для карточек, теста и системного повторения</p>
+  </div>
+  <div class="badges">
+    <div class="badge">Всего слов: <span id="badge-total">—</span></div>
+    <div class="badge">Блоков: <span id="badge-batches">—</span></div>
+    <div class="badge">Средний размер блока: <span id="badge-avg">—</span></div>
+    <div class="badge">Три формы: <span>муж / жен / ср</span></div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom:16px; color:var(--accent2)">📚 Тематические блоки</h3>
+    <table>
+      <thead><tr><th>Блок</th><th>Тема</th><th>Объём</th><th>Активность</th></tr></thead>
+      <tbody id="plan-table-body"></tbody>
+    </table>
+  </div>
+
+  <!-- PLURAL REFERENCE -->
+  <div class="card" style="margin-top:16px">
+    <h3 style="margin-bottom:12px; color:var(--accent2)">🧠 Множественное число прилагательных</h3>
+    <p style="color:var(--muted); font-size:0.85rem; margin-bottom:14px; line-height:1.6">
+      В греческом прилагательное согласуется с существительным по роду, числу и падежу.
+      Ниже — основные паттерны образования множественного числа.
+    </p>
+    <div class="decl-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Тип</th>
+            <th>Муж. ед.</th>
+            <th>Жен. ед.</th>
+            <th>Ср. ед.</th>
+            <th>Муж. мн.</th>
+            <th>Жен. мн.</th>
+            <th>Ср. мн.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color:var(--muted); font-size:0.8rem">-ος / -η / -ο</td>
+            <td class="td-masc">καλός</td>
+            <td class="td-fem">καλή</td>
+            <td class="td-neut">καλό</td>
+            <td class="td-masc">καλοί</td>
+            <td class="td-fem">καλές</td>
+            <td class="td-neut">καλά</td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted); font-size:0.8rem">-ος / -α / -ο</td>
+            <td class="td-masc">ωραίος</td>
+            <td class="td-fem">ωραία</td>
+            <td class="td-neut">ωραίο</td>
+            <td class="td-masc">ωραίοι</td>
+            <td class="td-fem">ωραίες</td>
+            <td class="td-neut">ωραία</td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted); font-size:0.8rem">-ύς / -ιά / -ύ</td>
+            <td class="td-masc">βαθύς</td>
+            <td class="td-fem">βαθιά</td>
+            <td class="td-neut">βαθύ</td>
+            <td class="td-masc">βαθιοί</td>
+            <td class="td-fem">βαθιές</td>
+            <td class="td-neut">βαθιά</td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted); font-size:0.8rem">-ης / -α / -ικο</td>
+            <td class="td-masc">ζεστός</td>
+            <td class="td-fem">ζεστή</td>
+            <td class="td-neut">ζεστό</td>
+            <td class="td-masc">ζεστοί</td>
+            <td class="td-fem">ζεστές</td>
+            <td class="td-neut">ζεστά</td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted); font-size:0.8rem">-ων / -ουσα / -ον (причастие)</td>
+            <td class="td-masc">ενδιαφέρων</td>
+            <td class="td-fem">ενδιαφέρουσα</td>
+            <td class="td-neut">ενδιαφέρον</td>
+            <td class="td-masc">ενδιαφέροντες</td>
+            <td class="td-fem">ενδιαφέρουσες</td>
+            <td class="td-neut">ενδιαφέροντα</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- AGREEMENT REFERENCE -->
+  <div class="card" style="margin-top:16px">
+    <h3 style="margin-bottom:12px; color:var(--accent2)">📐 Согласование прилагательного с существительным</h3>
+    <p style="color:var(--muted); font-size:0.85rem; margin-bottom:14px; line-height:1.6">
+      Прилагательное принимает форму рода, числа и падежа существительного, к которому относится.
+      Типичная модель: <b style="color:var(--text)">артикль + прилагательное + существительное</b>.
+    </p>
+
+    <div class="decl-section">
+      <h4 class="td-masc">Мужской род — ο -ος (прил. -ος / -η / -ο)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Ед.ч.</th><th>Мн.ч.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-masc">ο καλός φίλος</td><td class="td-masc">οι καλοί φίλοι</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-masc">του καλού φίλου</td><td class="td-masc">των καλών φίλων</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-masc">τον καλό φίλο</td><td class="td-masc">τους καλούς φίλους</td></tr>
+            <tr><td class="td-case">Κλητ.</td><td class="td-masc">καλέ φίλε</td><td class="td-masc">καλοί φίλοι</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="decl-section">
+      <h4 class="td-fem">Женский род — η -η (прил. -ος / -η / -ο)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Ед.ч.</th><th>Мн.ч.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-fem">η καλή φίλη</td><td class="td-fem">οι καλές φίλες</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-fem">της καλής φίλης</td><td class="td-fem">των καλών φίλων</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-fem">την καλή φίλη</td><td class="td-fem">τις καλές φίλες</td></tr>
+            <tr><td class="td-case">Κλητ.</td><td class="td-fem">καλή φίλη</td><td class="td-fem">καλές φίλες</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="decl-section">
+      <h4 class="td-neut">Средний род — το -ο (прил. -ος / -η / -ο)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Ед.ч.</th><th>Мн.ч.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-neut">το καλό παιδί</td><td class="td-neut">τα καλά παιδιά</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-neut">του καλού παιδιού</td><td class="td-neut">των καλών παιδιών</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-neut">το καλό παιδί</td><td class="td-neut">τα καλά παιδιά</td></tr>
+            <tr><td class="td-case">Κλητ.</td><td class="td-neut">καλό παιδί</td><td class="td-neut">καλά παιδιά</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="decl-section">
+      <h4 style="color:var(--accent2)">Тип -ος / -α / -ο (прил. с женским на -α)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Муж. ед.</th><th>Жен. ед.</th><th>Ср. ед.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-masc">ωραίος</td><td class="td-fem">ωραία</td><td class="td-neut">ωραίο</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-masc">ωραίου</td><td class="td-fem">ωραίας</td><td class="td-neut">ωραίου</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-masc">ωραίο(ν)</td><td class="td-fem">ωραία</td><td class="td-neut">ωραίο</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="decl-section">
+      <h4 style="color:var(--accent2)">Тип -ύς / -ιά / -ύ (прил. с ударным окончанием)</h4>
+      <div class="decl-table-wrap">
+        <table>
+          <thead><tr><th>Падеж</th><th>Муж. ед.</th><th>Жен. ед.</th><th>Ср. ед.</th></tr></thead>
+          <tbody>
+            <tr><td class="td-case">Ονομ.</td><td class="td-masc">βαθύς</td><td class="td-fem">βαθιά</td><td class="td-neut">βαθύ</td></tr>
+            <tr><td class="td-case">Γεν.</td><td class="td-masc">βαθύ</td><td class="td-fem">βαθιάς</td><td class="td-neut">βαθύ</td></tr>
+            <tr><td class="td-case">Αιτ.</td><td class="td-masc">βαθύ(ν)</td><td class="td-fem">βαθιά</td><td class="td-neut">βαθύ</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p style="color:var(--muted); font-size:0.82rem; margin-top:14px; line-height:1.6">
+      <b style="color:var(--text)">Сравнительная степень:</b> прилагательное + <b style="color:var(--text)">πιο</b> → πιο καλός.
+      <br><b style="color:var(--text)">Превосходная:</b> <b style="color:var(--text)">ο / η / το πιο</b> + прилагательное → ο πιο καλός.
+      <br>Нерегулярно: καλός → καλύτερος (лучше), κακός → χειρότερος (хуже), μεγάλος → μεγαλύτερος (больше).
+    </p>
+  </div>
+</div>
+
+<!-- LEARN PAGE -->
+<div id="page-learn" class="page">
+  <div class="learn-controls">
+    <select id="batch-select" onchange="resetLearn()">
+      <option value="-1">⭐ К повторению сегодня</option>
+      <option value="-2">🔀 Все слова (перемешать)</option>
+    </select>
+    <button onclick="resetLearn()">▶ Начать</button>
+  </div>
+  <div class="progress-bar-wrap"><div class="progress-bar" id="learn-progress-bar" style="width:0%"></div></div>
+  <div class="progress-label" id="learn-progress-label">0 / 0</div>
+
+  <div id="learn-main">
+    <div class="card-nav-wrap">
+      <button class="card-nav-btn" id="btn-prev" onclick="prevCard()" title="Предыдущая">&#8592;</button>
+      <div class="flip-scene" onclick="flipCard()">
+        <div class="flip-card" id="flip-card">
+          <div class="flip-face flip-front">
+            <span class="card-tag" id="card-batch-tag">Блок 1</span>
+            <span class="card-level-badge" id="card-level-badge"></span>
+            <div class="adj-forms-wrap">
+              <div class="adj-form-row">
+                <span class="adj-form-label">муж</span>
+                <span class="adj-form-value" id="card-male">—</span>
+              </div>
+              <div class="adj-form-row">
+                <span class="adj-form-label">жен</span>
+                <span class="adj-form-value" id="card-female">—</span>
+              </div>
+              <div class="adj-form-row">
+                <span class="adj-form-label">ср</span>
+                <span class="adj-form-value" id="card-neuter">—</span>
+              </div>
+            </div>
+            <div class="adj-example" id="card-example">—</div>
+            <div class="flip-hint">нажми чтобы перевернуть</div>
+          </div>
+          <div class="flip-face flip-back">
+            <span class="card-tag" id="card-batch-tag2">Блок 1</span>
+            <div class="adj-translation" id="card-translation">—</div>
+            <div class="flip-hint">↑ нажми чтобы вернуть</div>
+          </div>
+        </div>
+      </div>
+      <button class="card-nav-btn" id="btn-next" onclick="nextCard()" title="Следующая">&#8594;</button>
+    </div>
+    <div class="rating-btns">
+      <button class="btn-no" onclick="rate(0)">✗ Не знаю</button>
+      <button class="btn-maybe" onclick="rate(3)">~ Смутно</button>
+      <button class="btn-yes" onclick="rate(5)">✓ Знаю!</button>
+    </div>
+  </div>
+  <div id="learn-done" class="done-msg" style="display:none">
+    <div class="big">🎉</div>
+    <h2>Отличная работа!</h2>
+    <p id="done-stats">Пройдено карточек: 0</p>
+    <button class="btn-primary" onclick="resetLearn()">Повторить ещё раз</button>
+  </div>
+</div>
+
+<!-- QUIZ PAGE -->
+<div id="page-quiz" class="page">
+  <div class="quiz-controls">
+    <select id="quiz-mode">
+      <option value="gr-ru">Греч → Рус (перевод по форме)</option>
+      <option value="ru-gr">Рус → Греч (выбрать слово)</option>
+    </select>
+    <select id="quiz-batch">
+      <option value="-2">Все блоки</option>
+    </select>
+    <button onclick="startQuiz()">▶ Начать тест</button>
+  </div>
+  <div class="quiz-controls-sub">
+    <label class="quiz-exclude-label">
+      <input type="checkbox" id="quiz-exclude-known">
+      Исключить выученные
+    </label>
+  </div>
+  <div class="quiz-score">Правильно: <span id="quiz-correct">0</span> / <span id="quiz-total">0</span></div>
+  <div class="quiz-question" id="quiz-question-box">
+    <div class="quiz-q-label" id="quiz-mode-label">Переведи слово</div>
+    <div class="quiz-q-text" id="quiz-q-text">Нажми «Начать тест»</div>
+    <div class="quiz-q-forms" id="quiz-q-forms"></div>
+    <div class="quiz-q-sub" id="quiz-q-sub"></div>
+  </div>
+  <div class="quiz-options" id="quiz-options"></div>
+  <div class="quiz-giveup-wrap" id="quiz-giveup-wrap" style="display:none">
+    <button class="btn-giveup" id="btn-giveup" onclick="giveUp()">✕ Не знаю</button>
+  </div>
+  <div class="next-btn-wrap" id="next-btn-wrap" style="display:none">
+    <button class="btn-primary" onclick="nextQuizQuestion()">Следующий →</button>
+  </div>
+</div>
+
+<!-- PROGRESS PAGE -->
+<div id="page-progress" class="page">
+  <h2 style="margin-bottom:20px">Мой прогресс</h2>
+  <div class="stats-grid">
+    <div class="stat-box"><div class="stat-num" id="stat-known" style="color:var(--green)">0</div><div class="stat-label">Знаю уверенно</div></div>
+    <div class="stat-box"><div class="stat-num" id="stat-learning" style="color:var(--yellow)">0</div><div class="stat-label">В процессе</div></div>
+    <div class="stat-box"><div class="stat-num" id="stat-new" style="color:var(--muted)">0</div><div class="stat-label">Ещё не видел</div></div>
+  </div>
+  <div class="batch-progress-list" id="batch-progress-list"></div>
+  <div style="text-align:center"><button class="btn-reset" onclick="resetAll()">🗑 Сбросить весь прогресс</button></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

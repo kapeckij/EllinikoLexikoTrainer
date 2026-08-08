@@ -66,6 +66,25 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
 .tips-item-example { margin-top: 8px; padding: 7px 10px; background: rgba(91,143,255,.07); border-left: 2px solid var(--accent); border-radius: 0 6px 6px 0; font-size: 0.8rem; color: var(--accent2); line-height: 1.55; }
 .tips-section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 14px 0 8px; font-weight: 700; }
 
+/* SEARCH */
+.search-wrap { display: flex; flex-direction: column; gap: 10px; }
+.search-input-wrap { display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 0 14px; transition: border-color .2s; }
+.search-input-wrap:focus-within { border-color: var(--accent); }
+.search-icon { font-size: 1rem; color: var(--muted); flex-shrink: 0; }
+.search-input { flex: 1; background: transparent; border: none; outline: none; color: var(--text); font-size: 1rem; padding: 13px 0; font-family: inherit; }
+.search-input::placeholder { color: var(--muted); }
+.search-clear { background: transparent; border: none; color: var(--muted); cursor: pointer; font-size: 0.95rem; padding: 4px 6px; border-radius: 6px; line-height: 1; }
+.search-clear:hover { color: var(--text); background: var(--card2); }
+.search-meta { font-size: 0.78rem; color: var(--muted); min-height: 16px; }
+.search-results { display: flex; flex-direction: column; gap: 5px; }
+.search-result-row { display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; font-size: 0.88rem; line-height: 1.4; }
+.search-result-row:hover { border-color: var(--accent); background: var(--card2); }
+.sr-type { font-size: 0.64rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); background: var(--card2); padding: 2px 7px; border-radius: 99px; flex-shrink: 0; min-width: 36px; text-align: center; }
+.sr-forms { color: var(--accent2); font-weight: 600; flex: 1; }
+.sr-sep { color: var(--border); margin: 0 2px; }
+.sr-translation { color: var(--muted); }
+.search-empty { text-align: center; color: var(--muted); font-size: 0.88rem; padding: 24px 0; }
+
 @media (max-width: 768px) {
   body { justify-content: flex-start; padding: 16px 12px 20px; }
   .lang-level-floating {

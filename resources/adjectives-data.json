@@ -1,0 +1,4649 @@
+{
+  "batches": [
+    {
+      "batchId": "0",
+      "batchHeader": "Блок 1 — Цвета",
+      "batchName": "Цвета и оттенки",
+      "words": [
+        {
+          "male": "ανοιχτός",
+          "female": "ανοιχτή",
+          "neuter": "ανοιχτό",
+          "example": "Η πόρτα είναι ανοιχτή· μπες!",
+          "translation": "открытый; светлый (о цвете)",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ασπρόμαυρος",
+          "female": "ασπρόμαυρη",
+          "neuter": "ασπρόμαυρο",
+          "example": "Έχω μια ασπρόμαυρη φωτογραφία.",
+          "translation": "чёрно-белый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "άσπρος",
+          "female": "άσπρη",
+          "neuter": "άσπρο",
+          "example": "Ο τοίχος είναι άσπρος.",
+          "translation": "белый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "βυσσινί",
+          "female": "βυσσινί",
+          "neuter": "βυσσινί",
+          "example": "Φόρεσε βυσσινί σακάκι στη γιορτή.",
+          "translation": "бордовый, вишневый (цвет)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "γαλάζιος",
+          "female": "γαλάζια",
+          "neuter": "γαλάζιο",
+          "example": "Η θάλασσα έχει γαλάζιο χρώμα.",
+          "translation": "голубой, лазурный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "γαλανός",
+          "female": "γαλανή",
+          "neuter": "γαλανό",
+          "example": "Έχει γαλανά μάτια.",
+          "translation": "голубой, синий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "γκρι",
+          "female": "γκρι",
+          "neuter": "γκρι",
+          "example": "Το αυτοκίνητό του είναι γκρι.",
+          "translation": "серый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "γκρίζος",
+          "female": "γκρίζα",
+          "neuter": "γκρίζο",
+          "example": "Ο ουρανός είναι γκρίζος σήμερα.",
+          "translation": "серый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "έγχρωμος",
+          "female": "έγχρωμη",
+          "neuter": "έγχρωμο",
+          "example": "Θέλω μια έγχρωμη εκτύπωση.",
+          "translation": "цветной",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "έντονος",
+          "female": "έντονη",
+          "neuter": "έντονο",
+          "example": "Το δωμάτιο έχει έντονο μπλε χρώμα.",
+          "translation": "яркий, интенсивный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "θαλασσί",
+          "female": "θαλασσί",
+          "neuter": "θαλασσί",
+          "example": "Αγόρασε ένα θαλασσί φόρεμα.",
+          "translation": "морской, голубовато-синий",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "καστανός",
+          "female": "καστανή",
+          "neuter": "καστανό",
+          "example": "Έχει καστανά μαλλιά.",
+          "translation": "каштановый (о цвете волос)",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "κατακόκκινος",
+          "female": "κατακόκκινη",
+          "neuter": "κατακόκκινο",
+          "example": "Το πρόσωπό της είναι κατακόκκινο από ντροπή.",
+          "translation": "пунцовый, ярко-красный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "καφέ",
+          "female": "καφέ",
+          "neuter": "καφέ",
+          "example": "Φοράει καφέ παπούτσια.",
+          "translation": "коричневый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "κίτρινος",
+          "female": "κίτρινη",
+          "neuter": "κίτρινο",
+          "example": "Τα λεμόνια είναι κίτρινα.",
+          "translation": "жёлтый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "κόκκινος",
+          "female": "κόκκινη",
+          "neuter": "κόκκινο",
+          "example": "Τα τριαντάφυλλα είναι κόκκινα.",
+          "translation": "красный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "λαδί",
+          "female": "λαδί",
+          "neuter": "λαδί",
+          "example": "Το σακάκι του είναι λαδί.",
+          "translation": "оливковый (цвет)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "λευκός",
+          "female": "λευκή",
+          "neuter": "λευκό",
+          "example": "Φοράω λευκό πουκάμισο.",
+          "translation": "белый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μαύρος",
+          "female": "μαύρη",
+          "neuter": "μαύρο",
+          "example": "Φοράω μαύρα παπούτσια.",
+          "translation": "чёрный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μοβ",
+          "female": "μοβ",
+          "neuter": "μοβ",
+          "example": "Έβαψε τον τοίχο μοβ.",
+          "translation": "фиолетовый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μονόχρωμος",
+          "female": "μονόχρωμη",
+          "neuter": "μονόχρωμο",
+          "example": "Διάλεξα ένα μονόχρωμο πουκάμισο.",
+          "translation": "однотонный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "μπλε",
+          "female": "μπλε",
+          "neuter": "μπλε",
+          "example": "Ο ουρανός είναι μπλε.",
+          "translation": "синий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μωβ",
+          "female": "μωβ",
+          "neuter": "μωβ",
+          "example": "Η τσάντα της είναι μωβ.",
+          "translation": "фиолетовый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "παλ",
+          "female": "παλ",
+          "neuter": "παλ",
+          "example": "Προτιμά παλ χρώματα στο σπίτι.",
+          "translation": "бледный (о цвете)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "πολύχρωμος",
+          "female": "πολύχρωμη",
+          "neuter": "πολύχρωμο",
+          "example": "Αγόρασα πολύχρωμη στολή.",
+          "translation": "разноцветный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "πορτοκαλί",
+          "female": "πορτοκαλί",
+          "neuter": "πορτοκαλί",
+          "example": "Έχει πορτοκαλί σακίδιο.",
+          "translation": "оранжевый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "πράσινος",
+          "female": "πράσινη",
+          "neuter": "πράσινο",
+          "example": "Τα φύλλα είναι πράσινα.",
+          "translation": "зелёный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ροζ",
+          "female": "ροζ",
+          "neuter": "ροζ",
+          "example": "Φοράει ροζ μπλούζα.",
+          "translation": "розовый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "σκούρος",
+          "female": "σκούρα",
+          "neuter": "σκούρο",
+          "example": "Φοράω σκούρο παντελόνι.",
+          "translation": "тёмный (о цвете)",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "τιρκουάζ",
+          "female": "τιρκουάζ",
+          "neuter": "τιρκουάζ",
+          "example": "Το φόρεμα είναι τιρκουάζ.",
+          "translation": "бирюзовый",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "1",
+      "batchHeader": "Блок 2 — Внешность + Эмоции",
+      "batchName": "Внешность человека и физические характеристики; Эмоциональные состояния",
+      "words": [
+        {
+          "male": "αγαπημένος",
+          "female": "αγαπημένη",
+          "neuter": "αγαπημένο",
+          "example": "Αυτό είναι το αγαπημένο μου τραγούδι.",
+          "translation": "любимый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "αγαπητός",
+          "female": "αγαπητή",
+          "neuter": "αγαπητό",
+          "example": "Αγαπητέ φίλε, σε χαιρετώ!",
+          "translation": "дорогой, уважаемый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "αγχωμένος",
+          "female": "αγχωμένη",
+          "neuter": "αγχωμένο",
+          "example": "Είμαι αγχωμένος πριν από την εξέταση.",
+          "translation": "взволнованный, в стрессе",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αδύναμος",
+          "female": "αδύναμη",
+          "neuter": "αδύναμο",
+          "example": "Μετά τη γρίπη νιώθω πολύ αδύναμος.",
+          "translation": "слабый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αδύνατος",
+          "female": "αδύνατη",
+          "neuter": "αδύνατο",
+          "example": "Ο αδύνατος αθλητής χρειάζεται περισσότερη τροφή.",
+          "translation": "тонкий, худой; невозможный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "αξύριστος",
+          "female": "αξύριστη",
+          "neuter": "αξύριστο",
+          "example": "Το αξύριστο πρόσωπό του είναι χαρακτηριστικό.",
+          "translation": "небритый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βαριεστημένος",
+          "female": "βαριεστημένη",
+          "neuter": "βαριεστημένο",
+          "example": "Φαίνεται βαριεστημένος στο μάθημα.",
+          "translation": "скучающий",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "βαρύς",
+          "female": "βαριά",
+          "neuter": "βαρύ",
+          "example": "Αυτό το κουτί είναι πολύ βαρύ.",
+          "translation": "тяжелый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "γελαστός",
+          "female": "γελαστή",
+          "neuter": "γελαστό",
+          "example": "Ο γελαστός μαθητής φέρνει καλή διάθεση.",
+          "translation": "смеющийся, улыбчивый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "γυμνασμένος",
+          "female": "γυμνασμένη",
+          "neuter": "γυμνασμένο",
+          "example": "Ο γυμνασμένος αθλητής κερδίζει.",
+          "translation": "тренированный, накачанный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ελαφρύς",
+          "female": "ελαφριά",
+          "neuter": "ελαφρύ",
+          "example": "Χρειάζομαι ένα ελαφρύ μπουφάν.",
+          "translation": "легкий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ζωηρός",
+          "female": "ζωηρή",
+          "neuter": "ζωηρό",
+          "example": "Το ζωηρό παιδί τρέχει παντού.",
+          "translation": "живой, живущий; шустрый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ίσιος",
+          "female": "ίσια",
+          "neuter": "ίσιο",
+          "example": "Έχω ίσια μαλλιά.",
+          "translation": "прямой",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κοντός",
+          "female": "κοντή",
+          "neuter": "κοντό",
+          "example": "Είναι κοντός για την ηλικία του.",
+          "translation": "низкий, короткий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "λεπτός",
+          "female": "λεπτή",
+          "neuter": "λεπτό",
+          "example": "Φοράει λεπτό ρούχο.",
+          "translation": "тонкий, стройный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μακρύς",
+          "female": "μακριά",
+          "neuter": "μακρύ",
+          "example": "Έχει μακριά μαλλιά.",
+          "translation": "длинный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μελαχρινός",
+          "female": "μελαχρινή",
+          "neuter": "μελαχρινό",
+          "example": "Είναι μελαχρινός με σκούρα μαλλιά.",
+          "translation": "смуглый, тёмноволосый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ντυμένος",
+          "female": "ντυμένη",
+          "neuter": "ντυμένο",
+          "example": "Είναι ντυμένος με κοστούμι.",
+          "translation": "одетый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ξυπόλητος",
+          "female": "ξυπόλητη",
+          "neuter": "ξυπόλητο",
+          "example": "Περπατώ ξυπόλητος στην παραλία.",
+          "translation": "босой",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ξυρισμένος",
+          "female": "ξυρισμένη",
+          "neuter": "ξυρισμένο",
+          "example": "Έχει ξυρισμένο πρόσωπο.",
+          "translation": "бритый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "παχουλός",
+          "female": "παχουλή",
+          "neuter": "παχουλό",
+          "example": "Ο παχουλός σκύλος τρώει πολύ.",
+          "translation": "пухлый, полненький",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "πυκνός",
+          "female": "πυκνή",
+          "neuter": "πυκνό",
+          "example": "Έχει πυκνά μαλλιά.",
+          "translation": "густой; плотный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σγουρός",
+          "female": "σγουρή",
+          "neuter": "σγουρό",
+          "example": "Έχει σγουρά μαλλιά.",
+          "translation": "вьющийся, кудрявый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "υπέρβαρος",
+          "female": "υπέρβαρη",
+          "neuter": "υπέρβαρο",
+          "example": "Ο γιατρός λέει ότι είμαι υπέρβαρος.",
+          "translation": "страдающий избыточным весом",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φαλακρός",
+          "female": "φαλακρή",
+          "neuter": "φαλακρό",
+          "example": "Ο φαλακρός άντρας δεν έχει μαλλιά.",
+          "translation": "лысый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φαρδύς",
+          "female": "φαρδιά",
+          "neuter": "φαρδύ",
+          "example": "Το παντελόνι είναι πολύ φαρδύ.",
+          "translation": "широкий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χλωμός",
+          "female": "χλωμή",
+          "neuter": "χλωμό",
+          "example": "Φαίνεσαι χλωμός, είσαι καλά;",
+          "translation": "бледный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χοντρός",
+          "female": "χοντρή",
+          "neuter": "χοντρό",
+          "example": "Φοράω χοντρό παλτό.",
+          "translation": "толстый; грубый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "χτενισμένος",
+          "female": "χτενισμένη",
+          "neuter": "χτενισμένο",
+          "example": "Τα χτενισμένα μαλλιά της είναι τέλεια.",
+          "translation": "причёсанный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ψηλός",
+          "female": "ψηλή",
+          "neuter": "ψηλό",
+          "example": "Ο ψηλός φοιτητής φτάνει την ανώτατη ράφι.",
+          "translation": "высокий (о человеке)",
+          "languageLevel": "A1"
+        }
+      ]
+    },
+    {
+      "batchId": "2",
+      "batchHeader": "Блок 3 — Эмоции + Характер",
+      "batchName": "Эмоциональные состояния; Черты характера и личностные качества",
+      "words": [
+        {
+          "male": "αγενής",
+          "female": "αγενής",
+          "neuter": "αγενές",
+          "example": "Ήταν αγενής με τη σερβιτόρα.",
+          "translation": "невежливый, грубый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αισιόδοξος",
+          "female": "αισιόδοξη",
+          "neuter": "αισιόδοξο",
+          "example": "Παραμένει αισιόδοξος παρά τις δυσκολίες.",
+          "translation": "оптимистичный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ανδρειωμένος",
+          "female": "ανδρειωμένη",
+          "neuter": "ανδρειωμένο",
+          "example": "Ο ανδρειωμένος πολεμιστής δεν φοβάται.",
+          "translation": "храбрый, смелый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ανεύθυνος",
+          "female": "ανεύθυνη",
+          "neuter": "ανεύθυνο",
+          "example": "Ήταν ανεύθυνος και ξέχασε τα κλειδιά.",
+          "translation": "безответственный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "απαισιόδοξος",
+          "female": "απαισιόδοξη",
+          "neuter": "απαισιόδοξο",
+          "example": "Μην είσαι τόσο απαισιόδοξος για το μέλλον.",
+          "translation": "пессимистичный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "αυτόνομος",
+          "female": "αυτόνομη",
+          "neuter": "αυτόνομο",
+          "example": "Είναι ένα αυτόνομο άτομο.",
+          "translation": "автономный, независимый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "βλάκας",
+          "female": "βλάκα",
+          "neuter": "βλάκικο",
+          "example": "Ήταν βλάκας να το πει έτσι.",
+          "translation": "глупый (разг.)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "γενναιόδωρος",
+          "female": "γενναιόδωρη",
+          "neuter": "γενναιόδωρο",
+          "example": "Είναι πολύ γενναιόδωρος με τους φίλους του.",
+          "translation": "щедрый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "δειλός",
+          "female": "δειλή",
+          "neuter": "δειλό",
+          "example": "Ήταν δειλός και δεν μίλησε.",
+          "translation": "трусливый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "δυσαρεστημένος",
+          "female": "δυσαρεστημένη",
+          "neuter": "δυσαρεστημένο",
+          "example": "Ο πελάτης έφυγε δυσαρεστημένος.",
+          "translation": "недовольный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "δυστυχισμένος",
+          "female": "δυστυχισμένη",
+          "neuter": "δυστυχισμένο",
+          "example": "Ο δυστυχισμένος ήρωας χάνει τα πάντα.",
+          "translation": "несчастный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ενθουσιασμένος",
+          "female": "ενθουσιασμένη",
+          "neuter": "ενθουσιασμένο",
+          "example": "Τα παιδιά είναι ενθουσιασμένα με την εκδρομή.",
+          "translation": "восторженный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ερωτευμένος",
+          "female": "ερωτευμένη",
+          "neuter": "ερωτευμένο",
+          "example": "Είναι ερωτευμένος με τη γειτόνισσα.",
+          "translation": "влюблённый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ευτυχισμένος",
+          "female": "ευτυχισμένη",
+          "neuter": "ευτυχισμένο",
+          "example": "Είναι ευτυχισμένος με την οικογένειά του.",
+          "translation": "счастливый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ευχαριστημένος",
+          "female": "ευχαριστημένη",
+          "neuter": "ευχαριστημένο",
+          "example": "Είμαι ευχαριστημένος με το αποτέλεσμα.",
+          "translation": "довольный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ευχάριστος",
+          "female": "ευχάριστη",
+          "neuter": "ευχάριστο",
+          "example": "Η ευχάριστη βόλτα μάς αναζωογόνησε.",
+          "translation": "приятный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ήρεμος",
+          "female": "ήρεμη",
+          "neuter": "ήρεμο",
+          "example": "Η ήρεμη θάλασσα είναι ιδανική για κολύμπι.",
+          "translation": "спокойный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "θυμωμένος",
+          "female": "θυμωμένη",
+          "neuter": "θυμωμένο",
+          "example": "Ο θυμωμένος πατέρας μαλώνει το παιδί.",
+          "translation": "злой, рассерженный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "καημένος",
+          "female": "καημένη",
+          "neuter": "καημένο",
+          "example": "Ο καημένος φίλος μου αρρώστησε.",
+          "translation": "бедный, несчастный (сочувствие)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κουρασμένος",
+          "female": "κουρασμένη",
+          "neuter": "κουρασμένο",
+          "example": "Είμαι κουρασμένος μετά τη δουλειά.",
+          "translation": "уставший",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "λυπημένος",
+          "female": "λυπημένη",
+          "neuter": "λυπημένο",
+          "example": "Ο λυπημένος φίλος μου κλαίει.",
+          "translation": "грустный, расстроенный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "νευρικός",
+          "female": "νευρική",
+          "neuter": "νευρικό",
+          "example": "Ο νευρικός μαθητής δεν μπορεί να συγκεντρωθεί.",
+          "translation": "нервный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ντροπαλός",
+          "female": "ντροπαλή",
+          "neuter": "ντροπαλό",
+          "example": "Είναι ντροπαλός όταν γνωρίζει κόσμο.",
+          "translation": "застенчивый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "περήφανος",
+          "female": "περήφανη",
+          "neuter": "περήφανο",
+          "example": "Είμαι περήφανος για την κόρη μου.",
+          "translation": "гордый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σιωπηλός",
+          "female": "σιωπηλή",
+          "neuter": "σιωπηλό",
+          "example": "Ο σιωπηλός μαθητής ακούει προσεκτικά.",
+          "translation": "молчаливый, тихий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "στενοχωρημένος",
+          "female": "στενοχωρημένη",
+          "neuter": "στενοχωρημένο",
+          "example": "Ο στενοχωρημένος φίλος μου κλαίει.",
+          "translation": "расстроенный, огорчённый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φοβισμένος",
+          "female": "φοβισμένη",
+          "neuter": "φοβισμένο",
+          "example": "Το παιδί ήταν φοβισμένο στο σκοτάδι.",
+          "translation": "испуганный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χαμογελαστός",
+          "female": "χαμογελαστή",
+          "neuter": "χαμογελαστό",
+          "example": "Η χαμογελαστή κοπέλα είναι ευχάριστη.",
+          "translation": "улыбчивый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χαριτωμένος",
+          "female": "χαριτωμένη",
+          "neuter": "χαριτωμένο",
+          "example": "Το χαριτωμένο μωρό μας κάνει να γελάμε.",
+          "translation": "очаровательный, прелестный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "χαρούμενος",
+          "female": "χαρούμενη",
+          "neuter": "χαρούμενο",
+          "example": "Ο χαρούμενος παππούς τραγουδά.",
+          "translation": "радостный, весёлый",
+          "languageLevel": "A1"
+        }
+      ]
+    },
+    {
+      "batchId": "3",
+      "batchHeader": "Блок 4 — Характер + Размер и форма",
+      "batchName": "Черты характера и личностные качества; Размер, форма и количество",
+      "words": [
+        {
+          "male": "αρκετός",
+          "female": "αρκετή",
+          "neuter": "αρκετό",
+          "example": "Έχω αρκετά χρήματα για το ταξίδι.",
+          "translation": "достаточный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "γιγαντιαίος",
+          "female": "γιγαντιαία",
+          "neuter": "γιγαντιαίο",
+          "example": "Βλέπω ένα γιγαντιαίο κτίριο.",
+          "translation": "гигантский",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "δημιουργικός",
+          "female": "δημιουργική",
+          "neuter": "δημιουργικό",
+          "example": "Έχω δημιουργική δουλειά.",
+          "translation": "творческий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "δίκαιος",
+          "female": "δίκαιη",
+          "neuter": "δίκαιο",
+          "example": "Ο δίκαιος δικαστής κρίνει σωστά.",
+          "translation": "справедливый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "διπλός",
+          "female": "διπλή",
+          "neuter": "διπλό",
+          "example": "Θέλω διπλή μερίδα.",
+          "translation": "двойной",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "δυναμικός",
+          "female": "δυναμική",
+          "neuter": "δυναμικό",
+          "example": "Είναι ένα δυναμικό άτομο.",
+          "translation": "динамичный, энергичный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ειλικρινής",
+          "female": "ειλικρινής",
+          "neuter": "ειλικρινές",
+          "example": "Θέλω μια ειλικρινή απάντηση.",
+          "translation": "честный, искренний",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "έξυπνος",
+          "female": "έξυπνη",
+          "neuter": "έξυπνο",
+          "example": "Η έξυπνη μαθήτρια απαντά σωστά.",
+          "translation": "умный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "εργατικός",
+          "female": "εργατική",
+          "neuter": "εργατικό",
+          "example": "Είναι πολύ εργατική φοιτήτρια.",
+          "translation": "трудолюбивый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ευγενικός",
+          "female": "ευγενική",
+          "neuter": "ευγενικό",
+          "example": "Είναι πολύ ευγενικός κύριος.",
+          "translation": "вежливый, любезный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "κάθετος",
+          "female": "κάθετη",
+          "neuter": "κάθετο",
+          "example": "Η κάθετη γραμμή είναι ευθεία.",
+          "translation": "вертикальный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "λίγος",
+          "female": "λίγη",
+          "neuter": "λίγο",
+          "example": "Έχω λίγο χρόνο.",
+          "translation": "мало, немного",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "λιγότερος",
+          "female": "λιγότερη",
+          "neuter": "λιγότερο",
+          "example": "Τρώω λιγότερο γλυκό.",
+          "translation": "меньший",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μεγάλος",
+          "female": "μεγάλη",
+          "neuter": "μεγάλο",
+          "example": "Έχω ένα μεγάλο σπίτι.",
+          "translation": "большой; взрослый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μεγαλύτερος",
+          "female": "μεγαλύτερη",
+          "neuter": "μεγαλύτερο",
+          "example": "Ο αδελφός μου είναι μεγαλύτερος από μένα.",
+          "translation": "более большой, старший",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μορφωμένος",
+          "female": "μορφωμένη",
+          "neuter": "μορφωμένο",
+          "example": "Είναι πολύ μορφωμένος άνθρωπος.",
+          "translation": "образованный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "οργανωμένος",
+          "female": "οργανωμένη",
+          "neuter": "οργανωμένο",
+          "example": "Είμαι πολύ οργανωμένος στη δουλειά.",
+          "translation": "организованный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σοβαρός",
+          "female": "σοβαρή",
+          "neuter": "σοβαρό",
+          "example": "Αυτό είναι σοβαρό πρόβλημα.",
+          "translation": "серьёзный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τεμπέλης",
+          "female": "τεμπέλα",
+          "neuter": "τεμπέλικο",
+          "example": "Είναι τεμπέλης και δεν βοηθάει στο σπίτι.",
+          "translation": "ленивый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τίμιος",
+          "female": "τίμια",
+          "neuter": "τίμιο",
+          "example": "Είναι πολύ τίμιος άνθρωπος.",
+          "translation": "честный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τολμηρός",
+          "female": "τολμηρή",
+          "neuter": "τολμηρό",
+          "example": "Έκανε μια τολμηρή επιλογή.",
+          "translation": "смелый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "τσιγκούνης",
+          "female": "τσιγκούνα",
+          "neuter": "τσιγκούνικο",
+          "example": "Μην είσαι τσιγκούνης με τους φίλους σου.",
+          "translation": "скупой, жадный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "υπεύθυνος",
+          "female": "υπεύθυνη",
+          "neuter": "υπεύθυνο",
+          "example": "Είναι ένας υπεύθυνος εργαζόμενος.",
+          "translation": "ответственный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φιλανθρωπικός",
+          "female": "φιλανθρωπική",
+          "neuter": "φιλανθρωπικό",
+          "example": "Κάνω φιλανθρωπική δωρεά.",
+          "translation": "благотворительный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φιλάνθρωπος",
+          "female": "φιλάνθρωπη",
+          "neuter": "φιλάνθρωπο",
+          "example": "Είναι ένας φιλάνθρωπος επιχειρηματίας.",
+          "translation": "благотворительный (о человеке), человеколюбивый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φιλελεύθερος",
+          "female": "φιλελεύθερη",
+          "neuter": "φιλελεύθερο",
+          "example": "Έχει φιλελεύθερες απόψεις.",
+          "translation": "либеральный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φιλικός",
+          "female": "φιλική",
+          "neuter": "φιλικό",
+          "example": "Έχω φιλική σχέση με τον γείτονά μου.",
+          "translation": "дружеский, дружелюбный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "φιλόξενος",
+          "female": "φιλόξενη",
+          "neuter": "φιλόξενο",
+          "example": "Η φιλόξενη οικογένεια μας φιλοξένησε.",
+          "translation": "гостеприимный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φρόνιμος",
+          "female": "φρόνιμη",
+          "neuter": "φρόνιμο",
+          "example": "Ο φρόνιμος μαθητής μελετά καθημερινά.",
+          "translation": "благоразумный, благовоспитанный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χαζός",
+          "female": "χαζή",
+          "neuter": "χαζό",
+          "example": "Μη λες χαζά πράγματα.",
+          "translation": "глупый",
+          "languageLevel": "A2"
+        }
+      ]
+    },
+    {
+      "batchId": "4",
+      "batchHeader": "Блок 5 — Размер и форма + Материалы",
+      "batchName": "Размер, форма и количество; Материалы и состав предметов",
+      "words": [
+        {
+          "male": "αδιάβροχος",
+          "female": "αδιάβροχη",
+          "neuter": "αδιάβροχο",
+          "example": "Έχω ένα αδιάβροχο μπουφάν.",
+          "translation": "водонепроницаемый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ασημένιος",
+          "female": "ασημένια",
+          "neuter": "ασημένιο",
+          "example": "Φοράω ένα ασημένιο βραχιόλι.",
+          "translation": "серебряный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βαμβακερός",
+          "female": "βαμβακερή",
+          "neuter": "βαμβακερό",
+          "example": "Φοράω βαμβακερό πουκάμισο το καλοκαίρι.",
+          "translation": "хлопковый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βαμμένος",
+          "female": "βαμμένη",
+          "neuter": "βαμμένο",
+          "example": "Τα βαμμένα νύχια της είναι κόκκινα.",
+          "translation": "окрашенный, накрашенный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "γυάλινος",
+          "female": "γυάλινη",
+          "neuter": "γυάλινο",
+          "example": "Βάζω λουλούδια σε γυάλινο βάζο.",
+          "translation": "стеклянный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "δερμάτινος",
+          "female": "δερμάτινη",
+          "neuter": "δερμάτινο",
+          "example": "Φοράω δερμάτινο μπουφάν.",
+          "translation": "кожаный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κεραμικός",
+          "female": "κεραμική",
+          "neuter": "κεραμικό",
+          "example": "Αγόρασα κεραμικό βάζο.",
+          "translation": "керамический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κριθαρένιος",
+          "female": "κριθαρένια",
+          "neuter": "κριθαρένιο",
+          "example": "Φτιάχνω κριθαρένιο ψωμί.",
+          "translation": "ячменный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "λινός",
+          "female": "λινή",
+          "neuter": "λινό",
+          "example": "Αγόρασα λινό ρούχο για το καλοκαίρι.",
+          "translation": "льняной",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "λιωμένος",
+          "female": "λιωμένη",
+          "neuter": "λιωμένο",
+          "example": "Το λιωμένο παγωτό έπεσε κάτω.",
+          "translation": "растаявший, расплавленный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μάλλινος",
+          "female": "μάλλινη",
+          "neuter": "μάλλινο",
+          "example": "Φοράω μάλλινη κάλτσα τον χειμώνα.",
+          "translation": "шерстяной",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μεσαίος",
+          "female": "μεσαία",
+          "neuter": "μεσαίο",
+          "example": "Έχω μεσαίου μεγέθους σπίτι.",
+          "translation": "средний (по размеру)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μέσος",
+          "female": "μέση",
+          "neuter": "μέσο",
+          "example": "Ο μέσος Έλληνας αγαπά τη θάλασσα.",
+          "translation": "средний",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μέτριος",
+          "female": "μέτρια",
+          "neuter": "μέτριο",
+          "example": "Θέλω μέτριο καφέ.",
+          "translation": "средний; умеренный; с молоком (о кофе)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μικρός",
+          "female": "μικρή",
+          "neuter": "μικρό",
+          "example": "Έχω ένα μικρό παιδί.",
+          "translation": "маленький; младший",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μικρότερος",
+          "female": "μικρότερη",
+          "neuter": "μικρότερο",
+          "example": "Θέλω ένα μικρότερο τραπέζι.",
+          "translation": "меньший, более маленький",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μισός",
+          "female": "μισή",
+          "neuter": "μισό",
+          "example": "Θέλω μισό κιλό τυρί.",
+          "translation": "половинный; полу-",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μοναδικός",
+          "female": "μοναδική",
+          "neuter": "μοναδικό",
+          "example": "Αυτό είναι ένα μοναδικό δώρο.",
+          "translation": "уникальный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ολόκληρος",
+          "female": "ολόκληρη",
+          "neuter": "ολόκληρο",
+          "example": "Έφαγα ολόκληρη πίτα.",
+          "translation": "целый, весь",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "περισσότερος",
+          "female": "περισσότερη",
+          "neuter": "περισσότερο",
+          "example": "Θέλω περισσότερο χρόνο.",
+          "translation": "больше; большинство",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "στενός",
+          "female": "στενή",
+          "neuter": "στενό",
+          "example": "Ο δρόμος είναι στενός.",
+          "translation": "узкий; тесный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "στρογγυλός",
+          "female": "στρογγυλή",
+          "neuter": "στρογγυλό",
+          "example": "Κάθομαι σε στρογγυλό τραπέζι.",
+          "translation": "круглый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τέλειος",
+          "female": "τέλεια",
+          "neuter": "τέλειο",
+          "example": "Αυτή είναι τέλεια ευκαιρία.",
+          "translation": "совершенный, идеальный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τεράστιος",
+          "female": "τεράστια",
+          "neuter": "τεράστιο",
+          "example": "Μένω σε τεράστιο σπίτι.",
+          "translation": "огромный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τετράγωνος",
+          "female": "τετράγωνη",
+          "neuter": "τετράγωνο",
+          "example": "Έχω τετράγωνο τραπέζι.",
+          "translation": "квадратный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τόσος",
+          "female": "τόση",
+          "neuter": "τόσο",
+          "example": "Δεν περίμενα τόσα πολλά άτομα.",
+          "translation": "столько, такой",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "τριγωνικός",
+          "female": "τριγωνική",
+          "neuter": "τριγωνικό",
+          "example": "Αυτό έχει τριγωνικό σχήμα.",
+          "translation": "треугольный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "υψηλός",
+          "female": "υψηλή",
+          "neuter": "υψηλό",
+          "example": "Έχει υψηλή θερμοκρασία.",
+          "translation": "высокий; высокий (о температуре)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χαμηλός",
+          "female": "χαμηλή",
+          "neuter": "χαμηλό",
+          "example": "Το τραπέζι είναι χαμηλό.",
+          "translation": "низкий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ψιλός",
+          "female": "ψιλή",
+          "neuter": "ψιλό",
+          "example": "Έχει ψιλή φωνή.",
+          "translation": "тонкий (о голосе); мелкий",
+          "languageLevel": "A2"
+        }
+      ]
+    },
+    {
+      "batchId": "5",
+      "batchHeader": "Блок 6 — Еда + Материалы",
+      "batchName": "Еда: вкус, приготовление, кулинарные свойства; Материалы и состав предметов",
+      "words": [
+        {
+          "male": "αλμυρός",
+          "female": "αλμυρή",
+          "neuter": "αλμυρό",
+          "example": "Η σούπα είναι πολύ αλμυρή.",
+          "translation": "солёный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "άνοστος",
+          "female": "άνοστη",
+          "neuter": "άνοστο",
+          "example": "Η σούπα είναι άνοστη χωρίς αλάτι.",
+          "translation": "безвкусный, пресный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "άπαχος",
+          "female": "άπαχη",
+          "neuter": "άπαχο",
+          "example": "Προτιμώ άπαχο γάλα στο πρωινό.",
+          "translation": "нежирный, постный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αρνίσιος",
+          "female": "αρνίσια",
+          "neuter": "αρνίσιο",
+          "example": "Μαγειρεύω αρνίσιο κρέας για το Πάσχα.",
+          "translation": "бараний, ягнячий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αρωματικός",
+          "female": "αρωματική",
+          "neuter": "αρωματικό",
+          "example": "Χρησιμοποιώ αρωματικά βότανα στη μαγειρική.",
+          "translation": "ароматный, душистый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βρασμένος",
+          "female": "βρασμένη",
+          "neuter": "βρασμένο",
+          "example": "Τρώω βρασμένα λαχανικά για διατροφή.",
+          "translation": "варёный, кипячёный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βραστός",
+          "female": "βραστή",
+          "neuter": "βραστό",
+          "example": "Θέλω ένα βραστό αυγό.",
+          "translation": "варёный (яйцо, картофель и т.д.)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "γεμιστός",
+          "female": "γεμιστή",
+          "neuter": "γεμιστό",
+          "example": "Τρώω γεμιστά λαχανικά.",
+          "translation": "фаршированный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "γλυκός",
+          "female": "γλυκιά",
+          "neuter": "γλυκό",
+          "example": "Μου αρέσει ο γλυκός καφές.",
+          "translation": "сладкий; нежный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ζεματιστός",
+          "female": "ζεματιστή",
+          "neuter": "ζεματιστό",
+          "example": "Η σούπα είναι ακόμα ζεματιστή.",
+          "translation": "обжигающе горячий",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "θυμαρίσιος",
+          "female": "θυμαρίσια",
+          "neuter": "θυμαρίσιο",
+          "example": "Αγοράζω θυμαρίσιο μέλι.",
+          "translation": "тимьяновый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "καπνιστός",
+          "female": "καπνιστή",
+          "neuter": "καπνιστό",
+          "example": "Τρώω καπνιστό σολομό.",
+          "translation": "копчёный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κατεψυγμένος",
+          "female": "κατεψυγμένη",
+          "neuter": "κατεψυγμένο",
+          "example": "Αγοράζω κατεψυγμένα λαχανικά.",
+          "translation": "замороженный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "καυτερός",
+          "female": "καυτερή",
+          "neuter": "καυτερό",
+          "example": "Αυτό το φαγητό είναι πολύ καυτερό.",
+          "translation": "острый (на вкус)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "καυτός",
+          "female": "καυτή",
+          "neuter": "καυτό",
+          "example": "Πρόσεχε, η σούπα είναι καυτή!",
+          "translation": "раскалённый, обжигающий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "λιπαρός",
+          "female": "λιπαρή",
+          "neuter": "λιπαρό",
+          "example": "Αποφεύγω λιπαρές τροφές.",
+          "translation": "жирный, жирный (о еде)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μαρμάρινος",
+          "female": "μαρμάρινη",
+          "neuter": "μαρμάρινο",
+          "example": "Ο μαρμάρινος στύλος είναι αρχαίος.",
+          "translation": "мраморный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "μεταλλικός",
+          "female": "μεταλλική",
+          "neuter": "μεταλλικό",
+          "example": "Αγόρασα μεταλλικό τραπέζι.",
+          "translation": "металлический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μεταξωτός",
+          "female": "μεταξωτή",
+          "neuter": "μεταξωτό",
+          "example": "Φοράω μεταξωτό φόρεμα.",
+          "translation": "шёлковый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ξύλινος",
+          "female": "ξύλινη",
+          "neuter": "ξύλινο",
+          "example": "Κάθομαι σε ξύλινη καρέκλα.",
+          "translation": "деревянный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "πέτρινος",
+          "female": "πέτρινη",
+          "neuter": "πέτρινο",
+          "example": "Μένω σε πέτρινο σπίτι.",
+          "translation": "каменный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "πήλινος",
+          "female": "πήλινη",
+          "neuter": "πήλινο",
+          "example": "Αγοράζω πήλινο πιάτο.",
+          "translation": "глиняный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "πλαστικός",
+          "female": "πλαστική",
+          "neuter": "πλαστικό",
+          "example": "Χρησιμοποιώ πλαστικό μπουκάλι.",
+          "translation": "пластиковый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "σιδερένιος",
+          "female": "σιδερένια",
+          "neuter": "σιδερένιο",
+          "example": "Κλείνω τη σιδερένια πόρτα.",
+          "translation": "железный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σταρένιος",
+          "female": "σταρένια",
+          "neuter": "σταρένιο",
+          "example": "Αγοράζω σταρένιο αλεύρι.",
+          "translation": "пшеничный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "συνθετικός",
+          "female": "συνθετική",
+          "neuter": "συνθετικό",
+          "example": "Φοράω συνθετικό ύφασμα.",
+          "translation": "синтетический",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "υφασμάτινος",
+          "female": "υφασμάτινη",
+          "neuter": "υφασμάτινο",
+          "example": "Πήρε μια υφασμάτινη τσάντα.",
+          "translation": "тканевый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "χάρτινος",
+          "female": "χάρτινη",
+          "neuter": "χάρτινο",
+          "example": "Χρησιμοποιώ χάρτινη σακούλα.",
+          "translation": "бумажный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χρυσός",
+          "female": "χρυσή",
+          "neuter": "χρυσό",
+          "example": "Φοράω χρυσό δαχτυλίδι.",
+          "translation": "золотой",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ψάθινος",
+          "female": "ψάθινη",
+          "neuter": "ψάθινο",
+          "example": "Φοράω ψάθινο καπέλο.",
+          "translation": "соломенный",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "6",
+      "batchHeader": "Блок 7 — Время + Еда",
+      "batchName": "Временные и периодические характеристики; Еда: вкус, приготовление, кулинарные свойства",
+      "words": [
+        {
+          "male": "αναδρομικός",
+          "female": "αναδρομική",
+          "neuter": "αναδρομικό",
+          "example": "Η αναδρομική αύξηση ισχύει από τον Ιανουάριο.",
+          "translation": "ретроактивный, с обратной силой",
+          "languageLevel": "B2"
+        },
+        {
+          "male": "απογευματινός",
+          "female": "απογευματινή",
+          "neuter": "απογευματινό",
+          "example": "Πίνω τον απογευματινό καφέ μου στο μπαλκόνι.",
+          "translation": "послеполуденный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αυριανός",
+          "female": "αυριανή",
+          "neuter": "αυριανό",
+          "example": "Ανυπομονώ για το αυριανό ταξίδι.",
+          "translation": "завтрашний",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βραδινός",
+          "female": "βραδινή",
+          "neuter": "βραδινό",
+          "example": "Ετοιμάζω το βραδινό φαγητό.",
+          "translation": "вечерний",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "δεύτερος",
+          "female": "δεύτερη",
+          "neuter": "δεύτερο",
+          "example": "Μένω στον δεύτερο όροφο.",
+          "translation": "второй",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "δίσεκτος",
+          "female": "δίσεκτη",
+          "neuter": "δίσεκτο",
+          "example": "Το 2024 είναι δίσεκτο έτος.",
+          "translation": "високосный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "εβδομαδιαίος",
+          "female": "εβδομαδιαία",
+          "neuter": "εβδομαδιαίο",
+          "example": "Διαβάζω το εβδομαδιαίο περιοδικό.",
+          "translation": "еженедельный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "εικοστός",
+          "female": "εικοστή",
+          "neuter": "εικοστό",
+          "example": "Γιορτάζω την εικοστή επέτειο.",
+          "translation": "двадцатый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "επόμενος",
+          "female": "επόμενη",
+          "neuter": "επόμενο",
+          "example": "Περιμένω τον επόμενο λεωφορείο.",
+          "translation": "следующий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ετήσιος",
+          "female": "ετήσια",
+          "neuter": "ετήσιο",
+          "example": "Έχω ετήσιο συμβόλαιο εργασίας.",
+          "translation": "годовой, ежегодный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ημερήσιος",
+          "female": "ημερήσια",
+          "neuter": "ημερήσιο",
+          "example": "Διαβάζω το ημερήσιο πρόγραμμα.",
+          "translation": "ежедневный; дневной",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "καθημερινός",
+          "female": "καθημερινή",
+          "neuter": "καθημερινό",
+          "example": "Η καθημερινή ρουτίνα μου ξεκινά νωρίς.",
+          "translation": "повседневный, ежедневный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μαγειρευτός",
+          "female": "μαγειρευτή",
+          "neuter": "μαγειρευτό",
+          "example": "Τρώω μαγειρευτό φαγητό.",
+          "translation": "варёный, приготовленный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μεσημεριανός",
+          "female": "μεσημεριανή",
+          "neuter": "μεσημεριανό",
+          "example": "Κοιμάμαι μεσημεριανό ύπνο.",
+          "translation": "полуденный, обеденный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μηνιαίος",
+          "female": "μηνιαία",
+          "neuter": "μηνιαίο",
+          "example": "Παίρνω μηνιαίο μισθό.",
+          "translation": "ежемесячный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "μισοψημένος",
+          "female": "μισοψημένη",
+          "neuter": "μισοψημένο",
+          "example": "Το μισοψημένο κρέας δεν είναι υγιεινό.",
+          "translation": "полупрожаренный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μοσχαρίσιος",
+          "female": "μοσχαρίσια",
+          "neuter": "μοσχαρίσιο",
+          "example": "Τρώω μοσχαρίσιο κρέας.",
+          "translation": "телячий, говяжий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "νηστίσιμος",
+          "female": "νηστίσιμη",
+          "neuter": "νηστίσιμο",
+          "example": "Μαγειρεύω νηστίσιμο φαγητό.",
+          "translation": "постный (пища)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "νόστιμος",
+          "female": "νόστιμη",
+          "neuter": "νόστιμο",
+          "example": "Το φαγητό είναι πολύ νόστιμο.",
+          "translation": "вкусный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "νυχτερινός",
+          "female": "νυχτερινή",
+          "neuter": "νυχτερινό",
+          "example": "Έχω νυχτερινή βάρδια στη δουλειά.",
+          "translation": "ночной",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ξινός",
+          "female": "ξινή",
+          "neuter": "ξινό",
+          "example": "Το λεμόνι είναι ξινό.",
+          "translation": "кислый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ορεκτικός",
+          "female": "ορεκτική",
+          "neuter": "ορεκτικό",
+          "example": "Η μυρωδιά ήταν πολύ ορεκτική.",
+          "translation": "аппетитный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "παντοτινός",
+          "female": "παντοτινή",
+          "neuter": "παντοτινό",
+          "example": "Είναι ο παντοτινός μου φίλος.",
+          "translation": "вечный, постоянный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "πικρός",
+          "female": "πικρή",
+          "neuter": "πικρό",
+          "example": "Ο καφές χωρίς ζάχαρη είναι πικρός.",
+          "translation": "горький",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σκέτος",
+          "female": "σκέτη",
+          "neuter": "σκέτο",
+          "example": "Θέλω σκέτο καφέ χωρίς ζάχαρη.",
+          "translation": "чистый (без добавок); простой",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φρέσκος",
+          "female": "φρέσκια",
+          "neuter": "φρέσκο",
+          "example": "Αγοράζω φρέσκο ψωμί κάθε πρωί.",
+          "translation": "свежий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "χοιρινός",
+          "female": "χοιρινή",
+          "neuter": "χοιρινό",
+          "example": "Μαγειρεύω χοιρινό κρέας.",
+          "translation": "свиной",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ψημένος",
+          "female": "ψημένη",
+          "neuter": "ψημένο",
+          "example": "Θέλω καλά ψημένο κρέας.",
+          "translation": "прожаренный, запечённый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ψητός",
+          "female": "ψητή",
+          "neuter": "ψητό",
+          "example": "Τρώω ψητό κοτόπουλο.",
+          "translation": "жареный, запечённый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ωμός",
+          "female": "ωμή",
+          "neuter": "ωμό",
+          "example": "Το ωμό κρέας πρέπει να μαγειρευτεί.",
+          "translation": "сырой, сырой (о мясе)",
+          "languageLevel": "A2"
+        }
+      ]
+    },
+    {
+      "batchId": "7",
+      "batchHeader": "Блок 8 — Погода + Время",
+      "batchName": "Сезоны, погода и природные условия; Временные и периодические характеристики",
+      "words": [
+        {
+          "male": "αίθριος",
+          "female": "αίθρια",
+          "neuter": "αίθριο",
+          "example": "Ο καιρός είναι αίθριος σήμερα.",
+          "translation": "ясный, безоблачный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ανεμώδης",
+          "female": "ανεμώδης",
+          "neuter": "ανεμώδες",
+          "example": "Το νησί είναι πολύ ανεμώδες τον χειμώνα.",
+          "translation": "ветреный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ανοιξιάτικος",
+          "female": "ανοιξιάτικη",
+          "neuter": "ανοιξιάτικο",
+          "example": "Φοράω ανοιξιάτικα ρούχα τον Απρίλιο.",
+          "translation": "весенний",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βροχερός",
+          "female": "βροχερή",
+          "neuter": "βροχερό",
+          "example": "Ο καιρός θα είναι βροχερός αύριο.",
+          "translation": "дождливый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "δροσερός",
+          "female": "δροσερή",
+          "neuter": "δροσερό",
+          "example": "Η δροσερή βροχή αναζωογονεί.",
+          "translation": "прохладный, освежающий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ζεστός",
+          "female": "ζεστή",
+          "neuter": "ζεστό",
+          "example": "Πίνω ένα ζεστό τσάι το πρωί.",
+          "translation": "тёплый, горячий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ηλιακός",
+          "female": "ηλιακή",
+          "neuter": "ηλιακό",
+          "example": "Έχω ηλιακό πάνελ στη στέγη.",
+          "translation": "солнечный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ηλιόλουστος",
+          "female": "ηλιόλουστη",
+          "neuter": "ηλιόλουστο",
+          "example": "Σήμερα είναι μια ηλιόλουστη μέρα.",
+          "translation": "солнечный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "θερινός",
+          "female": "θερινή",
+          "neuter": "θερινό",
+          "example": "Πηγαίνω στο θερινό σχολείο.",
+          "translation": "летний",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "θερμός",
+          "female": "θερμή",
+          "neuter": "θερμό",
+          "example": "Δέχομαι μια θερμή υποδοχή.",
+          "translation": "тёплый (в переносном смысле); горячий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "θυελλώδης",
+          "female": "θυελλώδης",
+          "neuter": "θυελλώδες",
+          "example": "Ήταν μια θυελλώδης νύχτα.",
+          "translation": "бурный, штормовой",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "καλοκαιρινός",
+          "female": "καλοκαιρινή",
+          "neuter": "καλοκαιρινό",
+          "example": "Αγαπώ τα καλοκαιρινά ρούχα.",
+          "translation": "летний",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "κρύος",
+          "female": "κρύα",
+          "neuter": "κρύο",
+          "example": "Πίνω κρύο νερό.",
+          "translation": "холодный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "νεφελώδης",
+          "female": "νεφελώδης",
+          "neuter": "νεφελώδες",
+          "example": "Ο καιρός θα είναι νεφελώδης το απόγευμα.",
+          "translation": "облачный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ξερός",
+          "female": "ξερή",
+          "neuter": "ξερό",
+          "example": "Τα ξερά φύλλα πέφτουν το φθινόπωρο.",
+          "translation": "сухой; засохший",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ξηρός",
+          "female": "ξηρή",
+          "neuter": "ξηρό",
+          "example": "Το ξηρό κλίμα δεν βολεύει μου.",
+          "translation": "сухой (климат, кожа)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ορεινός",
+          "female": "ορεινή",
+          "neuter": "ορεινό",
+          "example": "Ζω σε ορεινό χωριό.",
+          "translation": "горный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "παγωμένος",
+          "female": "παγωμένη",
+          "neuter": "παγωμένο",
+          "example": "Πίνω παγωμένο χυμό.",
+          "translation": "замёрзший, ледяной",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "περασμένος",
+          "female": "περασμένη",
+          "neuter": "περασμένο",
+          "example": "Την περασμένη εβδομάδα πήγα διακοπές.",
+          "translation": "прошлый, минувший",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "περσινός",
+          "female": "περσινή",
+          "neuter": "περσινό",
+          "example": "Τo περσινό καλοκαίρι ήταν πολύ ζεστό.",
+          "translation": "прошлогодний",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "πρόσφατος",
+          "female": "πρόσφατη",
+          "neuter": "πρόσφατο",
+          "example": "Διαβάζω πρόσφατα νέα.",
+          "translation": "недавний, свежий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "πρωινός",
+          "female": "πρωινή",
+          "neuter": "πρωινό",
+          "example": "Πίνω πρωινό καφέ.",
+          "translation": "утренний",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "πρώτος",
+          "female": "πρώτη",
+          "neuter": "πρώτο",
+          "example": "Είμαι πρώτος στην ουρά.",
+          "translation": "первый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "σημερινός",
+          "female": "σημερινή",
+          "neuter": "σημερινό",
+          "example": "Διαβάζω τη σημερινή εφημερίδα.",
+          "translation": "сегодняшний",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "τελευταίος",
+          "female": "τελευταία",
+          "neuter": "τελευταίο",
+          "example": "Αυτό είναι το τελευταίο λεπτό.",
+          "translation": "последний",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "τρίτος",
+          "female": "τρίτη",
+          "neuter": "τρίτο",
+          "example": "Μένω στον τρίτο όροφο.",
+          "translation": "третий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "υγρός",
+          "female": "υγρή",
+          "neuter": "υγρό",
+          "example": "Τα υγρά ρούχα στεγνώνουν στον αέρα.",
+          "translation": "влажный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φετινός",
+          "female": "φετινή",
+          "neuter": "φετινό",
+          "example": "Ο φετινός χειμώνας είναι πολύ κρύος.",
+          "translation": "нынешний, этого года",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φθινοπωρινός",
+          "female": "φθινοπωρινή",
+          "neuter": "φθινοπωρινό",
+          "example": "Μου αρέσει η φθινοπωρινή βροχή.",
+          "translation": "осенний",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χτεσινός / χθεσινός",
+          "female": "χτεσινή / χθεσινή",
+          "neuter": "χτεσινό / χθεσινό",
+          "example": "Διαβάζω χτεσινή εφημερίδα.",
+          "translation": "вчерашний",
+          "languageLevel": "A2"
+        }
+      ]
+    },
+    {
+      "batchId": "8",
+      "batchHeader": "Блок 9 — География + Погода",
+      "batchName": "Географические, национальные и религиозные; Сезоны, погода и природные условия",
+      "words": [
+        {
+          "male": "αγγλικός",
+          "female": "αγγλική",
+          "neuter": "αγγλικό",
+          "example": "Μιλάω αγγλικά γιατί δουλεύω με ξένους πελάτες.",
+          "translation": "английский",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "άγιος",
+          "female": "άγια",
+          "neuter": "άγιο",
+          "example": "Ο Άγιος Νικόλαος είναι προστάτης των ναυτικών.",
+          "translation": "святой",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "αιγινήτικος",
+          "female": "αιγινήτικη",
+          "neuter": "αιγινήτικο",
+          "example": "Αγόρασα αιγινήτικα φιστίκια.",
+          "translation": "с острова Эгина",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ανατολικός",
+          "female": "ανατολική",
+          "neuter": "ανατολικό",
+          "example": "Η ανατολική πλευρά του σπιτιού έχει ήλιο το πρωί.",
+          "translation": "восточный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αρχαιολογικός",
+          "female": "αρχαιολογική",
+          "neuter": "αρχαιολογικό",
+          "example": "Επισκέπτομαι έναν αρχαιολογικό χώρο.",
+          "translation": "археологический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αρχαίος",
+          "female": "αρχαία",
+          "neuter": "αρχαίο",
+          "example": "Επισκέπτομαι αρχαίους ναούς στην Ελλάδα.",
+          "translation": "древний",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αττικός",
+          "female": "αττική",
+          "neuter": "αττικό",
+          "example": "Μιλώ αττική ελληνική γλώσσα.",
+          "translation": "аттический",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "βορειοανατολικός",
+          "female": "βορειοανατολική",
+          "neuter": "βορειοανατολικό",
+          "example": "Φυσάει βορειοανατολικός άνεμος.",
+          "translation": "северо-восточный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βορειοδυτικός",
+          "female": "βορειοδυτική",
+          "neuter": "βορειοδυτικό",
+          "example": "Πηγαίνω βορειοδυτική κατεύθυνση.",
+          "translation": "северо-западный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βόρειος",
+          "female": "βόρεια",
+          "neuter": "βόρειο",
+          "example": "Ο βόρειος άνεμος είναι κρύος.",
+          "translation": "северный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "βυζαντινός",
+          "female": "βυζαντινή",
+          "neuter": "βυζαντινό",
+          "example": "Επισκέπτομαι βυζαντινές εκκλησίες.",
+          "translation": "византийский",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "γεωγραφικός",
+          "female": "γεωγραφική",
+          "neuter": "γεωγραφικό",
+          "example": "Κοιτάω γεωγραφικό χάρτη.",
+          "translation": "географический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "δυτικός",
+          "female": "δυτική",
+          "neuter": "δυτικό",
+          "example": "Ταξιδεύω στη δυτική Ευρώπη.",
+          "translation": "западный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ελληνικός",
+          "female": "ελληνική",
+          "neuter": "ελληνικό",
+          "example": "Μαθαίνω ελληνική γλώσσα.",
+          "translation": "греческий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ευρωπαϊκός",
+          "female": "ευρωπαϊκή",
+          "neuter": "ευρωπαϊκό",
+          "example": "Ταξιδεύω στις ευρωπαϊκές χώρες.",
+          "translation": "европейский",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "θείος",
+          "female": "θεία",
+          "neuter": "θείο",
+          "example": "Αυτή είναι θεία φωνή.",
+          "translation": "божественный; дядя/тётя (как прил.)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "θρησκευτικός",
+          "female": "θρησκευτική",
+          "neuter": "θρησκευτικό",
+          "example": "Γιορτάζουμε θρησκευτική εορτή.",
+          "translation": "религиозный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ιερός",
+          "female": "ιερή",
+          "neuter": "ιερό",
+          "example": "Η εκκλησία είναι ιερός χώρος.",
+          "translation": "священный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "Κρητικός",
+          "female": "Κρητική",
+          "neuter": "Κρητικό",
+          "example": "Αυτός είναι κρητικός χορός.",
+          "translation": "критский",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κυκλαδικός",
+          "female": "κυκλαδική",
+          "neuter": "κυκλαδικό",
+          "example": "Θαυμάζω την κυκλαδική αρχιτεκτονική.",
+          "translation": "кикладский",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "μεσογειακός",
+          "female": "μεσογειακή",
+          "neuter": "μεσογειακό",
+          "example": "Τρώω μεσογειακή κουζίνα.",
+          "translation": "средиземноморский",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "νοτιοανατολικός",
+          "female": "νοτιοανατολική",
+          "neuter": "νοτιοανατολικό",
+          "example": "Ο νοτιοανατολικός άνεμος φέρνει ζέστη.",
+          "translation": "юго-восточный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "νοτιοδυτικός",
+          "female": "νοτιοδυτική",
+          "neuter": "νοτιοδυτικό",
+          "example": "Πηγαίνω σε νοτιοδυτική κατεύθυνση.",
+          "translation": "юго-западный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "νότιος",
+          "female": "νότια",
+          "neuter": "νότιο",
+          "example": "Ο νότιος άνεμος φέρνει ζέστη.",
+          "translation": "южный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ντόπιος",
+          "female": "ντόπια",
+          "neuter": "ντόπιο",
+          "example": "Αγοράζω ντόπια προϊόντα.",
+          "translation": "местный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χειμερινός",
+          "female": "χειμερινή",
+          "neuter": "χειμερινό",
+          "example": "Φοράω χειμερινό παλτό.",
+          "translation": "зимний",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "χειμωνιάτικος",
+          "female": "χειμωνιάτικη",
+          "neuter": "χειμωνιάτικο",
+          "example": "Έχω χειμωνιάτικα ρούχα.",
+          "translation": "зимний (разговорный)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χιονισμένος",
+          "female": "χιονισμένη",
+          "neuter": "χιονισμένο",
+          "example": "Τα βουνά είναι χιονισμένα.",
+          "translation": "заснеженный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "χλιαρός",
+          "female": "χλιαρή",
+          "neuter": "χλιαρό",
+          "example": "Πίνω χλιαρό τσάι.",
+          "translation": "тёплый (чуть тёплый)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ψυχρός",
+          "female": "ψυχρή",
+          "neuter": "ψυχρό",
+          "example": "Ο ψυχρός βορράς φέρνει κρύο.",
+          "translation": "холодный (книжн.); прохладный (о климате)",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "9",
+      "batchHeader": "Блок 10 — Семья + География",
+      "batchName": "Семья, социальный статус и праздники; Географические, национальные и религиозные",
+      "words": [
+        {
+          "male": "άγαμος",
+          "female": "άγαμη",
+          "neuter": "άγαμο",
+          "example": "Είναι άγαμος και ζει μόνος του.",
+          "translation": "неженатый, холостой",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "άγνωστος",
+          "female": "άγνωστη",
+          "neuter": "άγνωστο",
+          "example": "Ένας άγνωστος άντρας χτύπησε την πόρτα.",
+          "translation": "неизвестный, незнакомый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ανύπαντρος",
+          "female": "ανύπαντρη",
+          "neuter": "ανύπαντρο",
+          "example": "Είναι ανύπαντρος και ψάχνει για σύντροφο.",
+          "translation": "неженатый, незамужняя",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αρραβωνιασμένος",
+          "female": "αρραβωνιασμένη",
+          "neuter": "αρραβωνιασμένο",
+          "example": "Η αρραβωνιασμένη κοπέλα φοράει ένα δαχτυλίδι.",
+          "translation": "обручённый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "γαμήλιος",
+          "female": "γαμήλια",
+          "neuter": "γαμήλιο",
+          "example": "Παίζω γαμήλιο τραγούδι.",
+          "translation": "свадебный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "γνώριμος",
+          "female": "γνώριμη",
+          "neuter": "γνώριμο",
+          "example": "Αυτή η φωνή μου φαίνεται γνώριμη.",
+          "translation": "знакомый (узнаваемый)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "γνωστός",
+          "female": "γνωστή",
+          "neuter": "γνωστό",
+          "example": "Αυτός είναι ένας γνωστός ηθοποιός.",
+          "translation": "известный, знакомый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "δημόσιος",
+          "female": "δημόσια",
+          "neuter": "δημόσιο",
+          "example": "Δουλεύω στο δημόσιο τομέα.",
+          "translation": "общественный, государственный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "δίδυμος",
+          "female": "δίδυμη",
+          "neuter": "δίδυμο",
+          "example": "Έχω δίδυμα αδέλφια.",
+          "translation": "близнечный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "έγγαμος",
+          "female": "έγγαμη",
+          "neuter": "έγγαμο",
+          "example": "Οι έγγαμοι έχουν ειδικές φορολογικές ελαφρύνσεις.",
+          "translation": "женатый, замужняя",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "εθνικός",
+          "female": "εθνική",
+          "neuter": "εθνικό",
+          "example": "Ακούω τον εθνικό ύμνο.",
+          "translation": "национальный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ηλικιωμένος",
+          "female": "ηλικιωμένη",
+          "neuter": "ηλικιωμένο",
+          "example": "Βοηθάω τον ηλικιωμένο γείτονά μου.",
+          "translation": "пожилой",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ιδιωτικός",
+          "female": "ιδιωτική",
+          "neuter": "ιδιωτικό",
+          "example": "Πηγαίνω σε ιδιωτικό σχολείο.",
+          "translation": "частный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κοινός",
+          "female": "κοινή",
+          "neuter": "κοινό",
+          "example": "Αυτό είναι κοινό μυστικό.",
+          "translation": "общий; обычный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κοινόχρηστος",
+          "female": "κοινόχρηστη",
+          "neuter": "κοινόχρηστο",
+          "example": "Το κοινόχρηστο μπαλκόνι ανήκει σε όλους.",
+          "translation": "общего пользования",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "μεσήλικος",
+          "female": "μεσήλικη",
+          "neuter": "μεσήλικο",
+          "example": "Ο μεσήλικος άντρας δουλεύει πολύ.",
+          "translation": "среднего возраста",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μονάχος",
+          "female": "μονάχη",
+          "neuter": "μονάχο",
+          "example": "Ζει μονάχος στο βουνό.",
+          "translation": "одинокий, один",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μόνος",
+          "female": "μόνη",
+          "neuter": "μόνο",
+          "example": "Ζω μόνος μου.",
+          "translation": "один, одинокий; сам",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "νεαρός",
+          "female": "νεαρή",
+          "neuter": "νεαρό",
+          "example": "Ο νεαρός φοιτητής σπουδάζει σκληρά.",
+          "translation": "молодой",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "νέος",
+          "female": "νέα",
+          "neuter": "νέο",
+          "example": "Είναι ένας νέος καλλιτέχνης.",
+          "translation": "новый; молодой",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "νιόπαντρος",
+          "female": "νιόπαντρη",
+          "neuter": "νιόπαντρο",
+          "example": "Το νιόπαντρο ζευγάρι ταξιδεύει στο Παρίσι.",
+          "translation": "молодожёны (прил.)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "νυφικός",
+          "female": "νυφική",
+          "neuter": "νυφικό",
+          "example": "Φοράει νυφικό φόρεμα.",
+          "translation": "свадебный (невесты)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ξένος",
+          "female": "ξένη",
+          "neuter": "ξένο",
+          "example": "Μαθαίνω ξένη γλώσσα.",
+          "translation": "чужой, иностранный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ολυμπιακός",
+          "female": "ολυμπιακή",
+          "neuter": "ολυμπιακό",
+          "example": "Παρακολουθώ τους Ολυμπιακούς Αγώνες.",
+          "translation": "олимпийский",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "παγκόσμιος",
+          "female": "παγκόσμια",
+          "neuter": "παγκόσμιο",
+          "example": "Παρακολουθώ παγκόσμιες ειδήσεις.",
+          "translation": "мировой, всемирный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "περσικός",
+          "female": "περσική",
+          "neuter": "περσικό",
+          "example": "Αγόρασα περσικό χαλί.",
+          "translation": "персидский",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ρωμαϊκός",
+          "female": "ρωμαϊκή",
+          "neuter": "ρωμαϊκό",
+          "example": "Επισκέπτομαι ρωμαϊκά ερείπια.",
+          "translation": "римский",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ρωσικός",
+          "female": "ρωσική",
+          "neuter": "ρωσικό",
+          "example": "Μαθαίνει ρωσική γλώσσα.",
+          "translation": "русский",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τοπικός",
+          "female": "τοπική",
+          "neuter": "τοπικό",
+          "example": "Αγοράζουμε τοπικά προϊόντα.",
+          "translation": "местный, локальный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χωριάτικος",
+          "female": "χωριάτικη",
+          "neuter": "χωριάτικο",
+          "example": "Τρώω χωριάτικη σαλάτα.",
+          "translation": "деревенский, сельский",
+          "languageLevel": "A2"
+        }
+      ]
+    },
+    {
+      "batchId": "10",
+      "batchHeader": "Блок 11 — Работа + Семья",
+      "batchName": "Профессиональные и образовательные; Семья, социальный статус и праздники",
+      "words": [
+        {
+          "male": "αεροπορικός",
+          "female": "αεροπορική",
+          "neuter": "αεροπορικό",
+          "example": "Κλείνω αεροπορικό εισιτήριο.",
+          "translation": "авиационный, авиа-",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ακτοπλοϊκός",
+          "female": "ακτοπλοϊκή",
+          "neuter": "ακτοπλοϊκό",
+          "example": "Πήρα ακτοπλοϊκό εισιτήριο για Σαντορίνη.",
+          "translation": "морской (паромный)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ανδρικός",
+          "female": "ανδρική",
+          "neuter": "ανδρικό",
+          "example": "Αυτό είναι ανδρικό άρωμα.",
+          "translation": "мужской",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αντιπροσωπευτικός",
+          "female": "αντιπροσωπευτική",
+          "neuter": "αντιπροσωπευτικό",
+          "example": "Αυτό είναι ένα αντιπροσωπευτικό παράδειγμα.",
+          "translation": "представительный, типичный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ανώτατος",
+          "female": "ανώτατη",
+          "neuter": "ανώτατο",
+          "example": "Σπούδασε στο ανώτατο εκπαιδευτικό ίδρυμα.",
+          "translation": "высший, наивысший",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "αξιότιμος",
+          "female": "αξιότιμη",
+          "neuter": "αξιότιμο",
+          "example": "Αξιότιμε κύριε, σας γράφω για...",
+          "translation": "уважаемый (в письмах)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "αριθμημένος",
+          "female": "αριθμημένη",
+          "neuter": "αριθμημένο",
+          "example": "Τα αριθμημένα καθίσματα είναι στη σειρά Α.",
+          "translation": "пронумерованный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "αρχιτεκτονικός",
+          "female": "αρχιτεκτονική",
+          "neuter": "αρχιτεκτονικό",
+          "example": "Η αρχιτεκτονική του κτιρίου είναι εντυπωσιακή.",
+          "translation": "архитектурный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "αστυνομικός",
+          "female": "αστυνομική",
+          "neuter": "αστυνομικό",
+          "example": "Βλέπω μια αστυνομική ταινία.",
+          "translation": "полицейский (прил.)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ασφαλισμένος",
+          "female": "ασφαλισμένη",
+          "neuter": "ασφαλισμένο",
+          "example": "Το αυτοκίνητό μου είναι ασφαλισμένο.",
+          "translation": "застрахованный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "βοηθητικός",
+          "female": "βοηθητική",
+          "neuter": "βοηθητικό",
+          "example": "Έχω ένα βοηθητικό δωμάτιο αποθήκευσης.",
+          "translation": "вспомогательный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "γυναικείος",
+          "female": "γυναικεία",
+          "neuter": "γυναικείο",
+          "example": "Ψάχνω τμήμα γυναικείας μόδας.",
+          "translation": "женский",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "δευτεροβάθμιος",
+          "female": "δευτεροβάθμια",
+          "neuter": "δευτεροβάθμιο",
+          "example": "Πηγαίνω σε δευτεροβάθμια εκπαίδευση.",
+          "translation": "среднего уровня (образование)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "διαφημιστικός",
+          "female": "διαφημιστική",
+          "neuter": "διαφημιστικό",
+          "example": "Βλέπω ένα διαφημιστικό σποτ.",
+          "translation": "рекламный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "εγγυημένος",
+          "female": "εγγυημένη",
+          "neuter": "εγγυημένο",
+          "example": "Η ποιότητα είναι εγγυημένη.",
+          "translation": "гарантированный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "εκπαιδευτικός",
+          "female": "εκπαιδευτική",
+          "neuter": "εκπαιδευτικό",
+          "example": "Επισκέπτομαι εκπαιδευτικό μουσείο.",
+          "translation": "образовательный, учебный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "εμπορικός",
+          "female": "εμπορική",
+          "neuter": "εμπορικό",
+          "example": "Πηγαίνω στο εμπορικό κέντρο.",
+          "translation": "коммерческий, торговый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "εξωσχολικός",
+          "female": "εξωσχολική",
+          "neuter": "εξωσχολικό",
+          "example": "Κάνω εξωσχολικές δραστηριότητες.",
+          "translation": "внешкольный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "επαγγελματικός",
+          "female": "επαγγελματική",
+          "neuter": "επαγγελματικό",
+          "example": "Ψάχνω επαγγελματική κατάρτιση.",
+          "translation": "профессиональный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "επιβατικός",
+          "female": "επιβατική",
+          "neuter": "επιβατικό",
+          "example": "Ταξιδεύω με επιβατικό πλοίο.",
+          "translation": "пассажирский",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "επίσημος",
+          "female": "επίσημη",
+          "neuter": "επίσημο",
+          "example": "Φοράω επίσημη ενδυμασία.",
+          "translation": "официальный, торжественный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "εργάσιμος",
+          "female": "εργάσιμη",
+          "neuter": "εργάσιμο",
+          "example": "Αυτή είναι εργάσιμη μέρα.",
+          "translation": "рабочий (о дне)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "παντρεμένος",
+          "female": "παντρεμένη",
+          "neuter": "παντρεμένο",
+          "example": "Είμαι παντρεμένος εδώ και δέκα χρόνια.",
+          "translation": "женатый/замужняя",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "πασχαλιάτικος",
+          "female": "πασχαλιάτικη",
+          "neuter": "πασχαλιάτικο",
+          "example": "Αγοράζω πασχαλιάτικα κεριά.",
+          "translation": "пасхальный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "πασχαλινός",
+          "female": "πασχαλινή",
+          "neuter": "πασχαλινό",
+          "example": "Ετοιμάζω πασχαλινό τραπέζι.",
+          "translation": "пасхальный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "πατρικός",
+          "female": "πατρική",
+          "neuter": "πατρικό",
+          "example": "Επισκέπτομαι το πατρικό μου σπίτι.",
+          "translation": "отцовский, родительский",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "συγγενικός",
+          "female": "συγγενική",
+          "neuter": "συγγενικό",
+          "example": "Έχουμε συγγενική σχέση.",
+          "translation": "родственный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "συνομήλικος",
+          "female": "συνομήλικη",
+          "neuter": "συνομήλικο",
+          "example": "Παίζω με συνομήλικα παιδιά.",
+          "translation": "ровесник (прил.)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "χριστουγεννιάτικος",
+          "female": "χριστουγεννιάτικη",
+          "neuter": "χριστουγεννιάτικο",
+          "example": "Στολίζω το χριστουγεννιάτικο δέντρο.",
+          "translation": "рождественский",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "χωρισμένος",
+          "female": "χωρισμένη",
+          "neuter": "χωρισμένο",
+          "example": "Ο χωρισμένος φίλος μου ζει μόνος.",
+          "translation": "разведённый",
+          "languageLevel": "A2"
+        }
+      ]
+    },
+    {
+      "batchId": "11",
+      "batchHeader": "Блок 12 — Технологии + Работа",
+      "batchName": "Технологии, медиа, спорт и культура; Профессиональные и образовательные",
+      "words": [
+        {
+          "male": "αθλητικός",
+          "female": "αθλητική",
+          "neuter": "αθλητικό",
+          "example": "Φοράω αθλητικά παπούτσια.",
+          "translation": "спортивный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "αυτόματος",
+          "female": "αυτόματη",
+          "neuter": "αυτόματο",
+          "example": "Η αυτόματη πόρτα ανοίγει μόνη της.",
+          "translation": "автоматический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αυτοσχέδιος",
+          "female": "αυτοσχέδια",
+          "neuter": "αυτοσχέδιο",
+          "example": "Έφτιαξα ένα αυτοσχέδιο δώρο.",
+          "translation": "импровизированный, самодельный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "βιολογικός",
+          "female": "βιολογική",
+          "neuter": "βιολογικό",
+          "example": "Αγοράζω βιολογικά λαχανικά.",
+          "translation": "биологический; органический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "εντατικός",
+          "female": "εντατική",
+          "neuter": "εντατικό",
+          "example": "Κάνω εντατική προπόνηση.",
+          "translation": "интенсивный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "επιτραπέζιος",
+          "female": "επιτραπέζια",
+          "neuter": "επιτραπέζιο",
+          "example": "Παίζω επιτραπέζιο παιχνίδι.",
+          "translation": "настольный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ζωολογικός",
+          "female": "ζωολογική",
+          "neuter": "ζωολογικό",
+          "example": "Επισκέπτομαι τον ζωολογικό κήπο.",
+          "translation": "зоологический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ηλεκτρικός",
+          "female": "ηλεκτρική",
+          "neuter": "ηλεκτρικό",
+          "example": "Χρησιμοποιώ ηλεκτρική σκούπα.",
+          "translation": "электрический",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ηλεκτρονικός",
+          "female": "ηλεκτρονική",
+          "neuter": "ηλεκτρονικό",
+          "example": "Στέλνω ηλεκτρονικό ταχυδρομείο.",
+          "translation": "электронный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "θεατρικός",
+          "female": "θεατρική",
+          "neuter": "θεατρικό",
+          "example": "Παρακολουθώ θεατρική παράσταση.",
+          "translation": "театральный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κινητός",
+          "female": "κινητή",
+          "neuter": "κινητό",
+          "example": "Έχω κινητό τηλέφωνο.",
+          "translation": "мобильный, подвижный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μεταπτυχιακός",
+          "female": "μεταπτυχιακή",
+          "neuter": "μεταπτυχιακό",
+          "example": "Κάνω μεταπτυχιακό πρόγραμμα.",
+          "translation": "аспирантский, магистерский",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "μοντέρνος",
+          "female": "μοντέρνα",
+          "neuter": "μοντέρνο",
+          "example": "Μένω σε μοντέρνο διαμέρισμα.",
+          "translation": "современный, модный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μουσικός",
+          "female": "μουσική",
+          "neuter": "μουσικό",
+          "example": "Ακούω μουσικό πρόγραμμα.",
+          "translation": "музыкальный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "νεοκλασικός",
+          "female": "νεοκλασική",
+          "neuter": "νεοκλασικό",
+          "example": "Το κτίριο έχει νεοκλασική αρχιτεκτονική.",
+          "translation": "неоклассический",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "οικολογικός",
+          "female": "οικολογική",
+          "neuter": "οικολογικό",
+          "example": "Χρησιμοποιώ οικολογικές συσκευασίες.",
+          "translation": "экологический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "οικονομικός",
+          "female": "οικονομική",
+          "neuter": "οικονομικό",
+          "example": "Η οικονομική κρίση επηρεάζει πολλούς.",
+          "translation": "экономический; экономный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "οπτικός",
+          "female": "οπτική",
+          "neuter": "οπτικό",
+          "example": "Φοράω οπτικά γυαλιά.",
+          "translation": "оптический, зрительный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ποδοσφαιρικός",
+          "female": "ποδοσφαιρική",
+          "neuter": "ποδοσφαιρικό",
+          "example": "Βλέπω ποδοσφαιρικό αγώνα.",
+          "translation": "футбольный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "πολεμικός",
+          "female": "πολεμική",
+          "neuter": "πολεμικό",
+          "example": "Βλέπω πολεμική ταινία.",
+          "translation": "военный (прил.)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "πολίτικος",
+          "female": "πολίτικη",
+          "neuter": "πολίτικο",
+          "example": "Μαγειρεύω πολίτικη συνταγή.",
+          "translation": "константинопольский (кулинарное прил.)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "πολυεθνικός",
+          "female": "πολυεθνική",
+          "neuter": "πολυεθνικό",
+          "example": "Δουλεύω σε πολυεθνική εταιρεία.",
+          "translation": "многонациональный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "πρωτοβάθμιος",
+          "female": "πρωτοβάθμια",
+          "neuter": "πρωτοβάθμιο",
+          "example": "Η πρωτοβάθμια εκπαίδευση είναι υποχρεωτική.",
+          "translation": "начального уровня (образование)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ραδιοφωνικός",
+          "female": "ραδιοφωνική",
+          "neuter": "ραδιοφωνικό",
+          "example": "Ακούω ραδιοφωνικό πρόγραμμα.",
+          "translation": "радиовещательный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σχολικός",
+          "female": "σχολική",
+          "neuter": "σχολικό",
+          "example": "Αγοράζω σχολικά βιβλία.",
+          "translation": "школьный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ταξιδιωτικός",
+          "female": "ταξιδιωτική",
+          "neuter": "ταξιδιωτικό",
+          "example": "Αγοράζω ταξιδιωτικό ασφαλιστήριο.",
+          "translation": "туристический, дорожный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τουριστικός",
+          "female": "τουριστική",
+          "neuter": "τουριστικό",
+          "example": "Επισκέπτομαι τουριστικό αξιοθέατο.",
+          "translation": "туристический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τριτοβάθμιος",
+          "female": "τριτοβάθμια",
+          "neuter": "τριτοβάθμιο",
+          "example": "Σπουδάζω στην τριτοβάθμια εκπαίδευση.",
+          "translation": "высшего уровня (образование)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φοιτητικός",
+          "female": "φοιτητική",
+          "neuter": "φοιτητικό",
+          "example": "Μένω σε φοιτητική εστία.",
+          "translation": "студенческий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φορολογικός",
+          "female": "φορολογική",
+          "neuter": "φορολογικό",
+          "example": "Κάνω φορολογική δήλωση.",
+          "translation": "налоговый",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "12",
+      "batchHeader": "Блок 13 — Пространство + Технологии",
+      "batchName": "Пространственные и жилищные; Технологии, медиа, спорт и культура",
+      "words": [
+        {
+          "male": "ακάλυπτος",
+          "female": "ακάλυπτη",
+          "neuter": "ακάλυπτο",
+          "example": "Ο ακάλυπτος χώρος είναι άδειος.",
+          "translation": "непокрытый; открытый (о пространстве)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ανακαινισμένος",
+          "female": "ανακαινισμένη",
+          "neuter": "ανακαινισμένο",
+          "example": "Νοικιάζω ένα ανακαινισμένο διαμέρισμα.",
+          "translation": "отремонтированный, renovированный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "δεξιός",
+          "female": "δεξιά",
+          "neuter": "δεξί",
+          "example": "Στρίψε στη δεξιά πλευρά.",
+          "translation": "правый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "δίκλινος",
+          "female": "δίκλινη",
+          "neuter": "δίκλινο",
+          "example": "Κλείνω ένα δίκλινο δωμάτιο.",
+          "translation": "двухместный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "διώροφος",
+          "female": "διώροφη",
+          "neuter": "διώροφο",
+          "example": "Μένω σε ένα διώροφο σπίτι.",
+          "translation": "двухэтажный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "εξωτερικός",
+          "female": "εξωτερική",
+          "neuter": "εξωτερικό",
+          "example": "Αποστέλλω εξωτερικό ταχυδρομείο.",
+          "translation": "внешний; иностранный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "επιπλωμένος",
+          "female": "επιπλωμένη",
+          "neuter": "επιπλωμένο",
+          "example": "Νοικιάζω επιπλωμένο διαμέρισμα.",
+          "translation": "меблированный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "εσωτερικός",
+          "female": "εσωτερική",
+          "neuter": "εσωτερικό",
+          "example": "Στέλνω εσωτερικό ταχυδρομείο.",
+          "translation": "внутренний",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ευρύχωρος",
+          "female": "ευρύχωρη",
+          "neuter": "ευρύχωρο",
+          "example": "Μένω σε ένα ευρύχωρο διαμέρισμα.",
+          "translation": "просторный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κατειλημμένος",
+          "female": "κατειλημμένη",
+          "neuter": "κατειλημμένο",
+          "example": "Αυτή η θέση είναι κατειλημμένη.",
+          "translation": "занятый (место)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κατοικίδιος",
+          "female": "κατοικίδια",
+          "neuter": "κατοικίδιο",
+          "example": "Έχω ένα κατοικίδιο ζώο.",
+          "translation": "домашнее (животное)",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "κεντρικός",
+          "female": "κεντρική",
+          "neuter": "κεντρικό",
+          "example": "Μένω στο κεντρικό τμήμα της πόλης.",
+          "translation": "центральный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "κλεισμένος",
+          "female": "κλεισμένη",
+          "neuter": "κλεισμένο",
+          "example": "Το παράθυρο είναι κλεισμένο.",
+          "translation": "закрытый (состояние)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κλειστός",
+          "female": "κλειστή",
+          "neuter": "κλειστό",
+          "example": "Το κατάστημα είναι κλειστό σήμερα.",
+          "translation": "закрытый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "κοντινός",
+          "female": "κοντινή",
+          "neuter": "κοντινό",
+          "example": "Το σχολείο είναι κοντινό στο σπίτι μας.",
+          "translation": "близкий, расположенный рядом",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μονόκλινος",
+          "female": "μονόκλινη",
+          "neuter": "μονόκλινο",
+          "example": "Κλείνω μονόκλινο δωμάτιο.",
+          "translation": "одноместный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "οδικός",
+          "female": "οδική",
+          "neuter": "οδικό",
+          "example": "Ελέγχω τον οδικό χάρτη.",
+          "translation": "дорожный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "οικιακός",
+          "female": "οικιακή",
+          "neuter": "οικιακό",
+          "example": "Κάνω οικιακές εργασίες.",
+          "translation": "домашний, бытовой",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "περιφερειακός",
+          "female": "περιφερειακή",
+          "neuter": "περιφερειακό",
+          "example": "Μένει σε περιφερειακή περιοχή της πόλης.",
+          "translation": "периферийный, пригородный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "πλαϊνός",
+          "female": "πλαϊνή",
+          "neuter": "πλαϊνό",
+          "example": "Μπαίνω από την πλαϊνή πόρτα.",
+          "translation": "боковой",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σύγχρονος",
+          "female": "σύγχρονη",
+          "neuter": "σύγχρονο",
+          "example": "Μένω σε σύγχρονο κτίριο.",
+          "translation": "современный, одновременный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τετράκλινος",
+          "female": "τετράκλινη",
+          "neuter": "τετράκλινο",
+          "example": "Κλείνω τετράκλινο δωμάτιο για την οικογένεια.",
+          "translation": "четырёхместный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "τεχνικός",
+          "female": "τεχνική",
+          "neuter": "τεχνικό",
+          "example": "Έχω τεχνικό πρόβλημα με τον υπολογιστή.",
+          "translation": "технический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τηλεοπτικός",
+          "female": "τηλεοπτική",
+          "neuter": "τηλεοπτικό",
+          "example": "Βλέπω τηλεοπτική σειρά.",
+          "translation": "телевизионный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τρίκλινος",
+          "female": "τρίκλινη",
+          "neuter": "τρίκλινο",
+          "example": "Κλείνω τρίκλινο δωμάτιο.",
+          "translation": "трёхместный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φορητός",
+          "female": "φορητή",
+          "neuter": "φορητό",
+          "example": "Χρησιμοποιώ φορητό υπολογιστή.",
+          "translation": "переносной, портативный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φωταγωγημένος",
+          "female": "φωταγωγημένη",
+          "neuter": "φωταγωγημένο",
+          "example": "Το φωταγωγημένο κτίριο είναι εντυπωσιακό.",
+          "translation": "иллюминированный, подсвеченный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φωτεινός",
+          "female": "φωτεινή",
+          "neuter": "φωτεινό",
+          "example": "Μένω σε φωτεινό δωμάτιο.",
+          "translation": "светлый, яркий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φωτογραφικός",
+          "female": "φωτογραφική",
+          "neuter": "φωτογραφικό",
+          "example": "Χρησιμοποιώ φωτογραφική μηχανή.",
+          "translation": "фотографический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ψηφιακός",
+          "female": "ψηφιακή",
+          "neuter": "ψηφιακό",
+          "example": "Χρησιμοποιώ ψηφιακή φωτογραφική μηχανή.",
+          "translation": "цифровой",
+          "languageLevel": "A2"
+        }
+      ]
+    },
+    {
+      "batchId": "13",
+      "batchHeader": "Блок 14 — Качество+ + Пространство",
+      "batchName": "Оценочные: положительные; Пространственные и жилищные",
+      "words": [
+        {
+          "male": "αληθινός",
+          "female": "αληθινή",
+          "neuter": "αληθινό",
+          "example": "Αυτή είναι μια αληθινή ιστορία.",
+          "translation": "настоящий, правдивый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "απαραίτητος",
+          "female": "απαραίτητη",
+          "neuter": "απαραίτητο",
+          "example": "Το νερό είναι απαραίτητο για τη ζωή.",
+          "translation": "необходимый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αυθεντικός",
+          "female": "αυθεντική",
+          "neuter": "αυθεντικό",
+          "example": "Το αυθεντικό έργο τέχνης είναι ανεκτίμητο.",
+          "translation": "подлинный, аутентичный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "βασικός",
+          "female": "βασική",
+          "neuter": "βασικό",
+          "example": "Αυτή είναι μια βασική αρχή.",
+          "translation": "основной, базовый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "γνήσιος",
+          "female": "γνήσια",
+          "neuter": "γνήσιο",
+          "example": "Αγόρασα γνήσιο ελληνικό ελαιόλαδο.",
+          "translation": "подлинный, настоящий",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "γραφικός",
+          "female": "γραφική",
+          "neuter": "γραφικό",
+          "example": "Μένω σε ένα γραφικό χωριό.",
+          "translation": "живописный; графический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "εντυπωσιακός",
+          "female": "εντυπωσιακή",
+          "neuter": "εντυπωσιακό",
+          "example": "Η θέα είναι εντυπωσιακή.",
+          "translation": "впечатляющий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "εξαιρετικός",
+          "female": "εξαιρετική",
+          "neuter": "εξαιρετικό",
+          "example": "Το φαγητό είναι εξαιρετικό.",
+          "translation": "исключительный, превосходный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "επιτυχημένος",
+          "female": "επιτυχημένη",
+          "neuter": "επιτυχημένο",
+          "example": "Είναι ένας επιτυχημένος επιχειρηματίας.",
+          "translation": "успешный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ζωντανός",
+          "female": "ζωντανή",
+          "neuter": "ζωντανό",
+          "example": "Παρακολουθώ ζωντανή μουσική.",
+          "translation": "живой; в прямом эфире",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ιδανικός",
+          "female": "ιδανική",
+          "neuter": "ιδανικό",
+          "example": "Η παραλία είναι ιδανική για κολύμπι.",
+          "translation": "идеальный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ιδιαίτερος",
+          "female": "ιδιαίτερη",
+          "neuter": "ιδιαίτερο",
+          "example": "Έχει ιδιαίτερο χαρακτήρα.",
+          "translation": "особенный, отдельный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "καλός",
+          "female": "καλή",
+          "neuter": "καλό",
+          "example": "Έχω έναν καλό φίλο.",
+          "translation": "хороший",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "καλύτερος",
+          "female": "καλύτερη",
+          "neuter": "καλύτερο",
+          "example": "Αυτό είναι το καλύτερο εστιατόριο.",
+          "translation": "лучший",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "καταπληκτικός",
+          "female": "καταπληκτική",
+          "neuter": "καταπληκτικό",
+          "example": "Είδα μια καταπληκτική παράσταση.",
+          "translation": "замечательный, потрясающий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μαγικός",
+          "female": "μαγική",
+          "neuter": "μαγικό",
+          "example": "Αυτό είναι ένα μαγικό μέρος.",
+          "translation": "волшебный, магический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ξεχωριστός",
+          "female": "ξεχωριστή",
+          "neuter": "ξεχωριστό",
+          "example": "Αυτή είναι ξεχωριστή στιγμή.",
+          "translation": "особый, выдающийся",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "όμορφος",
+          "female": "όμορφη",
+          "neuter": "όμορφο",
+          "example": "Είναι μια όμορφη πόλη.",
+          "translation": "красивый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "πραγματικός",
+          "female": "πραγματική",
+          "neuter": "πραγματικό",
+          "example": "Αυτό είναι πραγματικό πρόβλημα.",
+          "translation": "настоящий, реальный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σημαντικός",
+          "female": "σημαντική",
+          "neuter": "σημαντικό",
+          "example": "Αυτή είναι σημαντική απόφαση.",
+          "translation": "важный, значительный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τριώροφος",
+          "female": "τριώροφη",
+          "neuter": "τριώροφο",
+          "example": "Μένω σε τριώροφο σπίτι.",
+          "translation": "трёхэтажный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "υγιεινός",
+          "female": "υγιεινή",
+          "neuter": "υγιεινό",
+          "example": "Το περπάτημα είναι υγιεινή συνήθεια.",
+          "translation": "полезный для здоровья",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "υπαίθριος",
+          "female": "υπαίθρια",
+          "neuter": "υπαίθριο",
+          "example": "Κάθομαι σε υπαίθριο καφέ.",
+          "translation": "открытый, под открытым небом",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "υπέροχος",
+          "female": "υπέροχη",
+          "neuter": "υπέροχο",
+          "example": "Αυτό το μέρος είναι υπέροχο!",
+          "translation": "великолепный, чудесный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "υπόγειος",
+          "female": "υπόγεια",
+          "neuter": "υπόγειο",
+          "example": "Παίρνω υπόγειο σιδηρόδρομο.",
+          "translation": "подземный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φανταστικός",
+          "female": "φανταστική",
+          "neuter": "φανταστικό",
+          "example": "Αυτή η ταινία είναι φανταστική!",
+          "translation": "фантастический, великолепный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φιλοζωικός",
+          "female": "φιλοζωική",
+          "neuter": "φιλοζωικό",
+          "example": "Ανήκω σε φιλοζωική οργάνωση.",
+          "translation": "зоозащитный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φιλόζωος",
+          "female": "φιλόζωη",
+          "neuter": "φιλόζωο",
+          "example": "Είμαι φιλόζωος και έχω τρεις γάτες.",
+          "translation": "любящий животных",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φιλοπόλεμος",
+          "female": "φιλοπόλεμη",
+          "neuter": "φιλοπόλεμο",
+          "example": "Φοβάμαι τους φιλοπόλεμους πολιτικούς.",
+          "translation": "воинственный, агрессивный",
+          "languageLevel": "B2"
+        }
+      ]
+    },
+    {
+      "batchId": "14",
+      "batchHeader": "Блок 15 — Качество− + Качество+",
+      "batchName": "Оценочные: отрицательные и нейтральные; Оценочные: положительные",
+      "words": [
+        {
+          "male": "άγριος",
+          "female": "άγρια",
+          "neuter": "άγριο",
+          "example": "Τα άγρια ζώα ζουν στη φύση.",
+          "translation": "дикий, злой",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ακριβός",
+          "female": "ακριβή",
+          "neuter": "ακριβό",
+          "example": "Αυτό το εστιατόριο είναι πολύ ακριβό.",
+          "translation": "дорогой",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ανθυγιεινός",
+          "female": "ανθυγιεινή",
+          "neuter": "ανθυγιεινό",
+          "example": "Το πολύ fast food είναι ανθυγιεινό.",
+          "translation": "нездоровый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "απαίσιος",
+          "female": "απαίσια",
+          "neuter": "απαίσιο",
+          "example": "Ο απαίσιος καιρός μας χάλασε τη βόλτα.",
+          "translation": "ужасный, отвратительный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "απλός",
+          "female": "απλή",
+          "neuter": "απλό",
+          "example": "Θέλω μια απλή ερώτηση.",
+          "translation": "простой",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "άπλυτος",
+          "female": "άπλυτη",
+          "neuter": "άπλυτο",
+          "example": "Τα άπλυτα ρούχα είναι στο καλάθι.",
+          "translation": "немытый, нестираный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "άσχημος",
+          "female": "άσχημη",
+          "neuter": "άσχημο",
+          "example": "Σήμερα έχει άσχημο καιρό.",
+          "translation": "некрасивый; плохой (о погоде)",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "άχρηστος",
+          "female": "άχρηστη",
+          "neuter": "άχρηστο",
+          "example": "Αυτή η συσκευή είναι άχρηστη.",
+          "translation": "бесполезный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βαρετός",
+          "female": "βαρετή",
+          "neuter": "βαρετό",
+          "example": "Η ταινία ήταν πολύ βαρετή.",
+          "translation": "скучный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βγαλμένος",
+          "female": "βγαλμένη",
+          "neuter": "βγαλμένο",
+          "example": "Μια βγαλμένη φωτογραφία από τις διακοπές.",
+          "translation": "снятый, вынутый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βουλωμένος",
+          "female": "βουλωμένη",
+          "neuter": "βουλωμένο",
+          "example": "Η μύτη μου είναι βουλωμένη από κρύο.",
+          "translation": "заложенный (нос); заткнутый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βρεγμένος",
+          "female": "βρεγμένη",
+          "neuter": "βρεγμένο",
+          "example": "Τα βρεγμένα ρούχα πρέπει να στεγνώσουν.",
+          "translation": "мокрый, промокший",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "βρόμικος",
+          "female": "βρόμικη",
+          "neuter": "βρόμικο",
+          "example": "Τα βρόμικα πιάτα περιμένουν πλύσιμο.",
+          "translation": "грязный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "βρώμικος",
+          "female": "βρώμικη",
+          "neuter": "βρώμικο",
+          "example": "Το πάτωμα είναι βρώμικο.",
+          "translation": "грязный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "γενικός",
+          "female": "γενική",
+          "neuter": "γενικό",
+          "example": "Δίνω μια γενική εικόνα του θέματος.",
+          "translation": "общий, генеральный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "διαφορετικός",
+          "female": "διαφορετική",
+          "neuter": "διαφορετικό",
+          "example": "Έχουμε διαφορετικές απόψεις.",
+          "translation": "разный, отличающийся",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "δύσκολος",
+          "female": "δύσκολη",
+          "neuter": "δύσκολο",
+          "example": "Αυτή η άσκηση είναι πολύ δύσκολη.",
+          "translation": "трудный, сложный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ειδικός",
+          "female": "ειδική",
+          "neuter": "ειδικό",
+          "example": "Χρειάζομαι ειδική άδεια.",
+          "translation": "специальный; специалист",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "επικίνδυνος",
+          "female": "επικίνδυνη",
+          "neuter": "επικίνδυνο",
+          "example": "Αυτός ο δρόμος είναι επικίνδυνος.",
+          "translation": "опасный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "εύκολος",
+          "female": "εύκολη",
+          "neuter": "εύκολο",
+          "example": "Αυτή η άσκηση είναι εύκολη.",
+          "translation": "лёгкий, простой",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "κακός",
+          "female": "κακή",
+          "neuter": "κακό",
+          "example": "Είχα μια κακή μέρα.",
+          "translation": "плохой",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "κανονικός",
+          "female": "κανονική",
+          "neuter": "κανονικό",
+          "example": "Αυτό είναι κανονικό μέγεθος.",
+          "translation": "нормальный, стандартный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κατάλληλος",
+          "female": "κατάλληλη",
+          "neuter": "κατάλληλο",
+          "example": "Αυτό είναι κατάλληλο ρούχο για τη βροχή.",
+          "translation": "подходящий, подходящий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κύριος",
+          "female": "κύρια",
+          "neuter": "κύριο",
+          "example": "Αυτή είναι η κύρια είσοδος.",
+          "translation": "главный, основной",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "λάθος",
+          "female": "λάθος",
+          "neuter": "λάθος",
+          "example": "Αυτή είναι λάθος απάντηση.",
+          "translation": "неправильный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "φιλοχρήματος",
+          "female": "φιλοχρήματη",
+          "neuter": "φιλοχρήματο",
+          "example": "Ο φιλοχρήματος άντρας σκέφτεται μόνο χρήματα.",
+          "translation": "сребролюбивый",
+          "languageLevel": "B2"
+        },
+        {
+          "male": "χρήσιμος",
+          "female": "χρήσιμη",
+          "neuter": "χρήσιμο",
+          "example": "Αυτό το εργαλείο είναι χρήσιμο.",
+          "translation": "полезный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ωραίος",
+          "female": "ωραία",
+          "neuter": "ωραίο",
+          "example": "Αυτός είναι ένας ωραίος τόπος.",
+          "translation": "красивый, прекрасный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ωφέλιμος",
+          "female": "ωφέλιμη",
+          "neuter": "ωφέλιμο",
+          "example": "Η άσκηση είναι ωφέλιμη για την υγεία.",
+          "translation": "полезный",
+          "languageLevel": "A2"
+        }
+      ]
+    },
+    {
+      "batchId": "15",
+      "batchHeader": "Блок 16 — Качество− + Базовые",
+      "batchName": "Оценочные: отрицательные и нейтральные; Универсальные базовые прилагательные и местоимения",
+      "words": [
+        {
+          "male": "άδειος",
+          "female": "άδεια",
+          "neuter": "άδειο",
+          "example": "Το ποτήρι είναι άδειο.",
+          "translation": "пустой",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "άκλιτος",
+          "female": "άκλιτη",
+          "neuter": "άκλιτο",
+          "example": "Αυτή η λέξη είναι άκλιτη.",
+          "translation": "несклоняемый",
+          "languageLevel": "B2"
+        },
+        {
+          "male": "άλλος",
+          "female": "άλλη",
+          "neuter": "άλλο",
+          "example": "Θέλω άλλο ένα ποτήρι νερό.",
+          "translation": "другой, иной",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "αλφαβητικός",
+          "female": "αλφαβητική",
+          "neuter": "αλφαβητικό",
+          "example": "Ταξινομώ τις λέξεις σε αλφαβητική σειρά.",
+          "translation": "алфавитный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αναπαυτικός",
+          "female": "αναπαυτική",
+          "neuter": "αναπαυτικό",
+          "example": "Αυτή η πολυθρόνα είναι πολύ αναπαυτική.",
+          "translation": "удобный, комфортный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "άνετος",
+          "female": "άνετη",
+          "neuter": "άνετο",
+          "example": "Αυτή η καρέκλα είναι πολύ άνετη.",
+          "translation": "удобный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μάταιος",
+          "female": "μάταιη",
+          "neuter": "μάταιο",
+          "example": "Ήταν μάταιη προσπάθεια χωρίς σχέδιο.",
+          "translation": "напрасный",
+          "languageLevel": "B2"
+        },
+        {
+          "male": "παράνομος",
+          "female": "παράνομη",
+          "neuter": "παράνομο",
+          "example": "Η παράνομη στάθμευση τιμωρείται.",
+          "translation": "незаконный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "παρόμοιος",
+          "female": "παρόμοια",
+          "neuter": "παρόμοιο",
+          "example": "Έχουμε παρόμοιες ιδέες.",
+          "translation": "похожий, схожий",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "περίεργος",
+          "female": "περίεργη",
+          "neuter": "περίεργο",
+          "example": "Ο περίεργος μαθητής ρωτά πολλά.",
+          "translation": "любопытный; странный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "πλούσιος",
+          "female": "πλούσια",
+          "neuter": "πλούσιο",
+          "example": "Είναι ένας πλούσιος επιχειρηματίας.",
+          "translation": "богатый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "πολυάσχολος",
+          "female": "πολυάσχολη",
+          "neuter": "πολυάσχολο",
+          "example": "Ο διευθυντής είναι πολύ πολυάσχολος.",
+          "translation": "очень занятый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "πολύπλοκος",
+          "female": "πολύπλοκη",
+          "neuter": "πολύπλοκο",
+          "example": "Το πρόβλημα είναι πιο πολύπλοκο απ’ όσο φαίνεται.",
+          "translation": "сложный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "σκληρός",
+          "female": "σκληρή",
+          "neuter": "σκληρό",
+          "example": "Το σκληρό κρέας χρειάζεται πολύ μαγείρεμα.",
+          "translation": "твёрдый; жёсткий; суровый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "στεγνός",
+          "female": "στεγνή",
+          "neuter": "στεγνό",
+          "example": "Τα ρούχα είναι στεγνά πια.",
+          "translation": "сухой (высохший)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "συγκεκριμένος",
+          "female": "συγκεκριμένη",
+          "neuter": "συγκεκριμένο",
+          "example": "Δίνω συγκεκριμένες οδηγίες.",
+          "translation": "конкретный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "συνηθισμένος",
+          "female": "συνηθισμένη",
+          "neuter": "συνηθισμένο",
+          "example": "Αυτό είναι συνηθισμένο φαινόμενο.",
+          "translation": "обычный, привычный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σύντομος",
+          "female": "σύντομη",
+          "neuter": "σύντομο",
+          "example": "Στέλνω σύντομο μήνυμα.",
+          "translation": "краткий, короткий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σωστός",
+          "female": "σωστή",
+          "neuter": "σωστό",
+          "example": "Αυτή είναι η σωστή απάντηση.",
+          "translation": "правильный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "τοξικός",
+          "female": "τοξική",
+          "neuter": "τοξικό",
+          "example": "Αποφεύγω τοξικές ουσίες.",
+          "translation": "токсичный, ядовитый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "τρομερός",
+          "female": "τρομερή",
+          "neuter": "τρομερό",
+          "example": "Ήταν ένα τρομερό ατύχημα.",
+          "translation": "ужасный, страшный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φοβερός",
+          "female": "φοβερή",
+          "neuter": "φοβερό",
+          "example": "Ήταν ένας φοβερός αγώνας.",
+          "translation": "ужасный; отличный (разг.)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φορτωμένος",
+          "female": "φορτωμένη",
+          "neuter": "φορτωμένο",
+          "example": "Το φορτωμένο φορτηγό κινείται αργά.",
+          "translation": "нагруженный, гружёный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "φτηνός / φθηνός",
+          "female": "φτηνή / φθηνή",
+          "neuter": "φτηνό / φθηνό",
+          "example": "Αγοράζω φτηνά ρούχα.",
+          "translation": "дешёвый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "φτωχός",
+          "female": "φτωχή",
+          "neuter": "φτωχό",
+          "example": "Ήταν φτωχή αλλά πολύ αξιοπρεπής.",
+          "translation": "бедный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χαλαρός",
+          "female": "χαλαρή",
+          "neuter": "χαλαρό",
+          "example": "Το Σαββατοκύριακο θέλω πιο χαλαρό πρόγραμμα.",
+          "translation": "расслабленный, спокойный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "χαλασμένος",
+          "female": "χαλασμένη",
+          "neuter": "χαλασμένο",
+          "example": "Το χαλασμένο αυτοκίνητο δεν μπαίνει μπρος.",
+          "translation": "сломанный; испорченный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "χτυπημένος",
+          "female": "χτυπημένη",
+          "neuter": "χτυπημένο",
+          "example": "Το χτυπημένο αυτοκίνητο χρειάζεται επισκευή.",
+          "translation": "повреждённый, помятый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ψεύτικος",
+          "female": "ψεύτικη",
+          "neuter": "ψεύτικο",
+          "example": "Αγόρασα ψεύτικα κοσμήματα.",
+          "translation": "ненастоящий, поддельный",
+          "languageLevel": "A2"
+        }
+      ]
+    },
+    {
+      "batchId": "16",
+      "batchHeader": "Блок 17 — Базовые",
+      "batchName": "Универсальные базовые прилагательные и местоимения",
+      "words": [
+        {
+          "male": "ανθόσπαρτος",
+          "female": "ανθόσπαρτη",
+          "neuter": "ανθόσπαρτο",
+          "example": "Το ανθόσπαρτο λιβάδι είναι υπέροχο.",
+          "translation": "усыпанный цветами",
+          "languageLevel": "B2"
+        },
+        {
+          "male": "ανθρώπινος",
+          "female": "ανθρώπινη",
+          "neuter": "ανθρώπινο",
+          "example": "Το ανθρώπινο σώμα είναι πολύπλοκο.",
+          "translation": "человеческий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αντιπαθητικός",
+          "female": "αντιπαθητική",
+          "neuter": "αντιπαθητικό",
+          "example": "Ο αντιπαθητικός γείτονας δεν χαιρετά κανέναν.",
+          "translation": "неприятный, несимпатичный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αντιπυρετικός",
+          "female": "αντιπυρετική",
+          "neuter": "αντιπυρετικό",
+          "example": "Παίρνω αντιπυρετικό φάρμακο για τον πυρετό.",
+          "translation": "жаропонижающий",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ανυπεράσπιστος",
+          "female": "ανυπεράσπιστη",
+          "neuter": "ανυπεράσπιστο",
+          "example": "Τα ανυπεράσπιστα παιδιά χρειάζονται βοήθεια.",
+          "translation": "беззащитный",
+          "languageLevel": "B2"
+        },
+        {
+          "male": "απασχολημένος",
+          "female": "απασχολημένη",
+          "neuter": "απασχολημένο",
+          "example": "Είμαι πολύ απασχολημένος αυτή την εβδομάδα.",
+          "translation": "занятый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "απίθανος",
+          "female": "απίθανη",
+          "neuter": "απίθανο",
+          "example": "Αυτό είναι ένα απίθανο ταλέντο!",
+          "translation": "невероятный; невероятно талантливый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "απίστευτος",
+          "female": "απίστευτη",
+          "neuter": "απίστευτο",
+          "example": "Αυτή είναι απίστευτη ιστορία.",
+          "translation": "невероятный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αραιός",
+          "female": "αραιή",
+          "neuter": "αραιό",
+          "example": "Έχει αραιά μαλλιά.",
+          "translation": "редкий, жидкий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αργός",
+          "female": "αργή",
+          "neuter": "αργό",
+          "example": "Ο υπολογιστής μου είναι πολύ αργός σήμερα.",
+          "translation": "медленный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "άρρωστος",
+          "female": "άρρωστη",
+          "neuter": "άρρωστο",
+          "example": "Ο άρρωστος γιος μένει σπίτι.",
+          "translation": "больной",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "αρχικός",
+          "female": "αρχική",
+          "neuter": "αρχικό",
+          "example": "Η αρχική τιμή ήταν πιο ακριβή.",
+          "translation": "начальный, первоначальный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αστείος",
+          "female": "αστεία",
+          "neuter": "αστείο",
+          "example": "Ο αστείος ηθοποιός γελάει όλους.",
+          "translation": "смешной, забавный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ασφαλής",
+          "female": "ασφαλής",
+          "neuter": "ασφαλές",
+          "example": "Αυτή η γειτονιά είναι αρκετά ασφαλής.",
+          "translation": "безопасный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "άτοκος",
+          "female": "άτοκη",
+          "neuter": "άτοκο",
+          "example": "Πήρα άτοκο δάνειο.",
+          "translation": "беспроцентный",
+          "languageLevel": "B2"
+        },
+        {
+          "male": "αυστηρός",
+          "female": "αυστηρή",
+          "neuter": "αυστηρό",
+          "example": "Ο αυστηρός δάσκαλος δεν επιτρέπει αταξία.",
+          "translation": "строгий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "αυτός",
+          "female": "αυτή",
+          "neuter": "αυτό",
+          "example": "Αυτός είναι ο φίλος μου.",
+          "translation": "этот / он (указательное/личное местоимение)",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "άχαρος",
+          "female": "άχαρη",
+          "neuter": "άχαρο",
+          "example": "Είναι μια άχαρη δουλειά.",
+          "translation": "неблагодарный, нескладный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "γεμάτος",
+          "female": "γεμάτη",
+          "neuter": "γεμάτο",
+          "example": "Το ποτήρι είναι γεμάτο νερό.",
+          "translation": "полный, заполненный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "γρήγορος",
+          "female": "γρήγορη",
+          "neuter": "γρήγορο",
+          "example": "Είναι πολύ γρήγορος στο τρέξιμο.",
+          "translation": "быстрый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "δημοτικός",
+          "female": "δημοτική",
+          "neuter": "δημοτικό",
+          "example": "Μαθαίνω δημοτικό τραγούδι.",
+          "translation": "народный; муниципальный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "διάσημος",
+          "female": "διάσημη",
+          "neuter": "διάσημο",
+          "example": "Είναι ένας διάσημος ηθοποιός.",
+          "translation": "знаменитый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "δυνατός",
+          "female": "δυνατή",
+          "neuter": "δυνατό",
+          "example": "Είναι πολύ δυνατός αθλητής.",
+          "translation": "сильный; громкий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "εκείνος",
+          "female": "εκείνη",
+          "neuter": "εκείνο",
+          "example": "Εκείνος ο άντρας είναι γιατρός.",
+          "translation": "тот, тот самый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "εκφραστικός",
+          "female": "εκφραστική",
+          "neuter": "εκφραστικό",
+          "example": "Έχει εκφραστικό πρόσωπο.",
+          "translation": "выразительный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ελεύθερος",
+          "female": "ελεύθερη",
+          "neuter": "ελεύθερο",
+          "example": "Είμαι ελεύθερος αύριο το βράδυ.",
+          "translation": "свободный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "εμφιαλωμένος",
+          "female": "εμφιαλωμένη",
+          "neuter": "εμφιαλωμένο",
+          "example": "Πίνω εμφιαλωμένο νερό.",
+          "translation": "бутилированный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "ενδιαφερόμενος",
+          "female": "ενδιαφερόμενη",
+          "neuter": "ενδιαφερόμενο",
+          "example": "Οι ενδιαφερόμενοι να στείλουν email.",
+          "translation": "заинтересованный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ενδιαφέρων",
+          "female": "ενδιαφέρουσα",
+          "neuter": "ενδιαφέρον",
+          "example": "Ήταν μια ενδιαφέρουσα συζήτηση.",
+          "translation": "интересный",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "17",
+      "batchHeader": "Блок 18 — Базовые",
+      "batchName": "Универсальные базовые прилагательные и местоимения",
+      "words": [
+        {
+          "male": "έντυπος",
+          "female": "έντυπη",
+          "neuter": "έντυπο",
+          "example": "Η έντυπη έκδοση πωλείται παντού.",
+          "translation": "печатный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "επώνυμος",
+          "female": "επώνυμη",
+          "neuter": "επώνυμο",
+          "example": "Αγοράζω επώνυμα ρούχα.",
+          "translation": "фирменный, именной, известный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "εργαζόμενος",
+          "female": "εργαζόμενη",
+          "neuter": "εργαζόμενο",
+          "example": "Ο εργαζόμενος πατέρας κουράζεται.",
+          "translation": "работающий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "έτοιμος",
+          "female": "έτοιμη",
+          "neuter": "έτοιμο",
+          "example": "Το φαγητό είναι έτοιμο!",
+          "translation": "готовый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "εχθρικός",
+          "female": "εχθρική",
+          "neuter": "εχθρικό",
+          "example": "Η στάση του ήταν εχθρική.",
+          "translation": "враждебный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ήπιος",
+          "female": "ήπια",
+          "neuter": "ήπιο",
+          "example": "Ο ήπιος καιρός ευνοεί τις εκδρομές.",
+          "translation": "мягкий (о климате, характере)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ήσυχος",
+          "female": "ήσυχη",
+          "neuter": "ήσυχο",
+          "example": "Μένω σε ένα ήσυχο σπίτι.",
+          "translation": "тихий, спокойный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ίδιος",
+          "female": "ίδια",
+          "neuter": "ίδιο",
+          "example": "Φοράμε τα ίδια ρούχα!",
+          "translation": "одинаковый; сам (тот же)",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "ιπτάμενος",
+          "female": "ιπτάμενη",
+          "neuter": "ιπτάμενο",
+          "example": "Το ιπτάμενο πλάνο είναι εντυπωσιακό.",
+          "translation": "летающий",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "ισχυρός",
+          "female": "ισχυρή",
+          "neuter": "ισχυρό",
+          "example": "Η ισχυρή άνεμος γκρέμισε το δέντρο.",
+          "translation": "сильный, мощный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "καθαρός",
+          "female": "καθαρή",
+          "neuter": "καθαρό",
+          "example": "Φοράω καθαρά ρούχα.",
+          "translation": "чистый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "καθισμένος",
+          "female": "καθισμένη",
+          "neuter": "καθισμένο",
+          "example": "Ο καθισμένος επισκέπτης περιμένει.",
+          "translation": "сидящий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "καθιστικός",
+          "female": "καθιστική",
+          "neuter": "καθιστικό",
+          "example": "Ο καθιστικός τρόπος ζωής είναι ανθυγιεινός.",
+          "translation": "сидячий (образ жизни)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "καθιστός",
+          "female": "καθιστή",
+          "neuter": "καθιστό",
+          "example": "Κάθεται σε καθιστή θέση.",
+          "translation": "сидячий, сидящий",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "καινούριος",
+          "female": "καινούρια",
+          "neuter": "καινούριο",
+          "example": "Αγόρασα ένα καινούριο αυτοκίνητο.",
+          "translation": "новый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "καλορίζικος",
+          "female": "καλορίζικη",
+          "neuter": "καλορίζικο",
+          "example": "Καλορίζικο το νέο σπίτι!",
+          "translation": "благоприятный (новое место)",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "καμμένος",
+          "female": "καμένη",
+          "neuter": "καμένο",
+          "example": "Το τοστ είναι καμένο.",
+          "translation": "сгоревший",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "κάποιος",
+          "female": "κάποια",
+          "neuter": "κάποιο",
+          "example": "Κάποιος χτύπησε την πόρτα.",
+          "translation": "какой-то, некий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "κλασικός",
+          "female": "κλασική",
+          "neuter": "κλασικό",
+          "example": "Ακούω κλασική μουσική.",
+          "translation": "классический",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κομψός",
+          "female": "κομψή",
+          "neuter": "κομψό",
+          "example": "Φοράει κομψό φόρεμα.",
+          "translation": "элегантный, изящный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "κουραστικός",
+          "female": "κουραστική",
+          "neuter": "κουραστικό",
+          "example": "Η μακριά μέρα ήταν κουραστική.",
+          "translation": "утомительный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "λαϊκός",
+          "female": "λαϊκή",
+          "neuter": "λαϊκό",
+          "example": "Ακούω λαϊκή μουσική.",
+          "translation": "народный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μακρινός",
+          "female": "μακρινή",
+          "neuter": "μακρινό",
+          "example": "Ταξιδεύω σε μακρινές χώρες.",
+          "translation": "далёкий, отдалённый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μαλακός",
+          "female": "μαλακιά",
+          "neuter": "μαλακό",
+          "example": "Το κρεβάτι είναι πολύ μαλακό.",
+          "translation": "мягкий",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "μεικτός",
+          "female": "μεικτή",
+          "neuter": "μεικτό",
+          "example": "Παίζω σε μεικτή ομάδα.",
+          "translation": "смешанный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "μεταφορικός",
+          "female": "μεταφορική",
+          "neuter": "μεταφορικό",
+          "example": "Χρησιμοποιώ μεταφορική έκφραση.",
+          "translation": "метафорический; транспортный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "μεταχειρισμένος",
+          "female": "μεταχειρισμένη",
+          "neuter": "μεταχειρισμένο",
+          "example": "Αγόρασα μεταχειρισμένο αυτοκίνητο.",
+          "translation": "подержанный, б/у",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "μετεωρολογικός",
+          "female": "μετεωρολογική",
+          "neuter": "μετεωρολογικό",
+          "example": "Παρακολουθώ το μετεωρολογικό δελτίο.",
+          "translation": "метеорологический",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "μοδάτος",
+          "female": "μοδάτη",
+          "neuter": "μοδάτο",
+          "example": "Αυτό το παλτό είναι πολύ μοδάτο.",
+          "translation": "модный",
+          "languageLevel": "B1"
+        }
+      ]
+    },
+    {
+      "batchId": "18",
+      "batchHeader": "Блок 19 — Базовые",
+      "batchName": "Универсальные базовые прилагательные и местоимения",
+      "words": [
+        {
+          "male": "μοναστικός",
+          "female": "μοναστική",
+          "neuter": "μοναστικό",
+          "example": "Επισκέπτομαι μοναστική κοινότητα.",
+          "translation": "монастырский",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "μυστικός",
+          "female": "μυστική",
+          "neuter": "μυστικό",
+          "example": "Έχω μυστικό σχέδιο.",
+          "translation": "тайный, секретный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "όλος",
+          "female": "όλη",
+          "neuter": "όλο",
+          "example": "Έφαγα όλο το φαγητό.",
+          "translation": "весь, целый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "παιδικός",
+          "female": "παιδική",
+          "neuter": "παιδικό",
+          "example": "Πηγαίνω στον παιδικό σταθμό.",
+          "translation": "детский",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "παλιός",
+          "female": "παλιά",
+          "neuter": "παλιό",
+          "example": "Μένουμε σε ένα παλιό σπίτι.",
+          "translation": "старый",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "πανελλήνιος",
+          "female": "πανελλήνια",
+          "neuter": "πανελλήνιο",
+          "example": "Δίνω πανελλήνιες εξετάσεις.",
+          "translation": "общегреческий",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "παραδοσιακός",
+          "female": "παραδοσιακή",
+          "neuter": "παραδοσιακό",
+          "example": "Τρώω παραδοσιακό ελληνικό φαγητό.",
+          "translation": "традиционный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "περίφημος",
+          "female": "περίφημη",
+          "neuter": "περίφημο",
+          "example": "Επισκέπτομαι ένα περίφημο μουσείο.",
+          "translation": "знаменитый, прославленный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "πιθανός",
+          "female": "πιθανή",
+          "neuter": "πιθανό",
+          "example": "Είναι πιθανό να αργήσουμε λίγο.",
+          "translation": "вероятный, возможный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "πολύβουος",
+          "female": "πολύβουη",
+          "neuter": "πολύβουο",
+          "example": "Ήταν ένας πολύβουος δρόμος στο κέντρο.",
+          "translation": "шумный, многолюдный",
+          "languageLevel": "B2"
+        },
+        {
+          "male": "προθερμασμένος",
+          "female": "προθερμασμένη",
+          "neuter": "προθερμασμένο",
+          "example": "Βάζω τo φαγητό σε προθερμασμένο φούρνο.",
+          "translation": "предварительно разогретый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "προσωπικός",
+          "female": "προσωπική",
+          "neuter": "προσωπικό",
+          "example": "Αυτή είναι προσωπική πληροφορία.",
+          "translation": "личный, персональный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σίγουρος",
+          "female": "σίγουρη",
+          "neuter": "σίγουρο",
+          "example": "Είμαι σίγουρος για την απόφασή μου.",
+          "translation": "уверенный; точный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "σκοτεινός",
+          "female": "σκοτεινή",
+          "neuter": "σκοτεινό",
+          "example": "Το δωμάτιο είναι σκοτεινό χωρίς φως.",
+          "translation": "тёмный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "σπάνιος",
+          "female": "σπάνια",
+          "neuter": "σπάνιο",
+          "example": "Αυτό είναι σπάνιο φυτό.",
+          "translation": "редкий",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "σταθερός",
+          "female": "σταθερή",
+          "neuter": "σταθερό",
+          "example": "Έχω σταθερή δουλειά.",
+          "translation": "стабильный, устойчивый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "στολισμένος",
+          "female": "στολισμένη",
+          "neuter": "στολισμένο",
+          "example": "Το στολισμένο δέντρο είναι όμορφο.",
+          "translation": "украшенный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "συμπαθητικός",
+          "female": "συμπαθητική",
+          "neuter": "συμπαθητικό",
+          "example": "Είναι πολύ συμπαθητικός άντρας.",
+          "translation": "симпатичный, приятный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "συστημένος",
+          "female": "συστημένη",
+          "neuter": "συστημένο",
+          "example": "Στέλνω συστημένο γράμμα.",
+          "translation": "заказной (о письме)",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "συχνός",
+          "female": "συχνή",
+          "neuter": "συχνό",
+          "example": "Κάνω συχνές επισκέψεις στον γιατρό.",
+          "translation": "частый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τελικός",
+          "female": "τελική",
+          "neuter": "τελικό",
+          "example": "Βλέπω τον τελικό αγώνα.",
+          "translation": "окончательный; финальный",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "τυχερός",
+          "female": "τυχερή",
+          "neuter": "τυχερό",
+          "example": "Είμαι τυχερός σήμερα!",
+          "translation": "счастливый, удачливый",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "υδραυλικός",
+          "female": "υδραυλική",
+          "neuter": "υδραυλικό",
+          "example": "Καλώ τον υδραυλικό τεχνικό.",
+          "translation": "гидравлический; водопроводный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "υπόλοιπος",
+          "female": "υπόλοιπη",
+          "neuter": "υπόλοιπο",
+          "example": "Τι κάνεις με τον υπόλοιπο χρόνο σου;",
+          "translation": "оставшийся, остальной",
+          "languageLevel": "A2"
+        },
+        {
+          "male": "υποχρεωτικός",
+          "female": "υποχρεωτική",
+          "neuter": "υποχρεωτικό",
+          "example": "Το σχολείο είναι υποχρεωτικό.",
+          "translation": "обязательный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φανατικός",
+          "female": "φανατική",
+          "neuter": "φανατικό",
+          "example": "Είναι φανατικός φίλαθλος.",
+          "translation": "фанатичный",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φημισμένος",
+          "female": "φημισμένη",
+          "neuter": "φημισμένο",
+          "example": "Επισκέπτομαι φημισμένο εστιατόριο.",
+          "translation": "прославленный, знаменитый",
+          "languageLevel": "B1"
+        },
+        {
+          "male": "φυσικός",
+          "female": "φυσική",
+          "neuter": "φυσικό",
+          "example": "Πίνω φυσικό χυμό πορτοκαλιού.",
+          "translation": "натуральный; естественный",
+          "languageLevel": "A1"
+        },
+        {
+          "male": "χειρότερος",
+          "female": "χειρότερη",
+          "neuter": "χειρότερο",
+          "example": "Σήμερα αισθάνομαι χειρότερα.",
+          "translation": "худший",
+          "languageLevel": "A1"
+        }
+      ]
+    }
+  ]
+}

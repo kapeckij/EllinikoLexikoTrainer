@@ -1,4 +1,4 @@
-fetch('data.json')
+fetch('../resources/intro-and-linkings-data.json')
   .then(r => r.json())
   .then(DATA => {
 
@@ -290,7 +290,7 @@ function getLearnQueue() {
     pool = visibleWords.filter(w => w.batchId === val);
   }
 
-  return pool.map(w => ({ w, origIdx: WORDS.indexOf(w) }));
+  return pool.map(w => ({ w, origIdx: WORDS.indexOf(w) })).sort(() => Math.random() - .5);
 }
 
 function resetLearn() {
@@ -313,7 +313,7 @@ function showLearnCard() {
   learnFlipped = false;
 
   const { w } = learnQueue[learnIdx];
-  document.getElementById('card-present').textContent = w.greekWord || '-';
+  document.getElementById('card-present').textContent = w.greek || '-';
   document.getElementById('card-example').textContent = w.example || '';
   document.getElementById('card-translation').textContent = w.translation || '-';
 
@@ -436,14 +436,14 @@ function nextQuizQuestion() {
     ? 'Выбери перевод'
     : 'Выбери греческое слово';
   document.getElementById('quiz-q-text').textContent = mode === 'gr-ru'
-    ? (correct.greekWord || '')
+    ? (correct.greek || '')
     : (correct.translation || '');
   document.getElementById('quiz-q-sub').textContent = correct.example || '';
 
   document.getElementById('quiz-options').innerHTML = options.map(o => {
-    const label = mode === 'gr-ru' ? (o.translation || '-') : (o.greekWord || '-');
-    const chosenVal = mode === 'gr-ru' ? (o.translation || '') : (o.greekWord || '');
-    const correctVal = mode === 'gr-ru' ? (correct.translation || '') : (correct.greekWord || '');
+    const label = mode === 'gr-ru' ? (o.translation || '-') : (o.greek || '-');
+    const chosenVal = mode === 'gr-ru' ? (o.translation || '') : (o.greek || '');
+    const correctVal = mode === 'gr-ru' ? (correct.translation || '') : (correct.greek || '');
     return `<button class="quiz-option" data-answer="${escapeHtml(chosenVal)}" onclick="checkAnswer(this, '${escapeHtml(chosenVal)}', '${escapeHtml(correctVal)}')">${escapeHtml(label)}</button>`;
   }).join('');
 }
@@ -493,7 +493,7 @@ function giveUp() {
   document.querySelectorAll('#page-quiz .quiz-option').forEach(b => { b.disabled = true; });
 
   const mode = document.getElementById('quiz-mode').value;
-  const correctVal = mode === 'gr-ru' ? (quizCurrent.translation || '') : (quizCurrent.greekWord || '');
+  const correctVal = mode === 'gr-ru' ? (quizCurrent.translation || '') : (quizCurrent.greek || '');
   const correctEsc = escapeHtml(correctVal);
   const cb = Array.from(document.querySelectorAll('#page-quiz .quiz-option')).find(b => b.dataset.answer === correctEsc);
   if (cb) cb.classList.add('correct');
@@ -557,7 +557,7 @@ function updateProgressPage() {
 
       return `<div class="verb-status-row">
         <span class="verb-status-badge ${cls}">${icon} ${label}</span>
-        <span class="verb-status-present">${escapeHtml(w.greekWord || '-')}</span>
+        <span class="verb-status-present">${escapeHtml(w.greek || '-')}</span>
         <span class="verb-status-translation">${escapeHtml(w.translation || '')}</span>
       </div>`;
     }).join('');
