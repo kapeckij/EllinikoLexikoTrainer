@@ -189,6 +189,14 @@ function initLanguageLevelControl() {
   if (select) select.value = stored;
 }
 
+function updateHomeTopOffset() {
+  const topBlock = document.querySelector('.home-top-sticky');
+  if (!topBlock) return;
+  const topValue = parseFloat(getComputedStyle(topBlock).top) || 0;
+  const offset = Math.ceil(topBlock.getBoundingClientRect().height + topValue);
+  document.documentElement.style.setProperty('--home-top-offset', offset + 'px');
+}
+
 function showHomeTab(name, btn) {
   document.querySelectorAll('.home-tab').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.home-panel').forEach(p => p.classList.remove('active'));
@@ -202,6 +210,9 @@ window.onSearchInput = onSearchInput;
 window.clearSearch = clearSearch;
 
 initLanguageLevelControl();
+updateHomeTopOffset();
+window.addEventListener('resize', updateHomeTopOffset);
+window.addEventListener('load', updateHomeTopOffset);
 loadCategoryData().catch(() => {
   setCount('count-verbs', '-');
   setCount('count-numerals', '-');

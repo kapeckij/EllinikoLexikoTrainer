@@ -9,6 +9,7 @@
   --muted: #94a3b8;
   --border: #2d3148;
   --text: #e2e8f0;
+  --home-top-offset: 220px;
 }
 body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 24px; }
 .lang-level-floating {
@@ -34,12 +35,23 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
   font-size: 0.82rem;
   cursor: pointer;
 }
-.home-wrap { width: 100%; max-width: 650px; margin-top: 48px; }
-.home-header { text-align: center; margin-bottom: 40px; }
+.home-wrap { width: 100%; max-width: 650px; margin-top: 48px; padding-top: calc(var(--home-top-offset) + 10px); }
+.home-top-sticky {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(650px, calc(100vw - 48px));
+  z-index: 60;
+  padding: 6px 0 6px;
+  background: linear-gradient(to bottom, rgba(15,17,23,.98) 0%, rgba(15,17,23,.94) 82%, rgba(15,17,23,0) 100%);
+  backdrop-filter: blur(2px);
+}
+.home-header { text-align: center; margin-bottom: 14px; }
 .home-header .flag { font-size: 3rem; margin-bottom: 12px; }
 .home-header h1 { font-size: 1.8rem; color: var(--accent); margin-bottom: 8px; }
 .home-header p { color: var(--muted); font-size: 0.95rem; }
-.home-tabs { display: flex; gap: 8px; margin: 0 0 14px; }
+.home-tabs { display: flex; gap: 8px; margin: 0; }
 .home-tab { flex: 1; background: var(--card); border: 1px solid var(--border); border-radius: 10px; color: var(--muted); padding: 10px 12px; font-size: 0.9rem; cursor: pointer; transition: all .2s; }
 .home-tab:hover { border-color: var(--accent); color: var(--text); }
 .home-tab.active { border-color: var(--accent); color: var(--accent); background: var(--card2); }
@@ -86,6 +98,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
 .search-empty { text-align: center; color: var(--muted); font-size: 0.88rem; padding: 24px 0; }
 
 @media (max-width: 768px) {
+  :root { --home-top-offset: 190px; }
   body { justify-content: flex-start; padding: 16px 12px 20px; }
   .lang-level-floating {
     top: 8px;
@@ -98,7 +111,13 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
   }
   .lang-level-floating select { padding: 5px 8px; font-size: 0.78rem; }
   .home-wrap { max-width: 100%; margin-top: 44px; }
-  .home-header { margin-bottom: 24px; }
+  .home-top-sticky {
+    top: 0;
+    width: calc(100vw - 24px);
+    padding-top: 8px;
+    padding-bottom: 6px;
+  }
+  .home-header { margin-bottom: 14px; }
   .home-header .flag { font-size: 2.4rem; margin-bottom: 8px; }
   .home-header h1 { font-size: 1.45rem; }
   .home-tabs { gap: 6px; margin-bottom: 12px; }
