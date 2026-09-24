@@ -1,4 +1,5 @@
 const LANGUAGE_LEVEL_KEY = 'gr_language_level';
+const LEARNING_PLANS_KEY = 'gr_learning_plans';
 const LANGUAGE_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
 const LEVEL_RANK = { A1: 0, A2: 1, B1: 2, B2: 3, C1: 4 };
 
@@ -189,6 +190,44 @@ function initLanguageLevelControl() {
   if (select) select.value = stored;
 }
 
+function loadLearningPlans() {
+  try {
+    const plans = JSON.parse(localStorage.getItem(LEARNING_PLANS_KEY) || '[]');
+    return Array.isArray(plans) ? plans : [];
+  } catch {
+    return [];
+  }
+}
+
+function refreshLearningReviewStatuses(plans) {
+  const intervals = [1, 3, 7, 14, 30];
+  const now = Date.now();
+  let changed = false;
+  plans.forEach(plan => {
+    const previous = plan.needsReview;
+    if (plan.status !== 'completed' || !plan.completedAt) {
+      plan.needsReview = false;
+    } else {
+      const index = Math.min(plan.reviewCount || 0, intervals.length - 1);
+      plan.needsReview = new Date(plan.completedAt).getTime() + intervals[index] * 86400000 <= now;
+    }
+    if (plan.needsReview !== previous) changed = true;
+  });
+  if (changed) localStorage.setItem(LEARNING_PLANS_KEY, JSON.stringify(plans));
+  return plans;
+}
+
+function updateLearningPlanStats() {
+  const plans = refreshLearningReviewStatuses(loadLearningPlans());
+  const inProgress = plans.filter(plan => plan.status !== 'completed').length;
+  const completed = plans.filter(plan => plan.status === 'completed').length;
+  const needsReview = plans.filter(plan => plan.needsReview).length;
+  setCount('learning-plans-total', plans.length);
+  setCount('learning-plans-progress', inProgress);
+  setCount('learning-plans-complete', completed);
+  setCount('learning-plans-review', needsReview);
+}
+
 function updateHomeTopOffset() {
   const topBlock = document.querySelector('.home-top-sticky');
   if (!topBlock) return;
@@ -202,6 +241,7 @@ function showHomeTab(name, btn) {
   document.querySelectorAll('.home-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('home-panel-' + name).classList.add('active');
+  if (name === 'learnings') updateLearningPlanStats();
 }
 
 window.onLanguageLevelChange = onLanguageLevelChange;
@@ -210,6 +250,7 @@ window.onSearchInput = onSearchInput;
 window.clearSearch = clearSearch;
 
 initLanguageLevelControl();
+updateLearningPlanStats();
 updateHomeTopOffset();
 window.addEventListener('resize', updateHomeTopOffset);
 window.addEventListener('load', updateHomeTopOffset);

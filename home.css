@@ -78,6 +78,26 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
 .tips-item-example { margin-top: 8px; padding: 7px 10px; background: rgba(91,143,255,.07); border-left: 2px solid var(--accent); border-radius: 0 6px 6px 0; font-size: 0.8rem; color: var(--accent2); line-height: 1.55; }
 .tips-section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 14px 0 8px; font-weight: 700; }
 
+/* LEARNING PLANS */
+.learnings-home-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; }
+.learnings-home-card h2 { color: var(--accent2); font-size: 1.2rem; margin-bottom: 8px; }
+.learnings-home-card > p { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+.learning-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 20px 0; padding: 10px; border: 1px solid var(--border); border-radius: 14px; background: var(--card2); text-align: left; }
+.learning-stat { padding: 10px; border-radius: 8px; }
+.learning-stat:nth-child(odd) { background: rgba(15,17,23,.32); }
+.learning-stat span { display: block; color: var(--accent); font-size: 1.5rem; font-weight: 700; margin-bottom: 3px; }
+.learning-stat small { color: var(--muted); font-size: .76rem; line-height: 1.35; }
+.learning-stat-progress span { color: #eab308; }
+.learning-stat-complete span { color: var(--green); }
+.learning-stat-review span { color: #ef4444; }
+.learnings-open-link { display: flex; align-items: center; gap: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--card2); color: var(--text); padding: 13px 16px; text-align: left; text-decoration: none; transition: all .2s; }
+.learnings-open-link:hover { border-color: var(--accent); background: rgba(91,143,255,.1); transform: translateX(4px); }
+.learnings-open-icon { flex-shrink: 0; font-size: 1.6rem; }
+.learnings-open-info { display: flex; flex: 1; flex-direction: column; gap: 3px; }
+.learnings-open-info strong { font-size: .96rem; }
+.learnings-open-info small { color: var(--muted); font-size: .78rem; line-height: 1.35; }
+.learnings-open-arrow { color: var(--accent); font-size: 1.25rem; }
+
 /* SEARCH */
 .search-wrap { display: flex; flex-direction: column; gap: 10px; }
 .search-input-wrap { display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 0 14px; transition: border-color .2s; }
@@ -121,7 +141,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
   .home-header .flag { font-size: 2.4rem; margin-bottom: 8px; }
   .home-header h1 { font-size: 1.45rem; }
   .home-tabs { gap: 6px; margin-bottom: 12px; }
-  .home-tab { padding: 9px 10px; font-size: 0.84rem; }
+  .home-tab { padding: 9px 7px; font-size: 0.76rem; }
   .category-card { padding: 12px 14px; gap: 10px; }
   .category-icon { font-size: 1.4rem; }
   .category-name { font-size: 0.95rem; }
@@ -138,6 +158,9 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
 
 @media (max-width: 480px) {
   .home-header h1 { font-size: 1.3rem; }
+  .home-tabs { gap: 4px; }
+  .home-tab { padding: 8px 4px; font-size: 0.68rem; }
+  .learning-stats { grid-template-columns: 1fr; }
   .category-card { padding: 11px 12px; }
   .category-desc { font-size: 0.74rem; }
   .tips-item { flex-direction: column; align-items: flex-start; }

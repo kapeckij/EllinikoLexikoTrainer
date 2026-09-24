@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ежедневное изучение - Греческий тренажёр</title>
+<link rel="stylesheet" href="style.css?v=review-reminder">
+</head>
+<body>
+<nav>
+  <div class="logo">Ημερήσια μελέτη</div>
+  <a class="nav-home" href="../index.html" title="На главную">🏠</a>
+  <div class="lang-level-control">
+    <span>Уровень:</span>
+    <select id="lang-level-select" onchange="onLanguageLevelChange(this.value)">
+      <option value="A1">A1</option>
+      <option value="A2">A2</option>
+      <option value="B1">B1</option>
+      <option value="B2">B2</option>
+      <option value="C1">C1</option>
+    </select>
+  </div>
+</nav>
+
+<main id="plans-page" class="page">
+  <header class="page-header">
+    <h1>Изучение</h1>
+    <p>Ежедневные планы из новых слов для выбранного уровня.</p>
+  </header>
+
+  <section class="create-panel">
+    <div>
+      <h2>План на сегодня</h2>
+      <p id="create-plan-note">Подберём набор слов, которых ещё не было в ваших планах.</p>
+    </div>
+    <button class="btn-primary" onclick="openPlanConfig()">Создать план</button>
+  </section>
+
+  <section class="card">
+    <h2>Созданные планы</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>План</th><th>Уровень</th><th>Слов</th><th>Статус</th><th>Повторение</th><th></th></tr></thead>
+        <tbody id="plans-table-body"></tbody>
+      </table>
+    </div>
+    <p id="plans-empty" class="empty-state">Пока нет созданных планов.</p>
+  </section>
+</main>
+
+<main id="detail-page" class="page" hidden>
+  <button class="btn-back" onclick="showPlans()">← Все планы</button>
+  <header class="page-header detail-header">
+    <h1 id="detail-title"></h1>
+    <p id="detail-meta"></p>
+    <p id="plan-review-reminder" class="plan-review-reminder" hidden>Пройдите тест на повторение, чтобы обновить знания.</p>
+  </header>
+  <div class="plan-tabs">
+    <button class="plan-tab active" onclick="showPlanTab('words', this)">Слова плана</button>
+    <button class="plan-tab" onclick="showPlanTab('study', this)">Изучение</button>
+    <button class="plan-tab" onclick="showPlanTab('review', this)">Повторение</button>
+  </div>
+  <section id="plan-tab-words" class="plan-tab-panel active card">
+    <h2>Слова плана</h2>
+    <ol id="plan-words" class="word-list"></ol>
+  </section>
+  <section id="plan-tab-study" class="plan-tab-panel" hidden>
+    <div class="study-stats">
+      <div><span id="study-gr-ru-count">0</span><small>Греческий → русский</small></div>
+      <div><span id="study-ru-gr-count">0</span><small>Русский → греческий</small></div>
+    </div>
+    <section id="study-test" class="card">
+      <div id="study-direction" class="study-direction"></div>
+      <div id="study-question" class="study-question"></div>
+      <div id="study-streak" class="study-streak"></div>
+      <div id="study-example" class="study-example"></div>
+      <div id="study-options" class="study-options"></div>
+      <p id="study-feedback" class="study-feedback"></p>
+      <button id="study-next-button" class="btn-primary" onclick="nextStudyQuestion()" hidden>Следующий</button>
+    </section>
+    <section id="study-complete" class="card study-complete" hidden>
+      <h2>План изучен</h2>
+      <p>Все слова пройдены в обоих направлениях.</p>
+    </section>
+  </section>
+  <section id="plan-tab-review" class="plan-tab-panel" hidden>
+    <section id="review-unavailable" class="card study-complete" hidden>
+      <h2>Повторение станет доступно после изучения плана</h2>
+    </section>
+    <section id="review-test" class="card">
+      <div id="review-progress" class="review-progress"></div>
+      <div id="review-direction" class="study-direction"></div>
+      <div id="review-question" class="study-question"></div>
+      <div id="review-example" class="study-example"></div>
+      <div id="review-options" class="study-options"></div>
+      <p id="review-feedback" class="study-feedback"></p>
+      <button id="review-next-button" class="btn-primary" onclick="nextReviewQuestion()" hidden>Следующий</button>
+    </section>
+    <section id="review-complete" class="card study-complete" hidden>
+      <h2>Повторение завершено</h2>
+      <p id="review-result"></p>
+      <button id="review-reset-button" class="btn-secondary" onclick="resetPlanLearning()" hidden>Сбросить прогресс и изучить заново</button>
+      <button class="btn-primary" onclick="startReview()">Пройти повторение ещё раз</button>
+    </section>
+  </section>
+</main>
+
+<div id="plan-config-modal" class="modal" hidden>
+  <div class="modal-backdrop" onclick="closePlanConfig()"></div>
+  <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="plan-config-title">
+    <div class="modal-header">
+      <h2 id="plan-config-title">Новый учебный план</h2>
+      <button class="modal-close" onclick="closePlanConfig()" aria-label="Закрыть">×</button>
+    </div>
+    <label class="config-label">Размер плана</label>
+    <div class="size-options">
+      <label><input type="radio" name="plan-size" value="10"> <span>Маленький<small>10 слов</small></span></label>
+      <label><input type="radio" name="plan-size" value="15"> <span>Средний<small>15 слов</small></span></label>
+      <label><input type="radio" name="plan-size" value="20" checked> <span>Большой<small>20 слов</small></span></label>
+      <label><input type="radio" name="plan-size" value="custom"> <span>Свой размер<small>Укажите количество</small></span></label>
+    </div>
+    <label class="config-label" for="custom-plan-size">Количество слов</label>
+    <input id="custom-plan-size" class="config-input" type="number" min="1" max="100" value="20" disabled>
+    <label class="config-label" for="plan-level-select">Уровень слов</label>
+    <select id="plan-level-select" class="config-input">
+      <option value="A1">A1</option>
+      <option value="A2">A2</option>
+      <option value="B1">B1</option>
+      <option value="B2">B2</option>
+      <option value="C1">C1</option>
+    </select>
+    <p id="plan-config-note" class="modal-note"></p>
+    <div class="modal-actions">
+      <button class="btn-secondary" onclick="closePlanConfig()">Отмена</button>
+      <button class="btn-primary" onclick="confirmPlanConfig()">Создать</button>
+    </div>
+  </section>
+</div>
+
+<script src="app.js?v=available-word-count"></script>
+</body>
+</html>
