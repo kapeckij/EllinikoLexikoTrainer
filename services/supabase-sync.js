@@ -284,7 +284,37 @@
   account.className = 'trainer-account';
   account.style.cssText = 'display:flex;align-items:center;justify-content:flex-end;gap:7px;width:clamp(190px,28vw,330px);min-width:0;min-height:34px;visibility:hidden;color:#e2e8f0;font:12px system-ui,sans-serif';
   const responsiveStyles = document.createElement('style');
-  responsiveStyles.textContent = '.trainer-profile-link:hover{border-color:#5b8fff!important;color:#5b8fff!important}.trainer-profile-link[aria-label="Открыть профиль"]{width:38px!important;height:38px!important;padding:0!important;justify-content:center}.trainer-profile-link[aria-label="Открыть профиль"] .trainer-sync-status{display:none!important}@media(max-width:600px){.trainer-profile-link{max-width:clamp(112px,32vw,170px)!important}.trainer-account{gap:4px!important;width:clamp(190px,54vw,300px)!important}.trainer-account button{padding:6px 7px!important}.lang-level-floating{gap:5px!important}.lang-level-control{gap:5px!important}}';
+  responsiveStyles.textContent = `
+    .trainer-profile-link:hover { border-color:#5b8fff!important; color:#5b8fff!important; }
+    .trainer-profile-link[aria-label="Открыть профиль"] { width:38px!important; height:38px!important; padding:0!important; justify-content:center; }
+    .trainer-profile-link[aria-label="Открыть профиль"] .trainer-sync-status { display:none!important; }
+    .trainer-menu-toggle { display:none!important; }
+    @media (max-width:768px) {
+      nav.trainer-mobile-nav:not(.trainer-nav-open) { min-height:50px!important; align-items:center!important; flex-wrap:nowrap!important; row-gap:0!important; padding:0 10px!important; }
+      nav.trainer-mobile-nav .trainer-menu-toggle { display:inline-flex!important; align-items:center; justify-content:center; width:38px; height:38px; flex:none; padding:0; border:1px solid var(--border,#2d3148); border-radius:8px; background:var(--card2,#252840); color:var(--text,#e2e8f0); font-size:20px; line-height:1; }
+      nav.trainer-mobile-nav:not(.trainer-nav-open) > .logo,
+      nav.trainer-mobile-nav:not(.trainer-nav-open) > .trainer-nav-sections,
+      nav.trainer-mobile-nav:not(.trainer-nav-open) .lang-level-control .trainer-account { display:none!important; }
+      nav.trainer-mobile-nav:not(.trainer-nav-open) .nav-home { margin:0!important; border:0!important; padding:8px!important; }
+      nav.trainer-mobile-nav:not(.trainer-nav-open) .lang-level-control { width:auto!important; min-height:0!important; margin-left:auto!important; padding:0!important; justify-content:flex-end!important; flex:none!important; }
+      nav.trainer-mobile-nav:not(.trainer-nav-open) .lang-level-control > span { display:inline!important; padding:0!important; }
+      nav.trainer-mobile-nav:not(.trainer-nav-open) .lang-level-control select { margin:0!important; }
+      nav.trainer-mobile-nav.trainer-nav-open { display:grid!important; grid-template-columns:38px minmax(0,1fr) 38px; grid-template-areas:"toggle logo home" "sections sections sections" "levels levels levels"; align-items:center; gap:8px; padding:8px 10px 0!important; }
+      nav.trainer-mobile-nav.trainer-nav-open .trainer-menu-toggle { grid-area:toggle; }
+      nav.trainer-mobile-nav.trainer-nav-open > .logo { grid-area:logo; width:auto!important; margin:0!important; padding:8px 0!important; border:0!important; }
+      nav.trainer-mobile-nav.trainer-nav-open .nav-home { grid-area:home; justify-self:end; margin:0!important; }
+      nav.trainer-mobile-nav .trainer-nav-sections { grid-area:sections; display:flex; flex-wrap:wrap; justify-content:center; gap:6px; width:100%; }
+      nav.trainer-mobile-nav .trainer-nav-sections > button { flex:0 0 calc((100% - 12px)/3); min-width:0; width:calc((100% - 12px)/3); padding:9px 6px!important; border:1px solid var(--border,#2d3148)!important; border-radius:8px; background:var(--card2,#252840); text-align:center; }
+      nav.trainer-mobile-nav.trainer-nav-open .lang-level-control { grid-area:levels; display:flex; width:100%!important; min-height:0!important; align-items:center; justify-content:flex-end; gap:7px; margin:0!important; padding:0 0 8px!important; }
+      nav.trainer-mobile-nav.trainer-nav-open .lang-level-control .trainer-account { width:auto!important; min-width:0!important; margin-right:auto; }
+    }
+    @media (max-width:600px) {
+      .trainer-profile-link { max-width:clamp(112px,32vw,170px)!important; }
+      .trainer-account { gap:4px!important; width:clamp(190px,54vw,300px)!important; }
+      .trainer-account button { padding:6px 7px!important; }
+      .lang-level-floating, .lang-level-control { gap:5px!important; }
+    }
+  `;
   document.head.append(responsiveStyles);
   const profileLink = document.createElement('a');
   profileLink.className = 'trainer-profile-link';
@@ -328,6 +358,47 @@
   if (accountSlot) accountSlot.append(account);
   else if (levelControl) levelControl.prepend(account);
   else document.body.append(account);
+
+  const nav = document.querySelector('body > nav');
+  if (nav) {
+    nav.classList.add('trainer-mobile-nav');
+    const menuSections = [...nav.querySelectorAll(':scope > button')];
+    if (menuSections.length) {
+      const sections = document.createElement('div');
+      sections.className = 'trainer-nav-sections';
+      menuSections[0].before(sections);
+      sections.append(...menuSections);
+    }
+    const menuToggle = document.createElement('div');
+    menuToggle.className = 'trainer-menu-toggle';
+    menuToggle.setAttribute('role', 'button');
+    menuToggle.setAttribute('tabindex', '0');
+    menuToggle.textContent = '☰';
+    menuToggle.setAttribute('aria-label', 'Открыть меню');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    const toggleMenu = () => {
+      const expanded = nav.classList.toggle('trainer-nav-open');
+      menuToggle.textContent = expanded ? '×' : '☰';
+      menuToggle.setAttribute('aria-expanded', String(expanded));
+      menuToggle.setAttribute('aria-label', expanded ? 'Закрыть меню' : 'Открыть меню');
+    };
+    menuToggle.addEventListener('click', toggleMenu);
+    menuToggle.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleMenu();
+      }
+    });
+    nav.prepend(menuToggle);
+    nav.addEventListener('click', event => {
+      if (event.target.matches('button:not(.trainer-menu-toggle)')) {
+        nav.classList.remove('trainer-nav-open');
+        menuToggle.textContent = '☰';
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Открыть меню');
+      }
+    });
+  }
 
   if (!config.url || !config.publishableKey || !window.supabase?.createClient) {
     setAccountUI();

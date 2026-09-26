@@ -35,7 +35,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
   font-size: 0.82rem;
   cursor: pointer;
 }
-.home-wrap { width: 100%; max-width: 650px; margin-top: 60px; padding-top: calc(var(--home-top-offset) + 10px); }
+.home-wrap { width: 100%; max-width: 650px; margin-top: 0; padding-top: var(--home-top-offset); }
 .home-top-sticky {
   position: fixed;
   top: 0;
@@ -121,16 +121,21 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
   :root { --home-top-offset: 190px; }
   body { justify-content: flex-start; padding: 16px 12px 20px; }
   .lang-level-floating {
-    top: 8px;
-    right: 12px;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 48px;
     font-size: 0.78rem;
     background: rgba(26,29,46,.88);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 4px 8px;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0 0 10px 10px;
+    padding: 5px 12px;
   }
+  .lang-level-floating > span { margin-left: auto; }
   .lang-level-floating select { padding: 5px 8px; font-size: 0.78rem; }
-  .home-wrap { max-width: 100%; margin-top: 56px; }
+  .home-wrap { max-width: 100%; margin-top: 0; }
   .home-top-sticky {
     top: 0;
     width: calc(100vw - 24px);
