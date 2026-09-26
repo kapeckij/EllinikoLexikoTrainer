@@ -4,11 +4,11 @@ const USED_WORD_IDS_KEY = 'gr_learning_used_word_ids';
 const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
 const LEVEL_RANK = Object.fromEntries(LEVELS.map((level, index) => [level, index]));
 const SOURCE_FILES = [
-  ['adjective', '../resources/adjectives-data.json'],
-  ['adverb', '../resources/adverbs-data.json'],
-  ['linking', '../resources/intro-and-linkings-data.json'],
-  ['noun', '../resources/nouns-data.json'],
-  ['verb', '../resources/verbs-data.json']
+  ['adjective', '../../resources/adjectives-data.json'],
+  ['adverb', '../../resources/adverbs-data.json'],
+  ['linking', '../../resources/intro-and-linkings-data.json'],
+  ['noun', '../../resources/nouns-data.json'],
+  ['verb', '../../resources/verbs-data.json']
 ];
 const REVIEW_INTERVAL_DAYS = [1, 3, 7, 14, 30];
 

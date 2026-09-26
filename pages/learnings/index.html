@@ -9,7 +9,7 @@
 <body>
 <nav>
   <div class="logo">Ημερήσια μελέτη</div>
-  <a class="nav-home" href="../index.html" title="На главную">🏠</a>
+  <a class="nav-home" href="../../index.html" title="На главную">🏠</a>
   <div class="lang-level-control">
     <span>Уровень:</span>
     <select id="lang-level-select" onchange="onLanguageLevelChange(this.value)">
@@ -137,6 +137,10 @@
   </section>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../../services/supabase-config.js?v=1"></script>
+<script src="../../services/supabase-sync.js?v=11"></script>
+<script src="../../services/export.js?v=7"></script>
 <script src="app.js?v=available-word-count"></script>
 </body>
 </html>

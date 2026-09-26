@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Профиль — Греческий тренажёр</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-trainer-profile>
+<nav>
+  <div class="logo">Προφίλ</div>
+  <a class="nav-home" href="../../index.html" title="На главную">🏠</a>
+  <div class="lang-level-control">
+    <span>Уровень:</span>
+    <select id="lang-level-select" onchange="onProfileLevelChange(this.value)">
+      <option value="A1">A1</option>
+      <option value="A2">A2</option>
+      <option value="B1">B1</option>
+      <option value="B2">B2</option>
+      <option value="C1">C1</option>
+    </select>
+  </div>
+</nav>
+
+<main class="profile-page">
+  <header class="page-header">
+    <h1>Профиль пользователя</h1>
+    <p id="profile-email">Статистика обучения</p>
+  </header>
+
+  <section class="summary-grid" aria-label="Общая статистика">
+    <div class="summary-item"><strong id="summary-total">0</strong><span>слов с прогрессом</span></div>
+    <div class="summary-item"><strong id="summary-known">0</strong><span>знаю</span></div>
+    <div class="summary-item"><strong id="summary-learning">0</strong><span>изучаю</span></div>
+    <div class="summary-item"><strong id="summary-plans">0</strong><span>учебных планов</span></div>
+  </section>
+
+  <section class="profile-section">
+    <h2>Прогресс по разделам</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Раздел</th><th>Изучено</th><th>Знаю</th><th>В процессе</th><th>Новые</th><th>Всего</th></tr></thead>
+        <tbody id="profile-progress-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="profile-section">
+    <h2>Учебные планы</h2>
+    <div class="plans-summary">
+      <span>Всего: <strong id="plans-total">0</strong></span>
+      <span>В процессе: <strong id="plans-active">0</strong></span>
+      <span>Завершено: <strong id="plans-completed">0</strong></span>
+      <span>Повторить: <strong id="plans-review">0</strong></span>
+    </div>
+    <a class="section-link" href="../learnings/index.html">Открыть учебные планы →</a>
+  </section>
+
+  <section class="profile-section account-actions">
+    <h2>Данные аккаунта</h2>
+    <p>Сохраните резервную копию или перенесите данные между устройствами.</p>
+    <div class="profile-buttons">
+      <button class="action-button" id="profile-export">↓ Экспорт данных</button>
+      <button class="action-button" id="profile-import">↑ Импорт данных</button>
+      <button class="action-button action-primary" id="profile-sync">Синхронизировать данные</button>
+    </div>
+    <p id="profile-sync-message" class="sync-message" aria-live="polite"></p>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../../services/supabase-config.js?v=1"></script>
+<script src="../../services/supabase-sync.js?v=11"></script>
+<script src="../../services/export.js?v=7"></script>
+<script src="app.js"></script>
+</body>
+</html>

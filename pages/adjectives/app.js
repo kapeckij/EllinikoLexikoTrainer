@@ -1,4 +1,4 @@
-fetch('../resources/adverbs-data.json')
+fetch('../../resources/adjectives-data.json')
   .then(r => r.json())
   .then(TRAINER_DATA => {
 
@@ -8,7 +8,7 @@ const BATCH_NAMES = BATCHES.map(batch => batch.batchName);
 const LANGUAGE_LEVEL_KEY = 'gr_language_level';
 const LANGUAGE_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
 const LEVEL_RANK = { A1: 0, A2: 1, B1: 2, B2: 3, C1: 4 };
-const PROG_KEY = 'gr_adverbs_progress';
+const PROG_KEY = 'gr_adjectives_progress';
 
 let currentLanguageLevel = 'C1';
 
@@ -61,6 +61,10 @@ function escapeHtml(s) {
   return String(s)
     .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+}
+
+function getWordKey(w) {
+  return [w.male, w.female, w.neuter].filter(f => f && f !== '-').join(' / ');
 }
 
 // ===== PROGRESS =====
@@ -172,7 +176,7 @@ function renderPlanTable() {
   const total = visibleWords.length;
   const totalBatches = BATCHES.filter(b => visibleWords.some(w => w.batch === Number(b.batchId))).length;
   const avg = totalBatches ? Math.round(total / totalBatches) : 0;
-  document.getElementById('plan-title').textContent = `Обзор: ${total} наречий`;
+  document.getElementById('plan-title').textContent = `Обзор: ${total} прилагательных`;
   document.getElementById('badge-total').textContent = total;
   document.getElementById('badge-batches').textContent = totalBatches;
   document.getElementById('badge-avg').textContent = `~${avg}`;
@@ -231,7 +235,9 @@ function showLearnCard() {
   learnFlipped = false;
   const { w } = learnQueue[learnIdx];
 
-  document.getElementById('card-greek').textContent = w.greek || '-';
+  document.getElementById('card-male').textContent = w.male || '-';
+  document.getElementById('card-female').textContent = w.female || '-';
+  document.getElementById('card-neuter').textContent = w.neuter || '-';
   document.getElementById('card-translation').textContent = w.translation;
   document.getElementById('card-example').textContent = w.example || '';
 
@@ -290,6 +296,7 @@ function resetQuizUiState() {
   document.getElementById('quiz-correct').textContent = 0;
   document.getElementById('quiz-total').textContent = 0;
   document.getElementById('quiz-q-text').textContent = 'Нажмите «Начать тест»';
+  document.getElementById('quiz-q-forms').innerHTML = '';
   document.getElementById('quiz-q-sub').textContent = '';
   document.getElementById('quiz-options').innerHTML = '';
   document.getElementById('next-btn-wrap').style.display = 'none';
@@ -313,9 +320,18 @@ function startQuiz() {
   nextQuizQuestion();
 }
 
+function buildFormHtml(w) {
+  const rows = [];
+  if (w.male && w.male !== '-') rows.push(`<div class="quiz-q-form-row"><span class="lbl">муж</span>${escapeHtml(w.male)}</div>`);
+  if (w.female && w.female !== '-') rows.push(`<div class="quiz-q-form-row"><span class="lbl">жен</span>${escapeHtml(w.female)}</div>`);
+  if (w.neuter && w.neuter !== '-') rows.push(`<div class="quiz-q-form-row"><span class="lbl">ср</span>${escapeHtml(w.neuter)}</div>`);
+  return rows.join('');
+}
+
 function nextQuizQuestion() {
   if (quizPool.length === 0) {
     document.getElementById('quiz-q-text').textContent = '🎉 Тест завершён!';
+    document.getElementById('quiz-q-forms').innerHTML = '';
     document.getElementById('quiz-q-sub').textContent = 'Результат: ' + quizCorrectCount + ' / ' + quizTotalCount;
     document.getElementById('quiz-options').innerHTML = '<button class="btn-primary" onclick="startQuiz()" style="margin:10px auto;display:block">Начать заново</button>';
     document.getElementById('next-btn-wrap').style.display = 'none';
@@ -338,23 +354,26 @@ function nextQuizQuestion() {
 
   const modeLabel = document.getElementById('quiz-mode-label');
   const qText = document.getElementById('quiz-q-text');
+  const qForms = document.getElementById('quiz-q-forms');
   const qSub = document.getElementById('quiz-q-sub');
   const optContainer = document.getElementById('quiz-options');
 
   if (mode === 'gr-ru') {
     modeLabel.textContent = 'Переведи на русский:';
-    qText.textContent = correct.greek;
+    qText.textContent = '';
+    qForms.innerHTML = buildFormHtml(correct);
     qSub.innerHTML = `<details class="quiz-spoiler"><summary>Показать пример (спойлер)</summary><div class="quiz-example-text">${escapeHtml(correct.example || '')}</div></details>`;
     optContainer.innerHTML = options.map(o =>
       `<button class="quiz-option" data-key="${WORDS.indexOf(o)}" onclick="checkAnswer(this, ${WORDS.indexOf(o)}, ${correctKey})">${escapeHtml(o.translation)}</button>`
     ).join('');
   } else {
-    modeLabel.textContent = 'Выбери греческое наречие:';
+    modeLabel.textContent = 'Выбери греческое прилагательное:';
     qText.textContent = correct.translation;
+    qForms.innerHTML = '';
     qSub.innerHTML = `<details class="quiz-spoiler"><summary>Показать пример (спойлер)</summary><div class="quiz-example-text">${escapeHtml(correct.example || '')}</div></details>`;
     optContainer.innerHTML = options.map(o => {
       const key = WORDS.indexOf(o);
-      return `<button class="quiz-option" data-key="${key}" onclick="checkAnswer(this, ${key}, ${correctKey})">${escapeHtml(o.greek)}</button>`;
+      return `<button class="quiz-option" data-key="${key}" onclick="checkAnswer(this, ${key}, ${correctKey})">${escapeHtml(getWordKey(o))}</button>`;
     }).join('');
   }
 }
@@ -384,7 +403,8 @@ function giveUp() {
   let progress = loadProgress();
   let p = progress[correctKey] || { interval: 1, ef: 2.5, nextReview: Date.now(), seen: false };
   p.seen = false; p.interval = 1; p.ef = Math.max(1.3, p.ef - 0.2); p.nextReview = Date.now() + 86400000;
-  progress[correctKey] = p; saveProgress(progress); quizStreaks[correctKey] = 0;
+  progress[correctKey] = p;
+  saveProgress(progress); quizStreaks[correctKey] = 0;
   document.getElementById('quiz-total').textContent = quizTotalCount;
   document.getElementById('quiz-giveup-wrap').style.display = 'none';
   document.getElementById('next-btn-wrap').style.display = '';
@@ -419,7 +439,7 @@ function updateProgressPage() {
       const [icon, label, cls] = cat === 2 ? ['✓', 'знаю', 'verb-status-known'] : cat === 1 ? ['~', 'смутно', 'verb-status-learning'] : ['✕', 'не знаю', 'verb-status-new'];
       return `<div class="word-status-row">
         <span class="word-status-badge ${cls}">${icon} ${label}</span>
-        <span class="word-status-main">${escapeHtml(w.greek)}</span>
+        <span class="word-status-main">${escapeHtml(w.male || w.female || w.neuter || '-')}</span>
         <span class="word-status-translation">${escapeHtml(w.translation)}</span>
       </div>`;
     }).join('');
@@ -452,7 +472,7 @@ function resetBatchProgress(batchId) {
 }
 
 function resetAll() {
-  if (confirm('Сбросить весь прогресс по наречиям?')) {
+  if (confirm('Сбросить весь прогресс по прилагательным?')) {
     localStorage.removeItem(PROG_KEY);
     updateProgressPage();
   }
@@ -482,4 +502,4 @@ resetLearn();
 resetQuizUiState();
 
   })
-  .catch(err => console.error('Failed to load adverbs-data.json:', err));
+  .catch(err => console.error('Failed to load adjectives-data.json:', err));

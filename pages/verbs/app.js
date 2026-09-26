@@ -1,4 +1,4 @@
-fetch('../resources/verbs-data.json')
+fetch('../../resources/verbs-data.json')
   .then(r => r.json())
   .then(TRAINER_DATA => {
 

@@ -1,4 +1,4 @@
-fetch('../resources/intro-and-linkings-data.json')
+fetch('../../resources/intro-and-linkings-data.json')
   .then(r => r.json())
   .then(DATA => {
 

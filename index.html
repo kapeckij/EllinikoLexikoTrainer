@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Греческий язык — Тренажёр</title>
 <link rel="icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Ctext y="50" font-size="50"%3E%F0%9F%87%AC%F0%9F%87%B7%3C/text%3E%3C/svg%3E'>
-<link rel="stylesheet" href="home.css?v=learning-plans">
+<link rel="stylesheet" href="home.css?v=header-spacing">
 </head>
 <body>
 
@@ -38,7 +38,7 @@
 
   <div class="home-panel active" id="home-panel-catalog">
     <div class="category-list">
-    <a href="verbs/index.html" class="category-card">
+    <a href="pages/verbs/index.html" class="category-card">
       <span class="category-icon">📚</span>
       <div class="category-info">
         <div class="category-name">Глаголы</div>
@@ -46,7 +46,7 @@
       </div>
       <span class="category-count" id="count-verbs">-</span>
     </a>
-    <a href="nouns/index.html" class="category-card">
+    <a href="pages/nouns/index.html" class="category-card">
       <span class="category-icon">🔤</span>
       <div class="category-info">
         <div class="category-name">Существительные</div>
@@ -54,7 +54,7 @@
       </div>
       <span class="category-count" id="count-nouns">-</span>
     </a>
-    <a href="adjectives/index.html" class="category-card">
+    <a href="pages/adjectives/index.html" class="category-card">
       <span class="category-icon">🎨</span>
       <div class="category-info">
         <div class="category-name">Прилагательные</div>
@@ -62,7 +62,7 @@
       </div>
       <span class="category-count" id="count-adjectives">-</span>
     </a>
-    <a href="adverbs/index.html" class="category-card">
+    <a href="pages/adverbs/index.html" class="category-card">
       <span class="category-icon">🏷️</span>
       <div class="category-info">
         <div class="category-name">Наречия</div>
@@ -70,7 +70,7 @@
       </div>
       <span class="category-count" id="count-adverbs">-</span>
     </a>
-    <a href="numerals/index.html" class="category-card">
+    <a href="pages/numerals/index.html" class="category-card">
       <span class="category-icon">🔢</span>
       <div class="category-info">
         <div class="category-name">Числительные</div>
@@ -78,7 +78,7 @@
       </div>
       <span class="category-count" id="count-numerals">-</span>
     </a>
-    <a href="intro_and_linkings/index.html" class="category-card">
+    <a href="pages/intro_and_linkings/index.html" class="category-card">
       <span class="category-icon">🔗</span>
       <div class="category-info">
         <div class="category-name">Вводные и связки</div>
@@ -99,7 +99,7 @@
         <div class="learning-stat learning-stat-complete"><span id="learning-plans-complete">0</span><small>Изучено</small></div>
         <div class="learning-stat learning-stat-review"><span id="learning-plans-review">0</span><small>Стоит повторить</small></div>
       </div>
-      <a class="learnings-open-link" href="learnings/index.html">
+      <a class="learnings-open-link" href="pages/learnings/index.html">
         <span class="learnings-open-icon">🗓️</span>
         <span class="learnings-open-info"><strong>Перейти к учебным планам</strong><small>Создать новый план или продолжить начатый</small></span>
         <span class="learnings-open-arrow">→</span>
@@ -210,6 +210,10 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="services/supabase-config.js?v=1"></script>
+<script src="services/supabase-sync.js?v=11"></script>
+<script src="services/export.js?v=7"></script>
 <script src="app.js?v=review-reminder"></script>
 
 </body>
